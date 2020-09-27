@@ -1,15 +1,6 @@
-# MAPD_F2020
-Mobile Applications Development Program - Centennial College. 
-This is the master repo for the MAPD F2020 program.
+# MAPD 715
+Mobile UI/UX Development (SEC.001)
 
-# Classes listed:
-- MAPD 711
-- MAPD 712
-- MAPD 713
-- MAPD 714
-- MAPD 715
-
-# Latest operational branches:
-- MAPD 714 iOS Development: https://github.com/mnithyanandh/MAPD_F2020/tree/MAPD_714_iOS_Development
-- MAPD 712 Web Technologies: https://github.com/mnithyanandh/MAPD_F2020/tree/MAPD_712_Web_Technologies
-- MAPD 713 Enterprise Technologies: https://github.com/mnithyanandh/MAPD_F2020/tree/MAPD_713_Enterprise_Technologies
+# Milestone 1: due week 3
+- Identify two primary personas for this app.
+- Create the corresponding persona profile.
