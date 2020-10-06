@@ -44,7 +44,7 @@
             <EditText
                 android:id="@+id/Full_Name_Entry"
                 android:layout_width="200dp"
-                android:layout_height="30dp"
+                android:layout_height="40dp"
                 android:inputType="textPersonName"
                 android:paddingLeft="20dp" />
         </LinearLayout>
@@ -74,7 +74,7 @@
             <EditText
                 android:id="@+id/Qualification_Entry"
                 android:layout_width="150dp"
-                android:layout_height="30dp"
+                android:layout_height="40dp"
                 android:inputType="textPersonName"
                 android:paddingLeft="20dp"/>
         </LinearLayout>
@@ -104,7 +104,7 @@
             <EditText
                 android:id="@+id/Profession_Entry"
                 android:layout_width="200dp"
-                android:layout_height="30dp"
+                android:layout_height="40dp"
                 android:inputType="textPersonName"
                 android:paddingLeft="20dp"/>
         </LinearLayout>
@@ -134,7 +134,7 @@
             <EditText
                 android:id="@+id/Hobby_Entry"
                 android:layout_width="250dp"
-                android:layout_height="30dp"
+                android:layout_height="40dp"
                 android:inputType="textPersonName"
                 android:paddingLeft="20dp"/>
         </LinearLayout>
@@ -164,7 +164,7 @@
             <EditText
                 android:id="@+id/Dream_Job_Entry"
                 android:layout_width="200dp"
-                android:layout_height="30dp"
+                android:layout_height="40dp"
                 android:inputType="textPersonName"
                 android:paddingLeft="20dp"/>
         </LinearLayout>
