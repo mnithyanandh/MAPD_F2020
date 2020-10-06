@@ -3,7 +3,6 @@
     <string name="action_settings">Settings</string>
     <!-- Strings used for fragments for navigation -->
     <string name="next">Submit</string>
-    <string name="previous">Go back to Home</string>
     <string name="FullName">Full Name: </string>
     <string name="Qualification">Qualification: </string>
     <string name="Profession">Profession: </string>
