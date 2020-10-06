@@ -33,7 +33,7 @@ class MainActivity : AppCompatActivity() {
             val hobby = Hobby.text.toString()
             val dreamjob = DreamJob.text.toString()
 
-//          Intent declaration:
+//          Main Intent declaration where Tag names are linked to user input data and is ready to send to 2nd Screen :
             val intent = Intent(this@MainActivity, UserInputDisplay::class.java)
             intent.putExtra("Full Name: ", fullname)
             intent.putExtra("Qualifications: ", qualification)
