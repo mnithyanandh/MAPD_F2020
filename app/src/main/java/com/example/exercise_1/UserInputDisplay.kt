@@ -13,7 +13,7 @@ class UserInputDisplay : AppCompatActivity() {
 
 //      Intent declaration to receive data from the Main Activity
         val intent = intent
-        val fname = intent.getStringArrayExtra("Full Name: ")
+        val fname = intent.getStringExtra("Full Name: ")
         val qualif = intent.getStringArrayExtra("Qualifications: ")
         val prof = intent.getStringArrayExtra("Profession: ")
         val hobb = intent.getStringArrayExtra("Hobbies: ")
@@ -23,6 +23,6 @@ class UserInputDisplay : AppCompatActivity() {
         val datadisplay = findViewById<TextView>(R.id.InputDisplay)
 
 //      Display the user data in the textview
-        datadisplay.text = "Full Name: "+fname+"\nQualifications: "+qualif+"\nProfession: "+prof+"\nHobbies: "+hobb+"\nDream Job:"+dj
+        datadisplay.text = "Full Name: "+fname+"\n\nQualifications: "+qualif+"\n\nProfession: "+prof+"\n\nHobbies: "+hobb+"\n\nDream Job:"+dj
     }
 }

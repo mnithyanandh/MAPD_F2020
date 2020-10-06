@@ -13,7 +13,6 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        setSupportActionBar(findViewById(R.id.toolbar))
 
 //      Creating tags for holding values of different user variables
         val FullName = findViewById<EditText>(R.id.Full_Name_Entry)
@@ -28,11 +27,11 @@ class MainActivity : AppCompatActivity() {
 //      Declaring 'Submit' button intent. Also convert the user variables to Strings to pass down to second activity for display
         Submit.setOnClickListener {
 //          String conversion of user data:
-            val fullname = FullName.text.toString()
-            val qualification = Qualification.text.toString()
-            val profession = Profession.text.toString()
-            val hobby = Hobby.text.toString()
-            val dreamjob = DreamJob.text.toString()
+            var fullname = FullName.text.toString()
+            var qualification = Qualification.text.toString()
+            var profession = Profession.text.toString()
+            var hobby = Hobby.text.toString()
+            var dreamjob = DreamJob.text.toString()
 
 //          Intent declaration:
             val intent = Intent(this@MainActivity, UserInputDisplay::class.java)
