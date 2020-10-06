@@ -27,11 +27,11 @@ class MainActivity : AppCompatActivity() {
 //      Declaring 'Submit' button intent. Also convert the user variables to Strings to pass down to second activity for display
         Submit.setOnClickListener {
 //          String conversion of user data:
-            var fullname = FullName.text.toString()
-            var qualification = Qualification.text.toString()
-            var profession = Profession.text.toString()
-            var hobby = Hobby.text.toString()
-            var dreamjob = DreamJob.text.toString()
+            val fullname = FullName.text.toString()
+            val qualification = Qualification.text.toString()
+            val profession = Profession.text.toString()
+            val hobby = Hobby.text.toString()
+            val dreamjob = DreamJob.text.toString()
 
 //          Intent declaration:
             val intent = Intent(this@MainActivity, UserInputDisplay::class.java)
