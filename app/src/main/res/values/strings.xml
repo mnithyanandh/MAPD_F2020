@@ -9,4 +9,5 @@
     <string name="Profession">Profession: </string>
     <string name="Hobby">Hobby: </string>
     <string name="DreamJob">Dream Job: </string>
+    <string name="title_activity_user_input_display">UserInputDisplay</string>
 </resources>
