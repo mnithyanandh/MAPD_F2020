@@ -3,10 +3,30 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/pizza_selection"
-        android:icon="@drawable/"
+        android:id="@+id/pizza_selection_menu"
         android:title="Select your Pizza"
-
-
-    />
+        app:showAsAction="ifRoom">
+        <menu>
+            <item
+                android:id="@+id/meat_supreme"
+                android:title="Meat Supreme"
+                android:orderInCategory="1"/>
+            <item
+                android:id="@+id/super_hawaiian"
+                android:title="Super Hawaiian"
+                android:orderInCategory="1"/>
+            <item
+                android:id="@+id/veggie"
+                android:title="Veggie"
+                android:orderInCategory="1"/>
+            <item
+                android:id="@+id/mediterranean"
+                android:title="Mediterranean"
+                android:orderInCategory="1"/>
+            <item
+                android:id="@+id/cheddar_supreme"
+                android:title="Cheddar Supreme"
+                android:orderInCategory="1"/>
+        </menu>
+    </item>
 </menu>
