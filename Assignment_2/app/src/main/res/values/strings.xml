@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">Assignment_2</string>
+
+    <string name="meat_supreme">Meat Supreme</string>
+    <string name="super_hawaiian">Super Hawaiian</string>
+    <string name="veggie">Veggie</string>
+    <string name="mediterranean">Mediterranean</string>
+    <string name="cheddar_supreme">Cheddar Supreme</string>
+
+
 </resources>
