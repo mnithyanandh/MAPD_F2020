@@ -1,0 +1,41 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/user_hint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="3dp"
+        android:background="@drawable/welcome_title_border"
+        android:fadingEdge="horizontal"
+        android:fontFamily="@font/aclonica"
+        android:padding="15dp"
+        android:text="! Welcome to Your's Truly, Pizza !"
+        android:textAllCaps="true"
+        android:textColor="#0025F4"
+        android:textColorHighlight="#28E1FF" />
+
+    <ImageView
+        android:id="@+id/ivBackground"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="#F4646F"
+        android:src="@drawable/pizza_app_logo" />
+
+    <!--<Button
+        android:id="@+id/alert_Button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Alert_Button"
+        android:padding="10dp"
+        android:layout_margin="10dp"/>-->
+
+</LinearLayout>
