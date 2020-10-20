@@ -24,13 +24,13 @@ class Order_Screen : AppCompatActivity() {
         val pizzaToppings = ointent.getStringExtra("Pizza Toppings: ")
 
         // Initialize the textview which is going to hold the data from Main activity
-        val cinfo = findViewById<TextView>(R.id.Customer_Details)
+        val cinfo = findViewById<TextView>(R.id.Thank_You)
 
         // Display the user data in the textview
         cinfo.text = "Customer Name: $cname"+
-                "\n\n\nCustomer Address: $caddress"+
-                "\n\n\nType of Pizza: $pizzaType"+
-                "\n\n\nSize of Pizza: $pizzaSize"+
-                "\n\n\nToppings: $pizzaToppings"
+                "\n\nCustomer Address: $caddress"+
+                "\n\nType of Pizza: $pizzaType"+
+                "\n\nSize of Pizza: $pizzaSize"+
+                "\n\nToppings: $pizzaToppings"
     }
 }
