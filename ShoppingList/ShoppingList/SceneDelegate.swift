@@ -1,8 +1,9 @@
 //
-//  SceneDelegate.swift
-//  ShoppingList
-//
-//  Created by Nithyanandh Mahalingam on 10/30/20.
+//  File name: ViewController.swift
+//  App Name: ShoppingList
+//  Student ID: 301162314
+// Date: 10/30/2020
+//  Author's name: Created by Nithyanandh Mahalingam
 //
 
 import UIKit
