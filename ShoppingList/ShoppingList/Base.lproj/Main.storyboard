@@ -27,14 +27,16 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="40"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Enter new List name:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cVM-RV-NiW">
-                                                    <rect key="frame" x="20" y="10" width="374" height="20.5"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter new List name:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cVM-RV-NiW">
+                                                    <rect key="frame" x="20" y="10" width="374" height="20"/>
                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                                     <color key="textColor" red="0.34911519289999998" green="0.352937907" blue="0.36926931140000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="cVM-RV-NiW" firstAttribute="top" secondItem="nrD-ie-HMA" secondAttribute="topMargin" constant="-1" id="0hK-ZP-gzE"/>
+                                                <constraint firstItem="cVM-RV-NiW" firstAttribute="centerY" secondItem="nrD-ie-HMA" secondAttribute="centerY" id="LPg-bH-SlK"/>
                                                 <constraint firstItem="cVM-RV-NiW" firstAttribute="leading" secondItem="nrD-ie-HMA" secondAttribute="leading" constant="20" symbolic="YES" id="Y7r-RK-rOc"/>
                                                 <constraint firstAttribute="trailing" secondItem="cVM-RV-NiW" secondAttribute="trailing" constant="20" symbolic="YES" id="db4-8b-Vda"/>
                                             </constraints>
@@ -47,13 +49,17 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="48"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter the type of list" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="k64-HJ-yND">
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter the type of list" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="k64-HJ-yND">
                                                     <rect key="frame" x="20" y="7" width="374" height="34"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="k64-HJ-yND" firstAttribute="trailing" secondItem="ar7-eS-KqQ" secondAttribute="trailingMargin" id="3lt-dY-saC"/>
+                                                <constraint firstItem="k64-HJ-yND" firstAttribute="centerY" secondItem="ar7-eS-KqQ" secondAttribute="centerY" id="5aZ-G7-83h"/>
+                                                <constraint firstItem="k64-HJ-yND" firstAttribute="leading" secondItem="ar7-eS-KqQ" secondAttribute="leadingMargin" id="e7k-RP-Xnx"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ItemNameQuantityLabelCell" rowHeight="40" id="ma4-r7-few">
@@ -63,14 +69,17 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="40"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Enter new item name:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RZM-WP-lXr">
-                                                    <rect key="frame" x="20" y="10" width="182" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter new item name:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RZM-WP-lXr">
+                                                    <rect key="frame" x="20" y="10" width="172" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                                     <color key="textColor" red="0.34911519289999998" green="0.352937907" blue="0.36926931140000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Quantity:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wRD-IP-fwu">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quantity:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wRD-IP-fwu">
                                                     <rect key="frame" x="286" y="10" width="96" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="96" id="vVL-T5-o0f"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                                     <color key="textColor" red="0.34911519289999998" green="0.352937907" blue="0.36926931140000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -81,7 +90,7 @@
                                                 <constraint firstItem="RZM-WP-lXr" firstAttribute="leading" secondItem="YhH-Te-kG1" secondAttribute="leading" constant="20" symbolic="YES" id="EPf-B6-JmW"/>
                                                 <constraint firstAttribute="bottom" secondItem="RZM-WP-lXr" secondAttribute="bottom" constant="9" id="LBC-yp-HMX"/>
                                                 <constraint firstItem="wRD-IP-fwu" firstAttribute="top" secondItem="YhH-Te-kG1" secondAttribute="top" constant="10" id="N01-cb-1Sv"/>
-                                                <constraint firstItem="wRD-IP-fwu" firstAttribute="leading" secondItem="RZM-WP-lXr" secondAttribute="trailing" constant="84" id="RSK-hU-WpV"/>
+                                                <constraint firstItem="wRD-IP-fwu" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="RZM-WP-lXr" secondAttribute="trailing" constant="8" symbolic="YES" id="RSK-hU-WpV"/>
                                                 <constraint firstAttribute="bottom" secondItem="wRD-IP-fwu" secondAttribute="bottom" constant="9" id="hJN-xj-tkX"/>
                                                 <constraint firstItem="RZM-WP-lXr" firstAttribute="top" secondItem="YhH-Te-kG1" secondAttribute="top" constant="10" id="rQA-AL-W39"/>
                                             </constraints>
@@ -94,13 +103,16 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter item name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Luz-5o-tkT">
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter item name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Luz-5o-tkT">
                                                     <rect key="frame" x="20" y="7" width="221" height="46"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
-                                                <pickerView contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tJl-Mv-1Ve">
+                                                <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tJl-Mv-1Ve">
                                                     <rect key="frame" x="257" y="3" width="145" height="57"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="145" id="S28-CJ-vP5"/>
+                                                    </constraints>
                                                 </pickerView>
                                             </subviews>
                                             <constraints>
@@ -121,13 +133,16 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter item name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="a6p-pO-uEr">
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter item name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="a6p-pO-uEr">
                                                     <rect key="frame" x="20" y="7" width="221" height="46"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
-                                                <pickerView contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mi4-GV-RUU">
+                                                <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mi4-GV-RUU">
                                                     <rect key="frame" x="257" y="3" width="145" height="57"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="145" id="sr2-p0-ziw"/>
+                                                    </constraints>
                                                 </pickerView>
                                             </subviews>
                                             <constraints>
@@ -148,13 +163,16 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter item name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RGH-RW-vOb">
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter item name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RGH-RW-vOb">
                                                     <rect key="frame" x="20" y="7" width="221" height="46"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
-                                                <pickerView contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="E1b-Qj-8gd">
+                                                <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E1b-Qj-8gd">
                                                     <rect key="frame" x="257" y="3" width="145" height="57"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="145" id="Dky-Ze-Mwh"/>
+                                                    </constraints>
                                                 </pickerView>
                                             </subviews>
                                             <constraints>
@@ -175,13 +193,16 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter item name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="El6-7O-ykf">
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter item name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="El6-7O-ykf">
                                                     <rect key="frame" x="20" y="7" width="221" height="46"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
-                                                <pickerView contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iFf-2b-lKO">
+                                                <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iFf-2b-lKO">
                                                     <rect key="frame" x="257" y="3" width="145" height="57"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="145" id="jqX-Fv-2j7"/>
+                                                    </constraints>
                                                 </pickerView>
                                             </subviews>
                                             <constraints>
@@ -202,13 +223,16 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter item name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PPV-oY-0GK">
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter item name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PPV-oY-0GK">
                                                     <rect key="frame" x="20" y="7" width="221" height="46"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
-                                                <pickerView contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vUQ-Vs-PJK">
+                                                <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vUQ-Vs-PJK">
                                                     <rect key="frame" x="257" y="3" width="145" height="57"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="145" id="Imp-SH-oaL"/>
+                                                    </constraints>
                                                 </pickerView>
                                             </subviews>
                                             <constraints>
@@ -229,13 +253,16 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter item name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RA1-Kr-uQq">
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter item name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RA1-Kr-uQq">
                                                     <rect key="frame" x="20" y="7" width="221" height="46"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
-                                                <pickerView contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QV4-gt-QUW">
+                                                <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QV4-gt-QUW">
                                                     <rect key="frame" x="257" y="3" width="145" height="57"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="145" id="1KL-YK-j49"/>
+                                                    </constraints>
                                                 </pickerView>
                                             </subviews>
                                             <constraints>
@@ -256,13 +283,16 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter item name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iEr-aM-r8d">
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter item name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iEr-aM-r8d">
                                                     <rect key="frame" x="20" y="7" width="221" height="46"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
-                                                <pickerView contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vg4-XV-y1L">
+                                                <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vg4-XV-y1L">
                                                     <rect key="frame" x="257" y="3" width="145" height="57"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="145" id="TdH-7F-JpA"/>
+                                                    </constraints>
                                                 </pickerView>
                                             </subviews>
                                             <constraints>
@@ -283,13 +313,16 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter item name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yT0-wB-JPA">
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter item name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yT0-wB-JPA">
                                                     <rect key="frame" x="20" y="7" width="221" height="46"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
-                                                <pickerView contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xeY-7j-HQg">
+                                                <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xeY-7j-HQg">
                                                     <rect key="frame" x="257" y="3" width="145" height="57"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="145" id="b9y-Hh-lnb"/>
+                                                    </constraints>
                                                 </pickerView>
                                             </subviews>
                                             <constraints>
@@ -305,34 +338,44 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pJN-9Z-7hm">
-                                <rect key="frame" x="20" y="760" width="105" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pJN-9Z-7hm">
+                                <rect key="frame" x="67" y="778" width="37" height="21"/>
                                 <state key="normal" title="SAVE"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RDE-Ea-I7j">
-                                <rect key="frame" x="155" y="760" width="105" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RDE-Ea-I7j">
+                                <rect key="frame" x="152" y="759" width="111" height="60"/>
                                 <state key="normal" title="RESET"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mX0-ud-tDi">
-                                <rect key="frame" x="289" y="760" width="105" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="CANCEL"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1fk-2W-dcd">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1fk-2W-dcd">
                                 <rect key="frame" x="155" y="817" width="105" height="41"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="View Favorites"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mX0-ud-tDi">
+                                <rect key="frame" x="300" y="777" width="59" height="23"/>
+                                <state key="normal" title="CANCEL"/>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="JCK-tg-xMj" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="1Vp-G5-ZxW"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="RDE-Ea-I7j" secondAttribute="bottom" constant="43" id="94W-kH-wb8"/>
+                            <constraint firstItem="pJN-9Z-7hm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="67" id="ESa-0l-aKP"/>
+                            <constraint firstItem="pJN-9Z-7hm" firstAttribute="top" secondItem="JCK-tg-xMj" secondAttribute="bottom" constant="26" id="I5B-oY-EtT"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="JCK-tg-xMj" secondAttribute="trailing" id="KP7-AN-yq6"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="JCK-tg-xMj" secondAttribute="bottom" constant="110" id="P85-2k-xhq"/>
+                            <constraint firstItem="RDE-Ea-I7j" firstAttribute="top" secondItem="JCK-tg-xMj" secondAttribute="bottom" constant="7" id="SgE-tb-Pol"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="1fk-2W-dcd" secondAttribute="bottom" constant="4" id="Sjr-1e-yYB"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="mX0-ud-tDi" secondAttribute="bottom" constant="62" id="UHu-hj-YAN"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1fk-2W-dcd" secondAttribute="trailing" constant="154" id="YKP-Vs-cWz"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mX0-ud-tDi" secondAttribute="trailing" constant="55" id="dMh-Yo-aiW"/>
+                            <constraint firstItem="1fk-2W-dcd" firstAttribute="top" secondItem="JCK-tg-xMj" secondAttribute="bottom" constant="65" id="eZe-ev-R44"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="pJN-9Z-7hm" secondAttribute="bottom" constant="63" id="him-qa-2sn"/>
+                            <constraint firstItem="mX0-ud-tDi" firstAttribute="leading" secondItem="RDE-Ea-I7j" secondAttribute="trailing" constant="37" id="ipy-cL-96S"/>
+                            <constraint firstItem="mX0-ud-tDi" firstAttribute="top" secondItem="JCK-tg-xMj" secondAttribute="bottom" constant="25" id="oSd-Kh-GHJ"/>
+                            <constraint firstItem="RDE-Ea-I7j" firstAttribute="leading" secondItem="pJN-9Z-7hm" secondAttribute="trailing" constant="48" id="rY3-5W-pPj"/>
                             <constraint firstItem="JCK-tg-xMj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ra9-fq-YKY"/>
+                            <constraint firstItem="1fk-2W-dcd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="155" id="wfR-d4-QaR"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Shopping List" id="mdj-XD-hbd"/>

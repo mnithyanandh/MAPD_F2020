@@ -15,6 +15,7 @@
 		515825C3254B7DB700474158 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 515825C1254B7DB700474158 /* LaunchScreen.storyboard */; };
 		515825CE254B7DB700474158 /* ShoppingListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515825CD254B7DB700474158 /* ShoppingListTests.swift */; };
 		515825D9254B7DB700474158 /* ShoppingListUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515825D8254B7DB700474158 /* ShoppingListUITests.swift */; };
+		515825EA254C704C00474158 /* FavoriteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515825E9254C704C00474158 /* FavoriteCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		515825D4254B7DB700474158 /* ShoppingListUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShoppingListUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		515825D8254B7DB700474158 /* ShoppingListUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingListUITests.swift; sourceTree = "<group>"; };
 		515825DA254B7DB700474158 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		515825E9254C704C00474158 /* FavoriteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				515825BF254B7DB700474158 /* Assets.xcassets */,
 				515825C1254B7DB700474158 /* LaunchScreen.storyboard */,
 				515825C4254B7DB700474158 /* Info.plist */,
+				515825E9254C704C00474158 /* FavoriteCell.swift */,
 			);
 			path = ShoppingList;
 			sourceTree = "<group>";
@@ -259,6 +262,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				515825BB254B7DB500474158 /* ViewController.swift in Sources */,
+				515825EA254C704C00474158 /* FavoriteCell.swift in Sources */,
 				515825B7254B7DB500474158 /* AppDelegate.swift in Sources */,
 				515825B9254B7DB500474158 /* SceneDelegate.swift in Sources */,
 			);
