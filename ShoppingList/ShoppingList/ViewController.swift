@@ -35,6 +35,15 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     @IBOutlet weak var itemName5: UITextField!
     @IBOutlet weak var itemName6: UITextField!
     
+    // Default value for the List Name:
+    
+
+    @IBAction func saveButton(_ sender: UIButton) {
+        if self.listName.text == ""{
+            listName.text = "Shopping List"
+        }
+    }
+    
     // Cancel Button to rest all fields.
     @IBAction func cancelButton(_ sender: UIButton) {
         let alertController:UIAlertController = UIAlertController(title: "Cancel", message: "Do you wish to cancel without saving?", preferredStyle: UIAlertController.Style.alert)
