@@ -225,7 +225,7 @@
                         <outlet property="addmoreOutlet" destination="cgA-Yv-bv1" id="wjz-6d-MES"/>
                         <outlet property="cancelOutlet" destination="mX0-ud-tDi" id="BZX-n4-L6c"/>
                         <outlet property="favoritesOutlet" destination="1fk-2W-dcd" id="UsS-jU-s4E"/>
-                        <outlet property="item1" destination="obV-Qx-9EK" id="pgb-cN-eJ1"/>
+                        <outlet property="itemName1" destination="obV-Qx-9EK" id="bmG-re-JPL"/>
                         <outlet property="itemName2" destination="gwi-ta-mEg" id="z8v-Gs-MdT"/>
                         <outlet property="itemName3" destination="ruM-s5-rnL" id="CfM-a1-l07"/>
                         <outlet property="itemName4" destination="8ir-ZH-2BD" id="CIn-Dw-7pm"/>
@@ -254,7 +254,6 @@
         <!--Navigation Controller-->
         <scene sceneID="cPU-q6-mGA">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="snl-gM-fwx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="pc6-P9-OTI" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="M5l-f4-u9R">
@@ -266,6 +265,7 @@
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="goS-fN-yUE"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="snl-gM-fwx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="34.782608695652179" y="81.696428571428569"/>
         </scene>

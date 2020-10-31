@@ -10,8 +10,6 @@ import UIKit
 
 class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     
-    var message:String = "Do you wish to cancel without saving?"
-    
     // Creating outlets for Picker Views:
     @IBOutlet weak var pcView1: UIPickerView!
     @IBOutlet weak var pcView2: UIPickerView!
@@ -39,16 +37,19 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     
     // Cancel Button to rest all fields.
     @IBAction func cancelButton(_ sender: UIButton) {
-        let alertController:UIAlertController = UIAlertController(title: "Cancel", message: message, preferredStyle: UIAlertController.Style.alert)
-        alertController.addAction(UIAlertAction(title: "Yes", style: .default, handler:{action in
+        let alertController:UIAlertController = UIAlertController(title: "Cancel", message: "Do you wish to cancel without saving?", preferredStyle: UIAlertController.Style.alert)
+        
+        alertController.addAction(UIAlertAction(title: "Yes", style: .default, handler:
+        {(action: UIAlertAction!) in
             self.listName.text = ""
             self.itemName1.text = ""
             self.itemName2.text = ""
             self.itemName3.text = ""
             self.itemName4.text = ""
             self.itemName5.text = ""
-            self.itemName6.text = ""
-        }))
+            self.itemName6.text = ""}
+        ))
+        
         alertController.addAction(UIAlertAction(title: "No", style: .cancel, handler: nil))
         self.present(alertController, animated: true)
     }
@@ -73,13 +74,12 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         
         // Adding Picker View Delegates & Data Sources:
         pcView1.delegate = self
-        pcView1.dataSource = self
         pcView2.delegate = self
         pcView3.delegate = self
         pcView4.delegate = self
         pcView5.delegate = self
         pcView6.delegate = self
-        
+        pcView1.dataSource = self
         pcView2.dataSource = self
         pcView3.dataSource = self
         pcView4.dataSource = self
