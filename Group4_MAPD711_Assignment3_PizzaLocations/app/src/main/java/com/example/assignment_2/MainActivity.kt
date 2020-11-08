@@ -19,6 +19,12 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        val orderByCity = findViewById<Button>(R.id.ViewByCity)
+        orderByCity.setOnClickListener{
+            val viewCities = Intent(this@MainActivity, OurLocations::class.java)
+            startActivity(viewCities)
+        }
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {

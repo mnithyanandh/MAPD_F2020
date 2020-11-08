@@ -6,5 +6,18 @@
     <string name="veggie">Veggie</string>
     <string name="mediterranean">Mediterranean</string>
     <string name="cheddar_supreme">Cheddar Supreme</string>
+    <string name="title_activity_our_locations">Map</string>
+
+    <string-array name="Cities">
+        <item>Toronto</item>
+        <item>Ottawa</item>
+        <item>Brampton</item>
+        <item>Hamilton</item>
+        <item>London</item>
+        <item>Vaughan</item>
+        <item>Kitchener</item>
+    </string-array>
+
+    <string name="map_key">AIzaSyDQV43n9Xvlza9Og5I3vKK5-auaf5z60fg</string>
 
 </resources>

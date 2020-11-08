@@ -30,12 +30,11 @@
         android:background="#F4646F"
         android:src="@drawable/pizza_app_logo" />
 
-    <!--<Button
-        android:id="@+id/alert_Button"
-        android:layout_width="match_parent"
+    <Button
+        android:id="@+id/ViewByCity"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Alert_Button"
-        android:padding="10dp"
-        android:layout_margin="10dp"/>-->
+        android:text="Our locations"
+        android:padding="10dp" />
 
 </LinearLayout>
