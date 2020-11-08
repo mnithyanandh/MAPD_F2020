@@ -8,6 +8,7 @@
          location permissions for the "MyLocation" functionality.
     -->
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -31,7 +32,7 @@
 
         <activity
             android:name=".OurLocations"
-            android:label="@string/title_activity_our_locations"></activity>
+            android:label="@string/title_activity_our_locations"/>
         <activity android:name=".Order_Screen" />
         <activity android:name=".CheckoutScreen" />
         <activity android:name=".MainActivity">

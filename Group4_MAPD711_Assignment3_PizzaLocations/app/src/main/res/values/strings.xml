@@ -9,14 +9,23 @@
     <string name="title_activity_our_locations">Map</string>
 
     <string-array name="Cities">
+        <item>Select a city</item>
         <item>Toronto</item>
-        <item>Ottawa</item>
-        <item>Brampton</item>
-        <item>Hamilton</item>
-        <item>London</item>
+        <item>Scarborough</item>
+        <item>Mississauga</item>
+        <item>Oakville</item>
+        <item>North York</item>
         <item>Vaughan</item>
         <item>Kitchener</item>
     </string-array>
+
+    <string name="normal_map">Normal Map</string>
+    <string name="hybrid_map">Hybrid Map</string>
+    <string name="satellite_map">Satellite Map</string>
+    <string name="terrain_map">Terrain Map</string>
+    <string name="lat_long_snippet">Lat: %1$.5f, Long: %2$.5f</string>
+    <string name="dropped_pin">Dropped Pin</string>
+    <string name="poi">poi</string>
 
     <string name="map_key">AIzaSyDQV43n9Xvlza9Og5I3vKK5-auaf5z60fg</string>
 
