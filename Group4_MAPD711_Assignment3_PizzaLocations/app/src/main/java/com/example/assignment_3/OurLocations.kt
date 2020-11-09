@@ -2,9 +2,10 @@
 // Co-Author: Dhrumil Vipul Malaviya | ID: 301058391
 // Assignment: MAPD 711 - Assignment 3
 // Date: 11/9/2020
-package com.example.assignment_2
+package com.example.assignment_3
 
 import android.Manifest
+import android.content.Intent
 import android.content.pm.PackageManager
 import android.location.Address
 import android.location.Geocoder
@@ -22,7 +23,6 @@ import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.SupportMapFragment
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
-import java.io.IOException
 
 class OurLocations : AppCompatActivity(), OnMapReadyCallback, AdapterView.OnItemSelectedListener {
 
@@ -74,6 +74,13 @@ class OurLocations : AppCompatActivity(), OnMapReadyCallback, AdapterView.OnItem
             val latLng = LatLng(address.latitude, address.longitude)
             mMap!!.addMarker(MarkerOptions().position(latLng).title(Location))
             mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(latLng, 20f))
+        }
+
+        // Back to Home Button:
+        val Back = findViewById<Button>(R.id.Back)
+        Back.setOnClickListener{
+            val back_to_home = Intent(this@OurLocations, MainActivity::class.java)
+            startActivity(back_to_home)
         }
     }
 

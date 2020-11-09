@@ -2,20 +2,15 @@
 // Co-Author: Dhrumil Vipul Malaviya | ID: 301058391
 // Assignment: MAPD 711 - Assignment 3
 // Date: 11/9/2020
-package com.example.assignment_2
+package com.example.assignment_3
 
-import android.content.DialogInterface
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
-import android.view.View
-import android.widget.Toast
-import android.widget.TextView
 import android.widget.Button
 import androidx.appcompat.app.AlertDialog
-import kotlinx.android.synthetic.main.activity_main.*
 import java.util.*
 
 class MainActivity : AppCompatActivity() {

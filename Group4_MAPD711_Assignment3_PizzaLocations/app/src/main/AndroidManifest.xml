@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.assignment_2">
+    package="com.example.assignment_3">
 
     <!--
          The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
@@ -32,11 +32,11 @@
             android:value="@string/google_maps_key" />
 
         <activity
-            android:name=".OurLocations"
+            android:name="com.example.assignment_3.OurLocations"
             android:label="@string/title_activity_our_locations"/>
-        <activity android:name=".Order_Screen" />
-        <activity android:name=".CheckoutScreen" />
-        <activity android:name=".MainActivity">
+        <activity android:name="com.example.assignment_3.Order_Screen" />
+        <activity android:name="com.example.assignment_3.CheckoutScreen" />
+        <activity android:name="com.example.assignment_3.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

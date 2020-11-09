@@ -2,7 +2,7 @@
 // Co-Author: Dhrumil Vipul Malaviya | ID: 301058391
 // Assignment: MAPD 711 - Assignment 3
 // Date: 11/9/2020
-package com.example.assignment_2
+package com.example.assignment_3
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity

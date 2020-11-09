@@ -2,7 +2,7 @@
 // Co-Author: Dhrumil Vipul Malaviya | ID: 301058391
 // Assignment: MAPD 711 - Assignment 3
 // Date: 11/9/2020
-package com.example.assignment_2
+package com.example.assignment_3
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -11,9 +11,7 @@ import android.text.Editable
 import android.text.TextWatcher
 import android.widget.Button
 import android.widget.EditText
-import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_checkout_screen.*
-import org.w3c.dom.Text
 
 class CheckoutScreen : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
