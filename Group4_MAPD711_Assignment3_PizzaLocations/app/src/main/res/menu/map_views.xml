@@ -18,10 +18,10 @@
                 android:id="@+id/satellite_map"
                 android:title="@string/satellite_map"
                 app:showAsAction="never" />
-            <item
-                android:id="@+id/terrain_map"
-                android:title="@string/terrain_map"
-                app:showAsAction="never" />
+<!--            <item-->
+<!--                android:id="@+id/terrain_map"-->
+<!--                android:title="@string/terrain_map"-->
+<!--                app:showAsAction="never" />-->
         </menu>
     </item>
 </menu>

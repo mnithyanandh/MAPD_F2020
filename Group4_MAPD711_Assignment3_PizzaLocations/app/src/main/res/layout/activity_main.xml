@@ -34,7 +34,7 @@
         android:id="@+id/ViewByCity"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Our locations"
+        android:text="Nearby locations"
         android:padding="10dp" />
 
 </LinearLayout>
