@@ -558,7 +558,7 @@
                                 <rect key="frame" x="30" y="761" width="107" height="40"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="20"/>
                                 <state key="normal" title="+Add more">
-                                    <color key="titleColor" red="0.0" green="0.66806000405939092" blue="0.065278915288234929" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleColor" red="0.19552019239999999" green="0.98071998360000001" blue="0.64302051069999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="AddMoreTasks:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EmI-9M-jkz"/>
@@ -569,7 +569,7 @@
                                 <rect key="frame" x="305" y="761" width="62" height="40"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="20"/>
                                 <state key="normal" title="Delete">
-                                    <color key="titleColor" systemColor="systemPinkColor"/>
+                                    <color key="titleColor" red="0.98340529200000004" green="0.36518269780000001" blue="0.25722181799999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="DeleteTasks:" destination="BYZ-38-t0r" eventType="touchUpInside" id="net-r8-Clx"/>
@@ -577,7 +577,7 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" red="0.58865147829999998" green="0.71719145770000003" blue="0.98199373479999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.98150140050000001" green="0.61623126269999995" blue="0.092988230290000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="cUY-Zd-0PE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="2NE-jg-CBd"/>
                             <constraint firstItem="Tsx-XX-InT" firstAttribute="top" secondItem="L3M-wP-6kE" secondAttribute="bottom" constant="8" symbolic="YES" id="2fj-bE-uJt"/>
@@ -671,12 +671,12 @@
                                 <rect key="frame" x="107" y="707" width="200" height="40"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="20"/>
                                 <state key="normal" title="Save Changes">
-                                    <color key="titleColor" red="0.84834549848020302" green="0.49868844284855479" blue="0.27827430743847587" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleColor" red="0.20514512060000001" green="0.044255703690000002" blue="0.97955340150000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ged-ir-SCW"/>
-                        <color key="backgroundColor" red="0.59248763319999997" green="0.7171747088" blue="0.99008601900000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.98150140050000001" green="0.61623126269999995" blue="0.092988230290000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="ged-ir-SCW" firstAttribute="trailing" secondItem="80i-aZ-0Y2" secondAttribute="trailing" constant="107" id="1n1-oo-lek"/>
                             <constraint firstItem="cmx-bo-zlL" firstAttribute="top" secondItem="80i-aZ-0Y2" secondAttribute="bottom" constant="39" id="3wA-fn-sWb"/>
@@ -742,9 +742,6 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemPinkColor">
-            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

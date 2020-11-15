@@ -1,8 +1,9 @@
+//  File name: SceneDelegate.swift
 //
-//  SceneDelegate.swift
-//  ToDo_List_App
-//
-//  Created by Nithyanandh Mahalingam on 11/14/20.
+//  Author's name: Created by Nithyanandh Mahalingam on 11/14/20.
+//  StudentID: 301162314
+//  Date: 11/14/20
+//  App description: ToDo_List_App
 //
 
 import UIKit
