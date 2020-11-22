@@ -1,2 +1,0 @@
-include ':app'
-rootProject.name = "Group4_MAPD711_Assignment4_PizzaDB"
