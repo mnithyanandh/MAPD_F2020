@@ -10,7 +10,6 @@ This is the master repo for the MAPD F2020 program.
 - MAPD 715
 
 # Latest operational branches:
-- MAPD 711 Samsung Android Development: https://github.com/mnithyanandh/MAPD_F2020/tree/MAPD_711_Samsung_Android_Development
 - MAPD 714 iOS Development: https://github.com/mnithyanandh/MAPD_F2020/tree/MAPD_714_iOS_Development
 - MAPD 712 Web Technologies: https://github.com/mnithyanandh/MAPD_F2020/tree/MAPD_712_Web_Technologies
 - MAPD 713 Enterprise Technologies: https://github.com/mnithyanandh/MAPD_F2020/tree/MAPD_713_Enterprise_Technologies
