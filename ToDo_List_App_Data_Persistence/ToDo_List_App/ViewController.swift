@@ -15,13 +15,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     let db = Database.database().reference().child("Tasks")
     
     // MARK: - TaskHandler functions to reference TaskDetailsViewController
-    func Add_task(th_name: String, th_date: String, th_iscomplete: Bool, th_descp: String, th_ddate: Bool, th_db_key: String) {
+    func Add_task(th_name: String, th_date: String, th_iscomplete: Bool, th_descp: String, th_ddate: Bool, th_db_key: String, index: Int) {
         let th_db_key = db.childByAutoId().key
-        let dbobject :[String: Any] =  ["Name":th_name,"Date":th_date,"Description":th_descp,"isComplete":th_iscomplete,"hasDueDate":th_ddate,"id_key":th_db_key!]
+        let dbobject :[String: Any] =  ["Name":th_name,"Date":th_date,"Description":th_descp,"isComplete":th_iscomplete,"hasDueDate":th_ddate,"id_key":th_db_key!, "index": index]
         db.child(th_db_key!).setValue(dbobject)
     }
     
-    func Edit_task(th_name: String, th_date: String, th_iscomplete: Bool, th_descp: String, th_ddate: Bool, th_db_key: String) {
+    func Edit_task(th_name: String, th_date: String, th_iscomplete: Bool, th_descp: String, th_ddate: Bool, th_db_key: String, index: Int) {
         let dbobject :[String: Any] =  ["Name":th_name,"Date":th_date,"Description":th_descp,"isComplete":th_iscomplete,"hasDueDate":th_ddate,"id_key":th_db_key]
         db.child(th_db_key).setValue(dbobject)
         UITableViewOutlet.reloadData()
@@ -83,9 +83,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                     let user_task_description = user_task_object?["Description"]
                     let user_task_due_date = user_task_object?["hasDueDate"]
                     let user_task_key = user_task_object?["id_key"]
+                    let user_task_index = user_task_object?["index"]
                     
                     // Create child - Task under entity with above variables in the table:
-                    let utasks = Cell(Cname: user_task_name as! String, Cdate: user_task_date as! String, Ccomplete: (user_task_isComplete?.boolValue ?? false), Cdescp: user_task_description as! String, Cddate: (user_task_due_date?.boolValue ?? true), Cdb_key: user_task_key as! String)
+                    let utasks = Cell(Cname: user_task_name as! String, Cdate: user_task_date as! String, Ccomplete: (user_task_isComplete?.boolValue ?? false), Cdescp: user_task_description as! String, Cddate: (user_task_due_date?.boolValue ?? true), Cdb_key: user_task_key as! String, index: user_task_index as! Int)
                     
                     // Add the info created as a task to the task list to the entity table in the DB
                     self.user_tasks.append(utasks)
@@ -107,26 +108,37 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                                           Ccomplete: user_tasks[sender.tag].Ccomplete,
                                           Cdescp: user_tasks[sender.tag].Cdescp,
                                           Cddate: user_tasks[sender.tag].Cddate,
-                                          Cdb_key: user_tasks[sender.tag].Cdb_key
+                                          Cdb_key: user_tasks[sender.tag].Cdb_key,
+                                          index: sender.tag
                              ),
                      taction: Handler.CEdit))
     }
     
     // MARK: - Function for Primary Segue Transition:
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?){
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    {
         if segue.identifier == "AddMoreSegue" {
-            let next_screen = segue.destination as! TaskDetailsViewController
-            if let next_screen_data = sender as? (UTask: Cell, UAction: Handler)
-            {
-                next_screen.tname = next_screen_data.UTask.Cname
-                next_screen.tdate = next_screen_data.UTask.Cdate
-                next_screen.tdescription = next_screen_data.UTask.Cdescp
-                next_screen.getduedate=next_screen_data.UTask.Cddate
-                next_screen.getiscomplete=next_screen_data.UTask.Ccomplete
-                next_screen.tdbkey = next_screen_data.UTask.Cdb_key
-                next_screen.taction = next_screen_data.UAction
-            }
-            next_screen.tdelegate=self
-        }
+                   let destination = segue.destination as! TaskDetailsViewController
+                   
+                   //passing the data to "AddTaskViewController" once user enters it
+                   
+                   if let data = sender as? (task: Cell, taskAction: Handler)
+                   {    //using tuples to pass data from class and enum
+                       
+                       destination.tname = data.task.Cname
+                       destination.tdate = data.task.Cdate
+                       destination.tdescription = data.task.Cdescp
+                       destination.getiscomplete=data.task.Ccomplete
+                       destination.getduedate=data.task.Cddate
+                       destination.index=data.task.index
+                       destination.taction = data.taskAction
+                    destination.tdbkey=data.task.Cdb_key
+                   }
+                   else{
+                   print("Error")
+                   }
+                   
+                   destination.tdelegate=self
+               }
     }
 }

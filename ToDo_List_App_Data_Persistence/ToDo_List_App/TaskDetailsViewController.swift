@@ -20,6 +20,7 @@ class TaskDetailsViewController: UIViewController, UITextFieldDelegate, UITextVi
     var tduedate: Bool = true
     var getduedate: Bool = true
     var tdbkey = ""
+    var index = 0
     var tdelegate: TaskHandler?
     var taction: Handler = .CAdd
     
@@ -38,7 +39,7 @@ class TaskDetailsViewController: UIViewController, UITextFieldDelegate, UITextVi
         case .CAdd:
             if TaskNameOutlet.text != ""
             {
-                tdelegate?.Add_task(th_name: TaskNameOutlet.text!, th_date: tdate, th_iscomplete: tiscomplete, th_descp: TaskDescriptionOutlet.text!, th_ddate: tduedate, th_db_key: "")
+                tdelegate?.Add_task(th_name: TaskNameOutlet.text!, th_date: tdate, th_iscomplete: tiscomplete, th_descp: TaskDescriptionOutlet.text!, th_ddate: tduedate, th_db_key: "", index: index)
             }
                 
         case .CEdit:
@@ -46,7 +47,7 @@ class TaskDetailsViewController: UIViewController, UITextFieldDelegate, UITextVi
             Alert.addAction(UIAlertAction(title: "Update", style: .default, handler: { action in
                 if self.TaskNameOutlet.text != ""
                 {
-                    self.tdelegate?.Edit_task(th_name: self.TaskNameOutlet.text!, th_date: self.tdate, th_iscomplete: self.tiscomplete, th_descp: self.TaskDescriptionOutlet.text!, th_ddate: self.tduedate, th_db_key: self.tdbkey)
+                    self.tdelegate?.Edit_task(th_name: self.TaskNameOutlet.text!, th_date: self.tdate, th_iscomplete: self.tiscomplete, th_descp: self.TaskDescriptionOutlet.text!, th_ddate: self.tduedate, th_db_key: self.tdbkey, index: self.index)
                     self.navigationController?.popViewController(animated: true)
                 }
                 
@@ -176,7 +177,7 @@ class TaskDetailsViewController: UIViewController, UITextFieldDelegate, UITextVi
 
 // MARK: - Declare Protocol for Data transfer
 protocol TaskHandler {
-    func Add_task (th_name: String, th_date: String, th_iscomplete: Bool, th_descp: String, th_ddate: Bool, th_db_key: String)
-    func Edit_task(th_name: String, th_date: String, th_iscomplete: Bool, th_descp: String, th_ddate: Bool, th_db_key: String)
+    func Add_task (th_name: String, th_date: String, th_iscomplete: Bool, th_descp: String, th_ddate: Bool, th_db_key: String, index: Int)
+    func Edit_task(th_name: String, th_date: String, th_iscomplete: Bool, th_descp: String, th_ddate: Bool, th_db_key: String, index: Int)
     func Del_task(th_db_key: String)
 }
