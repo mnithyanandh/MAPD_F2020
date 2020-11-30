@@ -70,6 +70,7 @@ class TaskDetailsViewController: UIViewController, UITextFieldDelegate, UITextVi
         }))
         Alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: {action in ()}))
                 present(Alert,animated: true)
+        self.navigationController?.popViewController(animated: true)
     }
     
     // Delete Button:
@@ -81,6 +82,7 @@ class TaskDetailsViewController: UIViewController, UITextFieldDelegate, UITextVi
         } ))
         Alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: {action in ()}))
                 present(Alert,animated: true)
+        self.navigationController?.popViewController(animated: true)
     }
     
     // MARK: - Firebase DB Reference
@@ -106,7 +108,7 @@ class TaskDetailsViewController: UIViewController, UITextFieldDelegate, UITextVi
         switch taction{
             case .CAdd:
                 TaskSaveOutlet.setImage(UIImage(systemName: "plus"), for:.normal )
-                TaskSaveOutlet.setTitle("Add Task", for: .normal)
+                TaskSaveOutlet.setTitle("Add", for: .normal)
             case .CEdit:
                 TaskSaveOutlet.setImage(UIImage(systemName: "rectangle.and.pencil.and.ellipsis"), for:.normal )
                 TaskSaveOutlet.setTitle("Save", for: .normal)

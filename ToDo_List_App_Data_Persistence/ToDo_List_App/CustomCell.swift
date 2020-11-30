@@ -6,9 +6,8 @@
 //  App description: ToDo_List_App
 //
 
-import Foundation
-
 import UIKit
+
 class CustomCell: UITableViewCell {
 
     @IBOutlet weak var TaskNameLbl: UILabel!

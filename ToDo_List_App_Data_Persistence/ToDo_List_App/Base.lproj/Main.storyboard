@@ -76,6 +76,10 @@
                                     </tableViewCell>
                                 </prototypes>
                                 <sections/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="84d-Ie-dSs"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="pCu-LD-WgQ"/>
+                                </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cUY-Zd-0PE">
                                 <rect key="frame" x="139" y="785" width="136" height="40"/>
@@ -85,7 +89,7 @@
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
                                 </state>
                                 <connections>
-                                    <segue destination="4oF-XR-Agp" kind="showDetail" identifier="AddMoreSegue" id="MaI-Hp-zlN"/>
+                                    <segue destination="4oF-XR-Agp" kind="show" identifier="AddMoreSegue" id="MaI-Hp-zlN"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -189,7 +193,6 @@
                                     <color key="titleColor" red="0.81947494010456856" green="0.48171727505629774" blue="0.26880418630064412" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="DeleteTasks:" destination="BYZ-38-t0r" eventType="touchUpInside" id="net-r8-Clx"/>
                                     <action selector="TaskDeleteButton:" destination="4oF-XR-Agp" eventType="touchUpInside" id="Nbx-tY-iqY"/>
                                 </connections>
                             </button>
@@ -203,7 +206,7 @@
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
                                 </state>
                                 <connections>
-                                    <action selector="TaskSaveButton:" destination="4oF-XR-Agp" eventType="touchUpInside" id="ZmX-TC-c2d"/>
+                                    <action selector="TaskSaveButton:" destination="4oF-XR-Agp" eventType="touchUpInside" id="zw8-hn-ZIK"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="djP-KW-6uq">
@@ -266,15 +269,12 @@
                     <navigationItem key="navigationItem" title="To Do List Name Details" id="EBM-J5-dMJ"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="SaveButton" destination="cmx-bo-zlL" id="yhk-JQ-TUb"/>
-                        <outlet property="TaskCancelButton" destination="djP-KW-6uq" id="hL3-ht-bG3"/>
                         <outlet property="TaskDateOutlet" destination="RH1-2h-spt" id="nYS-6E-Rnl"/>
-                        <outlet property="TaskDeleteButton" destination="Tsx-XX-InT" id="N9g-Yw-wWi"/>
                         <outlet property="TaskDescriptionOutlet" destination="BZI-93-H0s" id="kLQ-SM-H91"/>
                         <outlet property="TaskDueDateOutlet" destination="5om-u7-X5v" id="jA5-2P-SnH"/>
                         <outlet property="TaskIsCompletedOutlet" destination="80i-aZ-0Y2" id="OG0-Ug-Chx"/>
                         <outlet property="TaskNameOutlet" destination="R8T-ya-O6D" id="ymE-GN-Pvh"/>
-                        <outlet property="TaskSaveOutlet" destination="cmx-bo-zlL" id="mYy-tT-jgl"/>
+                        <outlet property="TaskSaveOutlet" destination="cmx-bo-zlL" id="gEI-hB-pmN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fsV-g1-yvQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

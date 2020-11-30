@@ -17,12 +17,12 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     // MARK: - TaskHandler functions to reference TaskDetailsViewController
     func Add_task(th_name: String, th_date: String, th_iscomplete: Bool, th_descp: String, th_ddate: Bool, th_db_key: String) {
         let th_db_key = db.childByAutoId().key
-        let dbobject :[String: Any] =  ["name":th_name,"due-date":th_date,"description":th_descp,"checked":th_iscomplete,"due-date-specified":th_ddate,"id":th_db_key!]
+        let dbobject :[String: Any] =  ["Name":th_name,"Date":th_date,"Description":th_descp,"isComplete":th_iscomplete,"hasDueDate":th_ddate,"id_key":th_db_key!]
         db.child(th_db_key!).setValue(dbobject)
     }
     
     func Edit_task(th_name: String, th_date: String, th_iscomplete: Bool, th_descp: String, th_ddate: Bool, th_db_key: String) {
-        let dbobject :[String: Any] =  ["name":th_name,"due-date":th_date,"description":th_descp,"checked":th_iscomplete,"due-date-specified":th_ddate,"id":th_db_key]
+        let dbobject :[String: Any] =  ["Name":th_name,"Date":th_date,"Description":th_descp,"isComplete":th_iscomplete,"hasDueDate":th_ddate,"id_key":th_db_key]
         db.child(th_db_key).setValue(dbobject)
         UITableViewOutlet.reloadData()
     }
@@ -77,12 +77,12 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                     let user_task_object = user_tasks.value as? [String: AnyObject]
                     
                     // Assign instances of task details under selected entity:
-                    let user_task_name = user_task_object?["Name:"]
-                    let user_task_date = user_task_object?["Date:"]
-                    let user_task_isComplete = user_task_object?["isComplete:"]
-                    let user_task_description = user_task_object?["Description:"]
-                    let user_task_due_date = user_task_object?["hasDueDate:"]
-                    let user_task_key = user_task_object?["id_key:"]
+                    let user_task_name = user_task_object?["Name"]
+                    let user_task_date = user_task_object?["Date"]
+                    let user_task_isComplete = user_task_object?["isComplete"]
+                    let user_task_description = user_task_object?["Description"]
+                    let user_task_due_date = user_task_object?["hasDueDate"]
+                    let user_task_key = user_task_object?["id_key"]
                     
                     // Create child - Task under entity with above variables in the table:
                     let utasks = Cell(Cname: user_task_name as! String, Cdate: user_task_date as! String, Ccomplete: (user_task_isComplete?.boolValue ?? false), Cdescp: user_task_description as! String, Cddate: (user_task_due_date?.boolValue ?? true), Cdb_key: user_task_key as! String)
