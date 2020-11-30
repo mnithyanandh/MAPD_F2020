@@ -1,0 +1,753 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_7" orientation="landscape" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Calculator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="926" height="428"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="093-Cr-oaP">
+                                <rect key="frame" x="283" y="88" width="360" height="282"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="9B7-cp-80S">
+                                        <rect key="frame" x="2" y="0.0" width="356" height="50"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OKi-EI-CZF" customClass="CircleButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                <color key="backgroundColor" red="0.34911519289999998" green="0.352937907" blue="0.36926931140000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="Las-zC-aio"/>
+                                                    <constraint firstAttribute="width" constant="50" id="VCt-k1-i8z"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="28"/>
+                                                <state key="normal" title="√x">
+                                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="circleButton" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="squareRootPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CNp-8f-Nqv"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3k3-89-d8C" customClass="CircleButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="69" y="0.0" width="80" height="50"/>
+                                                <color key="backgroundColor" red="1" green="0.38149523457556556" blue="0.41526823472424912" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="WpO-Gu-bCD"/>
+                                                    <constraint firstAttribute="width" constant="80" id="gAi-8f-1wT"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="25"/>
+                                                <state key="normal" title="AC/C">
+                                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="circleButton" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="clearPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="J58-Kk-MBA"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Ej-6L-kZv" customClass="CircleButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="168" y="0.0" width="50" height="50"/>
+                                                <color key="backgroundColor" red="0.993186295" green="0.62408798929999998" blue="0.035885758699999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="Aan-8R-DHv"/>
+                                                    <constraint firstAttribute="width" constant="50" id="VNz-tO-0XB"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="30"/>
+                                                <state key="normal" title="±">
+                                                    <color key="titleColor" red="0.2195958197" green="0.21961641309999999" blue="0.2236720324" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="circleButton" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="signedPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Aag-iJ-LWk"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="txz-fC-ueC" customClass="CircleButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="237" y="0.0" width="50" height="50"/>
+                                                <color key="backgroundColor" red="0.993186295" green="0.62408798929999998" blue="0.035885758699999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="A9S-0u-ZE2"/>
+                                                    <constraint firstAttribute="width" constant="50" id="E3w-sA-C57"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="30"/>
+                                                <state key="normal" title="%">
+                                                    <color key="titleColor" red="0.2195958197" green="0.21961641309999999" blue="0.2236720324" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="circleButton" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="percentagePress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3IY-eU-nGd"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tZ7-rk-kUB" customClass="CircleButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="306" y="0.0" width="50" height="50"/>
+                                                <color key="backgroundColor" red="0.993186295" green="0.62408798929999998" blue="0.035885758699999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="CcN-vh-DBb"/>
+                                                    <constraint firstAttribute="width" constant="50" id="JB6-kP-r5o"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="30"/>
+                                                <state key="normal" title="➗">
+                                                    <color key="titleColor" red="0.1294069588" green="0.1294156015" blue="0.13348600269999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="circleButton" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="dividePress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sx0-hs-e8C"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="Ix0-es-SdP"/>
+                                            <constraint firstAttribute="width" constant="356" id="bhD-Cf-HBQ"/>
+                                        </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="Ix0-es-SdP"/>
+                                                <exclude reference="bhD-Cf-HBQ"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=compact-widthClass=regular" spacing="19">
+                                            <mask key="constraints">
+                                                <include reference="Ix0-es-SdP"/>
+                                                <include reference="bhD-Cf-HBQ"/>
+                                            </mask>
+                                        </variation>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="HNa-DG-7LE">
+                                        <rect key="frame" x="21" y="58" width="318" height="50"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QGb-fz-gAd" customClass="CircleButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                <color key="backgroundColor" red="0.34911519289999998" green="0.352937907" blue="0.36926931140000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="LPm-8R-we7"/>
+                                                    <constraint firstAttribute="width" constant="50" id="TBO-gr-6xa"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="28"/>
+                                                <state key="normal" title="x²">
+                                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="circleButton" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="squarePress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="J3o-V5-N4G"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uOW-Ok-QoG" customClass="CircleButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="67" y="0.0" width="50" height="50"/>
+                                                <color key="backgroundColor" red="0.34911519289999998" green="0.352937907" blue="0.36926931140000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="lWn-DU-LFp"/>
+                                                    <constraint firstAttribute="width" constant="50" id="oen-8E-CvT"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="30"/>
+                                                <state key="normal" title="7">
+                                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="circleButton" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="numberPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VEb-hB-ZF2"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GdJ-3h-qmJ" customClass="CircleButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="134" y="0.0" width="50" height="50"/>
+                                                <color key="backgroundColor" red="0.34911519289999998" green="0.352937907" blue="0.36926931140000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="MvJ-2n-lWC"/>
+                                                    <constraint firstAttribute="width" constant="50" id="hRA-wc-TK3"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="30"/>
+                                                <state key="normal" title="8">
+                                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="circleButton" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="numberPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Iy7-V0-c4s"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7nI-St-1KI" customClass="CircleButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="201" y="0.0" width="50" height="50"/>
+                                                <color key="backgroundColor" red="0.34911519289999998" green="0.352937907" blue="0.36926931140000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="50" id="3VS-Jg-yHP"/>
+                                                    <constraint firstAttribute="height" constant="50" id="cUL-7Q-yix"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="30"/>
+                                                <state key="normal" title="9">
+                                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="circleButton" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="numberPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="w9I-zI-tm2"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Iu-nF-st6" customClass="CircleButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="268" y="0.0" width="50" height="50"/>
+                                                <color key="backgroundColor" red="0.993186295" green="0.62408798929999998" blue="0.035885758699999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="50" id="L37-Pp-I3K"/>
+                                                    <constraint firstAttribute="height" constant="50" id="qWJ-oH-cHg"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="30"/>
+                                                <state key="normal" title="✖️">
+                                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="circleButton" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="multiplyPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aVo-WA-JDo"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="6HY-B2-Wio"/>
+                                            <constraint firstAttribute="width" constant="318" id="AvJ-UH-GlW"/>
+                                        </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="6HY-B2-Wio"/>
+                                                <exclude reference="AvJ-UH-GlW"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=compact-widthClass=regular" spacing="17">
+                                            <mask key="constraints">
+                                                <include reference="6HY-B2-Wio"/>
+                                                <include reference="AvJ-UH-GlW"/>
+                                            </mask>
+                                        </variation>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="Oae-6L-2g0">
+                                        <rect key="frame" x="21" y="116" width="318" height="50"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jCX-3g-6G2" customClass="CircleButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                <color key="backgroundColor" red="0.34911519289999998" green="0.352937907" blue="0.36926931140000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="m93-Eq-esw"/>
+                                                    <constraint firstAttribute="width" constant="50" id="vol-Tr-IYU"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="25"/>
+                                                <state key="normal" title="cos">
+                                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="circleButton" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="cosPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zoS-ck-lCl"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4O4-H7-cST" customClass="CircleButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="67" y="0.0" width="50" height="50"/>
+                                                <color key="backgroundColor" red="0.34911519289999998" green="0.352937907" blue="0.36926931140000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="dvo-A1-JWE"/>
+                                                    <constraint firstAttribute="width" constant="50" id="qnM-5N-TnH"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="30"/>
+                                                <state key="normal" title="4">
+                                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="circleButton" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="numberPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YF8-tH-iPb"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gie-0I-8hu" customClass="CircleButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="134" y="0.0" width="50" height="50"/>
+                                                <color key="backgroundColor" red="0.34911519289999998" green="0.352937907" blue="0.36926931140000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="50" id="Rmx-4C-Dhc"/>
+                                                    <constraint firstAttribute="height" constant="50" id="qNm-iK-xHw"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="30"/>
+                                                <state key="normal" title="5">
+                                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="circleButton" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="numberPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TxL-Ay-mZb"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1rq-fF-uR0" customClass="CircleButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="201" y="0.0" width="50" height="50"/>
+                                                <color key="backgroundColor" red="0.34911519289999998" green="0.352937907" blue="0.36926931140000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="0WB-3B-Xgy"/>
+                                                    <constraint firstAttribute="width" constant="50" id="FFG-PG-Jra"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="30"/>
+                                                <state key="normal" title="6">
+                                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="circleButton" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="numberPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="V0y-kr-uN6"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3hJ-Uq-KTH" customClass="CircleButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="268" y="0.0" width="50" height="50"/>
+                                                <color key="backgroundColor" red="0.993186295" green="0.62408798929999998" blue="0.035885758699999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="hR6-cm-Q4g"/>
+                                                    <constraint firstAttribute="width" constant="50" id="s3B-8q-Xj5"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="30"/>
+                                                <state key="normal" title="➖">
+                                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="circleButton" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="subtractPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Vxq-9O-jgH"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="Xc0-GP-pw8"/>
+                                            <constraint firstAttribute="width" constant="318" id="wOG-Vn-LCr"/>
+                                        </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="Xc0-GP-pw8"/>
+                                                <exclude reference="wOG-Vn-LCr"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=compact-widthClass=regular" spacing="17">
+                                            <mask key="constraints">
+                                                <include reference="Xc0-GP-pw8"/>
+                                                <include reference="wOG-Vn-LCr"/>
+                                            </mask>
+                                        </variation>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="TXS-UO-Nqr">
+                                        <rect key="frame" x="21" y="174" width="318" height="50"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9GW-Ui-1WM" customClass="CircleButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                <color key="backgroundColor" red="0.34911519289999998" green="0.352937907" blue="0.36926931140000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="50" id="6Ze-2f-MGw"/>
+                                                    <constraint firstAttribute="height" constant="50" id="9HP-4K-RHF"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="25"/>
+                                                <state key="normal" title="sin">
+                                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="circleButton" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="sinPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="u1F-wS-lpk"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BQD-EX-3fj" customClass="CircleButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="67" y="0.0" width="50" height="50"/>
+                                                <color key="backgroundColor" red="0.34911519289999998" green="0.352937907" blue="0.36926931140000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="50" id="OnP-yX-Gev"/>
+                                                    <constraint firstAttribute="height" constant="50" id="uY7-s1-9y2"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="30"/>
+                                                <state key="normal" title="1">
+                                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="circleButton" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="numberPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Vmx-RL-5D8"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sH8-L2-B9M" customClass="CircleButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="134" y="0.0" width="50" height="50"/>
+                                                <color key="backgroundColor" red="0.34911519289999998" green="0.352937907" blue="0.36926931140000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="50" id="J1C-cL-m1O"/>
+                                                    <constraint firstAttribute="height" constant="50" id="Jo0-dI-008"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="30"/>
+                                                <state key="normal" title="2">
+                                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="circleButton" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="numberPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9U2-4b-fJQ"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jee-AG-kiR" customClass="CircleButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="201" y="0.0" width="50" height="50"/>
+                                                <color key="backgroundColor" red="0.34911519289999998" green="0.352937907" blue="0.36926931140000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="50" id="nXj-1O-Kat"/>
+                                                    <constraint firstAttribute="height" constant="50" id="uJM-xb-qrb"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="30"/>
+                                                <state key="normal" title="3">
+                                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="circleButton" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="numberPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uff-IH-dAp"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4hJ-Y3-PqM" customClass="CircleButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="268" y="0.0" width="50" height="50"/>
+                                                <color key="backgroundColor" red="0.993186295" green="0.62408798929999998" blue="0.035885758699999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="50" id="K7G-JG-nxO"/>
+                                                    <constraint firstAttribute="height" constant="50" id="RSd-OM-eeb"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="30"/>
+                                                <state key="normal" title="➕">
+                                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="circleButton" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="addPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9ox-Ri-qhe"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="4lA-oF-Vau"/>
+                                            <constraint firstAttribute="width" constant="318" id="XH3-0S-Oy6"/>
+                                        </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="4lA-oF-Vau"/>
+                                                <exclude reference="XH3-0S-Oy6"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=compact-widthClass=regular" spacing="17">
+                                            <mask key="constraints">
+                                                <include reference="4lA-oF-Vau"/>
+                                                <include reference="XH3-0S-Oy6"/>
+                                            </mask>
+                                        </variation>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="Qrn-SN-H40">
+                                        <rect key="frame" x="2" y="232" width="356" height="50"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eCa-15-J5h" customClass="CircleButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                <color key="backgroundColor" red="0.34911519289999998" green="0.352937907" blue="0.36926931140000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="ahK-QY-0pZ"/>
+                                                    <constraint firstAttribute="width" constant="50" id="kTj-sX-zST"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="25"/>
+                                                <state key="normal" title="tan">
+                                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="circleButton" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="tanPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="L91-Uf-iXA"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4dB-bk-VXe" customClass="CircleButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="72" y="0.0" width="140" height="50"/>
+                                                <color key="backgroundColor" red="0.34911519289999998" green="0.352937907" blue="0.36926931140000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="130" id="Szb-kb-NGA">
+                                                        <variation key="heightClass=compact-widthClass=regular" constant="140"/>
+                                                    </constraint>
+                                                    <constraint firstAttribute="height" constant="50" id="xSl-4T-Q4c"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="30"/>
+                                                <state key="normal" title="0">
+                                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="circleButton" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="numberPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Vcm-FX-J93"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sp6-9H-7QK" customClass="CircleButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="234" y="0.0" width="50" height="50"/>
+                                                <color key="backgroundColor" red="0.34911519289999998" green="0.352937907" blue="0.36926931140000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="7cD-Kk-JEN"/>
+                                                    <constraint firstAttribute="width" constant="50" id="Tvy-l3-oZ5"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="30"/>
+                                                <state key="normal" title=".">
+                                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="circleButton" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="decimalPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kdl-DP-2Nw"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cqB-Ga-4bS" customClass="CircleButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="306" y="0.0" width="50" height="50"/>
+                                                <color key="backgroundColor" red="0.993186295" green="0.62408798929999998" blue="0.035885758699999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="50" id="djB-Y8-80d"/>
+                                                    <constraint firstAttribute="height" constant="50" id="wBu-5j-cjt"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="30"/>
+                                                <state key="normal" title="=">
+                                                    <color key="titleColor" red="0.2195958197" green="0.21961641309999999" blue="0.2236720324" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="circleButton" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="equalsPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XhJ-KM-3fD"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="356" id="fIa-db-y92"/>
+                                            <constraint firstAttribute="height" constant="50" id="pho-aQ-tyI"/>
+                                        </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="fIa-db-y92"/>
+                                                <exclude reference="pho-aQ-tyI"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=compact-widthClass=regular" spacing="22">
+                                            <mask key="constraints">
+                                                <include reference="fIa-db-y92"/>
+                                                <include reference="pho-aQ-tyI"/>
+                                            </mask>
+                                        </variation>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="285" id="7fW-LP-5U1"/>
+                                    <constraint firstAttribute="width" constant="360" id="G2e-5C-oBx"/>
+                                    <constraint firstAttribute="width" constant="350" id="fX6-5j-LPd"/>
+                                    <constraint firstAttribute="height" constant="450" id="ogZ-zo-QPM"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="7fW-LP-5U1"/>
+                                        <exclude reference="G2e-5C-oBx"/>
+                                        <exclude reference="fX6-5j-LPd"/>
+                                        <exclude reference="ogZ-zo-QPM"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact-widthClass=regular" alignment="center" axis="vertical" spacing="8">
+                                    <mask key="constraints">
+                                        <include reference="7fW-LP-5U1"/>
+                                        <include reference="G2e-5C-oBx"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="fX6-5j-LPd"/>
+                                        <include reference="ogZ-zo-QPM"/>
+                                    </mask>
+                                </variation>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Result" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="POT-44-IGt">
+                                <rect key="frame" x="285" y="20" width="356" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="356" id="IsS-Gn-K2v"/>
+                                    <constraint firstAttribute="height" constant="225" id="M0d-XU-ObI"/>
+                                    <constraint firstAttribute="height" constant="60" id="Qj0-8r-1lv"/>
+                                    <constraint firstAttribute="width" constant="374" id="ydd-56-jmy"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="25"/>
+                                <color key="textColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="IsS-Gn-K2v"/>
+                                        <exclude reference="M0d-XU-ObI"/>
+                                        <exclude reference="Qj0-8r-1lv"/>
+                                        <exclude reference="ydd-56-jmy"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact-widthClass=regular">
+                                    <mask key="constraints">
+                                        <include reference="IsS-Gn-K2v"/>
+                                        <include reference="Qj0-8r-1lv"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="M0d-XU-ObI"/>
+                                        <include reference="ydd-56-jmy"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.1294069588" green="0.1294156015" blue="0.13348600269999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="093-Cr-oaP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9zr-Dx-W9L"/>
+                            <constraint firstItem="POT-44-IGt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="FaG-lR-LsZ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="093-Cr-oaP" secondAttribute="bottom" constant="20" id="Mub-S3-eA5"/>
+                            <constraint firstItem="POT-44-IGt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Xlt-kV-XHY"/>
+                            <constraint firstItem="093-Cr-oaP" firstAttribute="top" secondItem="POT-44-IGt" secondAttribute="bottom" constant="8" id="YcT-YV-QQ4"/>
+                            <constraint firstItem="093-Cr-oaP" firstAttribute="top" secondItem="POT-44-IGt" secondAttribute="bottom" constant="75" id="bOi-wq-iqF"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="093-Cr-oaP" secondAttribute="bottom" constant="25" id="hkY-6h-Ysi"/>
+                            <constraint firstItem="POT-44-IGt" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="jno-GD-YaM"/>
+                            <constraint firstItem="093-Cr-oaP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zoQ-oJ-FRl"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Mub-S3-eA5"/>
+                                <exclude reference="hkY-6h-Ysi"/>
+                                <exclude reference="FaG-lR-LsZ"/>
+                                <exclude reference="Xlt-kV-XHY"/>
+                                <exclude reference="jno-GD-YaM"/>
+                                <exclude reference="9zr-Dx-W9L"/>
+                                <exclude reference="YcT-YV-QQ4"/>
+                                <exclude reference="bOi-wq-iqF"/>
+                                <exclude reference="zoQ-oJ-FRl"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact-widthClass=regular">
+                            <mask key="constraints">
+                                <include reference="Mub-S3-eA5"/>
+                                <include reference="Xlt-kV-XHY"/>
+                                <include reference="jno-GD-YaM"/>
+                                <include reference="9zr-Dx-W9L"/>
+                                <include reference="YcT-YV-QQ4"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="hkY-6h-Ysi"/>
+                                <include reference="FaG-lR-LsZ"/>
+                                <include reference="bOi-wq-iqF"/>
+                                <include reference="zoQ-oJ-FRl"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="cosOutlet" destination="jCX-3g-6G2" id="zEn-c3-ujY"/>
+                        <outlet property="resultLabel" destination="POT-44-IGt" id="QQE-Na-r0W"/>
+                        <outlet property="sinOutlet" destination="9GW-Ui-1WM" id="dQ5-Ah-2u6"/>
+                        <outlet property="squareOutlet" destination="QGb-fz-gAd" id="lPG-aS-oqK"/>
+                        <outlet property="squareRootOutlet" destination="OKi-EI-CZF" id="AfV-h0-Rr1"/>
+                        <outlet property="tanOutlet" destination="eCa-15-J5h" id="1Bg-gh-Hdu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.23188405797103" y="81.026785714285708"/>
+        </scene>
+    </scenes>
+    <designables>
+        <designable name="1rq-fF-uR0">
+            <size key="intrinsicContentSize" width="30" height="53"/>
+        </designable>
+        <designable name="2Ej-6L-kZv">
+            <size key="intrinsicContentSize" width="30" height="53"/>
+        </designable>
+        <designable name="3hJ-Uq-KTH">
+            <size key="intrinsicContentSize" width="30" height="53"/>
+        </designable>
+        <designable name="3k3-89-d8C">
+            <size key="intrinsicContentSize" width="63" height="47"/>
+        </designable>
+        <designable name="4Iu-nF-st6">
+            <size key="intrinsicContentSize" width="30" height="53"/>
+        </designable>
+        <designable name="4O4-H7-cST">
+            <size key="intrinsicContentSize" width="30" height="53"/>
+        </designable>
+        <designable name="4dB-bk-VXe">
+            <size key="intrinsicContentSize" width="30" height="53"/>
+        </designable>
+        <designable name="4hJ-Y3-PqM">
+            <size key="intrinsicContentSize" width="30" height="53"/>
+        </designable>
+        <designable name="7nI-St-1KI">
+            <size key="intrinsicContentSize" width="30" height="53"/>
+        </designable>
+        <designable name="9GW-Ui-1WM">
+            <size key="intrinsicContentSize" width="35" height="47"/>
+        </designable>
+        <designable name="BQD-EX-3fj">
+            <size key="intrinsicContentSize" width="30" height="53"/>
+        </designable>
+        <designable name="GdJ-3h-qmJ">
+            <size key="intrinsicContentSize" width="30" height="53"/>
+        </designable>
+        <designable name="OKi-EI-CZF">
+            <size key="intrinsicContentSize" width="33" height="51"/>
+        </designable>
+        <designable name="QGb-fz-gAd">
+            <size key="intrinsicContentSize" width="30" height="51"/>
+        </designable>
+        <designable name="cqB-Ga-4bS">
+            <size key="intrinsicContentSize" width="30" height="53"/>
+        </designable>
+        <designable name="eCa-15-J5h">
+            <size key="intrinsicContentSize" width="39" height="47"/>
+        </designable>
+        <designable name="gie-0I-8hu">
+            <size key="intrinsicContentSize" width="30" height="53"/>
+        </designable>
+        <designable name="jCX-3g-6G2">
+            <size key="intrinsicContentSize" width="41" height="47"/>
+        </designable>
+        <designable name="jee-AG-kiR">
+            <size key="intrinsicContentSize" width="30" height="53"/>
+        </designable>
+        <designable name="sH8-L2-B9M">
+            <size key="intrinsicContentSize" width="30" height="53"/>
+        </designable>
+        <designable name="sp6-9H-7QK">
+            <size key="intrinsicContentSize" width="30" height="53"/>
+        </designable>
+        <designable name="tZ7-rk-kUB">
+            <size key="intrinsicContentSize" width="30" height="53"/>
+        </designable>
+        <designable name="txz-fC-ueC">
+            <size key="intrinsicContentSize" width="30" height="53"/>
+        </designable>
+        <designable name="uOW-Ok-QoG">
+            <size key="intrinsicContentSize" width="30" height="53"/>
+        </designable>
+    </designables>
+</document>

@@ -21,7 +21,7 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CustomCell1" id="XfG-XI-ZXY" customClass="CustomCell" customModule="ToDo_List_App" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CustomCell" id="XfG-XI-ZXY" customClass="CustomCell" customModule="ToDo_List_App" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="45"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="XfG-XI-ZXY" id="M4v-Ks-QCY">
@@ -85,8 +85,7 @@
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
                                 </state>
                                 <connections>
-                                    <action selector="AddMoreTasks:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EmI-9M-jkz"/>
-                                    <segue destination="4oF-XR-Agp" kind="show" id="EUA-1q-8zG"/>
+                                    <segue destination="4oF-XR-Agp" kind="showDetail" identifier="AddMoreSegue" id="MaI-Hp-zlN"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -114,7 +113,7 @@
         <!--To Do List Name Details-->
         <scene sceneID="7WM-tl-7G1">
             <objects>
-                <viewController id="4oF-XR-Agp" sceneMemberID="viewController">
+                <viewController id="4oF-XR-Agp" customClass="TaskDetailsViewController" customModule="ToDo_List_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3fV-t0-eNp">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -142,6 +141,9 @@
                             </label>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="5om-u7-X5v">
                                 <rect key="frame" x="280" y="487.5" width="51" height="32.5"/>
+                                <connections>
+                                    <action selector="TaskDueDateAction:" destination="4oF-XR-Agp" eventType="valueChanged" id="hOF-3U-cuf"/>
+                                </connections>
                             </switch>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="RH1-2h-spt">
                                 <rect key="frame" x="80" y="526" width="254" height="100"/>
@@ -157,6 +159,9 @@
                             </label>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="80i-aZ-0Y2">
                                 <rect key="frame" x="258" y="644" width="51" height="31"/>
+                                <connections>
+                                    <action selector="TaskIsCompletedAction:" destination="4oF-XR-Agp" eventType="valueChanged" id="9Kz-ui-HjI"/>
+                                </connections>
                             </switch>
                             <textView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BZI-93-H0s">
                                 <rect key="frame" x="32" y="213" width="351" height="235.5"/>
@@ -170,6 +175,10 @@
                                 <color key="backgroundColor" red="0.6479650736" green="0.76923418050000003" blue="0.9783170819" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="TaskNameOutlet:" destination="js1-wl-4Qx" eventType="editingDidEnd" id="h7B-vY-VDt"/>
+                                    <action selector="TextFieldOutlet:" destination="js1-wl-4Qx" eventType="editingDidEnd" id="mbp-UJ-d3G"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tsx-XX-InT">
                                 <rect key="frame" x="289" y="728" width="94" height="22"/>
@@ -181,6 +190,7 @@
                                 </state>
                                 <connections>
                                     <action selector="DeleteTasks:" destination="BYZ-38-t0r" eventType="touchUpInside" id="net-r8-Clx"/>
+                                    <action selector="TaskDeleteButton:" destination="4oF-XR-Agp" eventType="touchUpInside" id="Nbx-tY-iqY"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cmx-bo-zlL">
@@ -192,6 +202,9 @@
                                     <color key="titleColor" red="0.21556246279999999" green="0.37973755599999998" blue="0.68010991809999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
                                 </state>
+                                <connections>
+                                    <action selector="TaskSaveButton:" destination="4oF-XR-Agp" eventType="touchUpInside" id="ZmX-TC-c2d"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="djP-KW-6uq">
                                 <rect key="frame" x="170" y="728" width="74" height="22"/>
@@ -202,6 +215,9 @@
                                     <color key="titleColor" systemColor="systemPurpleColor"/>
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
                                 </state>
+                                <connections>
+                                    <action selector="TaskCancelButton:" destination="4oF-XR-Agp" eventType="touchUpInside" id="ccw-st-ioY"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ged-ir-SCW"/>
@@ -247,12 +263,22 @@
                         </constraints>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="To Do List Name Details" id="EBM-J5-dMJ">
-                        <barButtonItem key="rightBarButtonItem" systemItem="cancel" id="ClI-oE-oGs"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="To Do List Name Details" id="EBM-J5-dMJ"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="SaveButton" destination="cmx-bo-zlL" id="yhk-JQ-TUb"/>
+                        <outlet property="TaskCancelButton" destination="djP-KW-6uq" id="hL3-ht-bG3"/>
+                        <outlet property="TaskDateOutlet" destination="RH1-2h-spt" id="nYS-6E-Rnl"/>
+                        <outlet property="TaskDeleteButton" destination="Tsx-XX-InT" id="N9g-Yw-wWi"/>
+                        <outlet property="TaskDescriptionOutlet" destination="BZI-93-H0s" id="kLQ-SM-H91"/>
+                        <outlet property="TaskDueDateOutlet" destination="5om-u7-X5v" id="jA5-2P-SnH"/>
+                        <outlet property="TaskIsCompletedOutlet" destination="80i-aZ-0Y2" id="OG0-Ug-Chx"/>
+                        <outlet property="TaskNameOutlet" destination="R8T-ya-O6D" id="ymE-GN-Pvh"/>
+                        <outlet property="TaskSaveOutlet" destination="cmx-bo-zlL" id="mYy-tT-jgl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fsV-g1-yvQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="js1-wl-4Qx" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1669.5652173913045" y="79.6875"/>
         </scene>

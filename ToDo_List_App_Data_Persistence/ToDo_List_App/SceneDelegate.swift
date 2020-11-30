@@ -1,4 +1,4 @@
-//  File name: AppDelegate.swift
+//  File name: SceneDelegate.swift
 //
 //  Author's name: Created by Nithyanandh Mahalingam on 11/29/20.
 //  StudentID: 301162314
