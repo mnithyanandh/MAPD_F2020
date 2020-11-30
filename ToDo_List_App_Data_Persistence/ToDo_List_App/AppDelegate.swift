@@ -1,13 +1,13 @@
 //  File name: AppDelegate.swift
 //
-//  Author's name: Created by Nithyanandh Mahalingam on 11/14/20.
+//  Author's name: Created by Nithyanandh Mahalingam on 11/29/20.
 //  StudentID: 301162314
-//  Date: 11/14/20
+//  Date: 11/29/20
 //  App description: ToDo_List_App
 //
 
 import UIKit
-
+import Firebase
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -15,6 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        FirebaseApp.configure()
         return true
     }
 
