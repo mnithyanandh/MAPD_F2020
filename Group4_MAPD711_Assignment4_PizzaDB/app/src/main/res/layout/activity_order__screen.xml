@@ -44,6 +44,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="Order more?" />
+            android:padding="10dp"
+        android:background="@drawable/customer_actions"
+            android:text="Go to Home" />
     </LinearLayout>
 </RelativeLayout>

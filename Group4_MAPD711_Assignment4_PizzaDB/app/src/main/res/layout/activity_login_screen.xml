@@ -18,14 +18,13 @@
             android:layout_height="wrap_content"
             android:id="@+id/user_hint2"
             android:gravity="center"
-            android:background="@drawable/welcome_title_border"
             android:fadingEdge="horizontal"
             android:fontFamily="@font/aclonica"
             android:padding="15dp"
             android:text="Your's Truly, Pizza"
             android:textAllCaps="true"
             android:textColor="#FFFFFF"
-            android:textSize="28dp"
+            android:textSize="40dp"
             android:textColorHighlight="#28E1FF"/>
         <ImageView
             android:id="@+id/logo"
@@ -92,13 +91,35 @@
                 android:inputType="textPassword"
                 android:text="Name" />
         </LinearLayout>
-        <Button
-            android:id="@+id/loginBtn"
-            android:layout_marginTop="30dp"
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@drawable/rounded_button"
-            android:text="Login" />
+            android:orientation="horizontal"
+            android:layout_marginTop="30dp"
+            android:layout_gravity="center">
+            <Button
+                android:id="@+id/loginBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_button"
+                android:text="Login" />
+            <Button
+                android:id="@+id/testBtn"
+                android:layout_marginLeft="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_button"
+                android:text="Test"
+                android:visibility="visible"/>
+        </LinearLayout>
+        <TextView
+            android:id="@+id/testData"
+            android:layout_width="250dp"
+            android:layout_height="60dp"
+            android:gravity="center"
+            android:textColor="#FF8F8F"
+            android:text="Test data here..."
+            android:visibility="visible"/>
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

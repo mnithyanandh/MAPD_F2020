@@ -9,8 +9,10 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import android.view.View
 import android.widget.Button
 import androidx.appcompat.app.AlertDialog
+import kotlinx.android.synthetic.main.activity_main.*
 import java.util.*
 
 class MainActivity : AppCompatActivity() {
@@ -19,11 +21,24 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        // Intent for Viewing other cities
         val orderByCity = findViewById<Button>(R.id.ViewByCity)
         orderByCity.setOnClickListener{
             val viewCities = Intent(this@MainActivity, OurLocations::class.java)
             startActivity(viewCities)
+            }
+
+        // Intent for User Logout
+        val logout = findViewById<Button>(R.id.Logout)
+        logout.setOnClickListener{
+            val performLogout = Intent(this@MainActivity, LoginScreen::class.java)
+            startActivity(performLogout)
+            findViewById<Button>(R.id.CustomerProfile).visibility = View.GONE
         }
+
+        // Intent to view Customer Profile
+        val customerOrders = findViewById<Button>(R.id.CustomerProfile)
+
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {

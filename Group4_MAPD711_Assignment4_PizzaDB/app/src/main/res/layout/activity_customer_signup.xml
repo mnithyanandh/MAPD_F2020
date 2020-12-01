@@ -14,15 +14,19 @@
         android:gravity="center"
         android:layout_marginTop="30dp">
         <TextView
-            android:id="@+id/Payment_info"
+            android:id="@+id/user_hint1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="10dp"
+            android:layout_gravity="center"
+            android:layout_margin="3dp"
+            android:fadingEdge="horizontal"
+            android:fontFamily="@font/aclonica"
+            android:padding="15dp"
             android:text="SIGNUP"
-            android:textSize="50sp"
+            android:textAllCaps="true"
             android:textColor="#FFFFFF"
-            android:textStyle="bold" />
+            android:textSize="40dp"
+            android:textColorHighlight="#28E1FF" />
 
         <!--Name: First Name Entry-->
         <LinearLayout

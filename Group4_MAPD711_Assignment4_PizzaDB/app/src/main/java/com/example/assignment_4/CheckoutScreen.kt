@@ -156,6 +156,7 @@ class CheckoutScreen : AppCompatActivity() {
             order_intent.putExtra("Pizza Size: ", psize)
             order_intent.putExtra("Pizza Toppings: ", ptoppings)
             startActivity(order_intent)
+            finish()
         }
     }
 }

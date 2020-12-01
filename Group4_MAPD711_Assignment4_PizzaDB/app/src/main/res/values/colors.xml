@@ -7,5 +7,6 @@
     <color name="textBoxColorWhite">#FFFFFF</color>
     <color name="loginBorderColor">#E4A3FC</color>
     <color name="customerOrderInfoColor">#8EE2FC</color>
+    <color name="signUpTitleBorder">#F2D6BD</color>
 
 </resources>
