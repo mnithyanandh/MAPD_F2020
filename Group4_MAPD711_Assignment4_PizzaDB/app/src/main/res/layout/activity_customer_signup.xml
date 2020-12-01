@@ -20,14 +20,15 @@
             android:layout_centerHorizontal="true"
             android:layout_marginTop="10dp"
             android:text="SIGNUP"
-            android:textSize="40sp"
+            android:textSize="50sp"
             android:textColor="#FFFFFF"
             android:textStyle="bold" />
+
         <!--Name: First Name Entry-->
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="30dp"
             android:orientation="horizontal"
             android:layout_gravity="center">
             <TextView
@@ -56,6 +57,7 @@
                     android:paddingLeft="10dp" />
             </LinearLayout>
         </LinearLayout>
+
         <!--Name: Last Name Entry-->
         <LinearLayout
             android:layout_width="wrap_content"
@@ -68,7 +70,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
-                android:paddingLeft="10dp"
                 android:textSize="20sp"
                 android:textStyle="bold"
                 android:textColor="#FFFFFF"
@@ -80,15 +81,17 @@
                 android:layout_gravity="center">
                 <EditText
                     android:id="@+id/LName_Entry"
-                    android:layout_width="250dp"
+                    android:layout_width="240dp"
                     android:layout_height="40dp"
                     android:hint="NAME"
                     android:background="@drawable/textbox_border"
                     android:textColor="#FFFFFF"
+                    android:paddingLeft="10dp"
                     android:inputType="textPersonName"
-                    android:paddingLeft="10dp" />
+ />
             </LinearLayout>
         </LinearLayout>
+
         <!--Address: Text Field & User Entry-->
         <LinearLayout
             android:layout_width="wrap_content"
@@ -105,7 +108,6 @@
                 android:layout_margin="10dp"
                 android:textSize="20sp"
                 android:textStyle="bold"
-                android:paddingLeft="35dp"
                 android:textColor="#FFFFFF"
                 android:text="Address:" />
             <LinearLayout
@@ -116,7 +118,7 @@
 
                 <EditText
                     android:id="@+id/Address_Entry"
-                    android:layout_width="250dp"
+                    android:layout_width="220dp"
                     android:layout_height="40dp"
                     android:hint="ADDRESS"
                     android:background="@drawable/textbox_border"
@@ -128,15 +130,14 @@
 
         <!--Postal Code: Text Field & User Entry-->
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             tools:context=".FirstFragment"
             android:orientation="horizontal"
-            android:paddingTop="10dp"
             android:layout_gravity="center">
             <TextView
                 android:id="@+id/Postal_Code_Text"
-                android:layout_width="wrap_content"
+                android:layout_width="80dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:textSize="20sp"
@@ -154,23 +155,22 @@
                     android:layout_width="130dp"
                     android:layout_height="40dp"
                     android:hint="ZIPCODE"
+                    android:paddingLeft="10dp"
                     android:background="@drawable/textbox_border"
                     android:textColor="#FFFFFF"
-                    android:inputType="number"
-                    android:paddingLeft="10dp"/>
+                    android:inputType="number"/>
             </LinearLayout>
         </LinearLayout>
 
-        <!--Telephone: Text Field & User Entry-->
+        <!--City: Text Field & User Entry-->
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             tools:context=".FirstFragment"
             android:orientation="horizontal"
-            android:paddingTop="10dp"
             android:layout_gravity="center">
             <TextView
-                android:id="@+id/Telephone_Text"
+                android:id="@+id/City_Text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
@@ -179,16 +179,16 @@
                 android:textStyle="bold"
                 android:layout_gravity="center"
                 android:paddingLeft="10dp"
-                android:text="Telephone:" />
+                android:text="City:" />
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:layout_gravity="center">
                 <EditText
-                    android:id="@+id/Telephone_Entry"
-                    android:hint="PHONE NUMBER"
-                    android:layout_width="200dp"
+                    android:id="@+id/City_Entry"
+                    android:hint="CITY"
+                    android:layout_width="100dp"
                     android:layout_height="40dp"
                     android:textColor="#FFFFFF"
                     android:background="@drawable/textbox_border"
@@ -196,5 +196,22 @@
                     android:paddingLeft="10dp"/>
             </LinearLayout>
         </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:layout_marginTop="40dp">
+
+            <!--Signup: Button-->
+            <Button
+                android:id="@+id/loginBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:background="@drawable/rounded_button"
+                android:text="Signup on Your's Truly Pizza" />
+        </LinearLayout>
+
     </LinearLayout>
 </RelativeLayout>

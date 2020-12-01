@@ -8,7 +8,7 @@
     android:background="@drawable/login_bg"
     tools:context=".MainActivity">
     <TextView
-        android:id="@+id/user_hint"
+        android:id="@+id/user_hint1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -17,24 +17,72 @@
         android:fadingEdge="horizontal"
         android:fontFamily="@font/aclonica"
         android:padding="15dp"
-        android:text="! Welcome to Your's Truly, Pizza !"
+        android:text="! Welcome !"
         android:textAllCaps="true"
         android:textColor="#FFFFFF"
-        android:textSize="18dp"
+        android:textSize="30dp"
         android:textColorHighlight="#28E1FF" />
-
-    <ImageView
-        android:id="@+id/ivBackground"
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:id="@+id/user_hint2"
         android:layout_gravity="center"
-        android:src="@drawable/pizza_app_logo" />
+        android:background="@drawable/welcome_title_border"
+        android:fadingEdge="horizontal"
+        android:fontFamily="@font/aclonica"
+        android:padding="15dp"
+        android:text="Your's Truly, Pizza"
+        android:textAllCaps="true"
+        android:textColor="#FFFFFF"
+        android:textSize="30dp"
+        android:textColorHighlight="#28E1FF"/>
 
     <Button
         android:id="@+id/ViewByCity"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textColor="#FFFFFF"
+        android:background="@drawable/maps_button"
+        android:layout_marginTop="30dp"
         android:text="Nearby locations"
+        android:padding="10dp" />
+
+    <ImageView
+        android:id="@+id/ivBackground"
+        android:layout_width="350dp"
+        android:layout_height="300dp"
+        android:layout_gravity="center"
+        android:src="@drawable/pizza_app_logo" />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center">
+
+        <!--Signup: Button-->
+        <Button
+            android:id="@+id/CustomerProfile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:background="@drawable/customer_actions"
+            android:text="Your Profile" />
+        <Button
+            android:id="@+id/CustomerOrders"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:padding="10dp"
+            android:background="@drawable/customer_actions"
+            android:text=" View Orders" />
+    </LinearLayout>
+    <Button
+        android:id="@+id/Logout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_logout"
+        android:layout_marginTop="30dp"
+        android:text="Logout"
         android:padding="10dp" />
 
 </LinearLayout>
