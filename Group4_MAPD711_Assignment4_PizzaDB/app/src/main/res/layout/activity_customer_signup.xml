@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:background="@drawable/login_bg"
+    tools:context=".CustomerSignup">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_marginTop="30dp">
+        <TextView
+            android:id="@+id/Payment_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text="SIGNUP"
+            android:textSize="40sp"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold" />
+        <!--Name: First Name Entry-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:orientation="horizontal"
+            android:layout_gravity="center">
+            <TextView
+                android:id="@+id/CFirst_Name_Text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:paddingLeft="10dp"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                android:text="First Name:"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center">
+                <EditText
+                    android:id="@+id/CFName_Entry"
+                    android:layout_width="250dp"
+                    android:layout_height="40dp"
+                    android:hint="NAME"
+                    android:background="@drawable/textbox_border"
+                    android:textColor="#FFFFFF"
+                    android:inputType="textPersonName"
+                    android:paddingLeft="10dp" />
+            </LinearLayout>
+        </LinearLayout>
+        <!--Name: Last Name Entry-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:layout_gravity="center">
+            <TextView
+                android:id="@+id/Last_Name_Text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:paddingLeft="10dp"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                android:text="Last Name:"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center">
+                <EditText
+                    android:id="@+id/LName_Entry"
+                    android:layout_width="250dp"
+                    android:layout_height="40dp"
+                    android:hint="NAME"
+                    android:background="@drawable/textbox_border"
+                    android:textColor="#FFFFFF"
+                    android:inputType="textPersonName"
+                    android:paddingLeft="10dp" />
+            </LinearLayout>
+        </LinearLayout>
+        <!--Address: Text Field & User Entry-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:context=".FirstFragment"
+            android:orientation="horizontal"
+            android:paddingTop="10dp"
+            android:layout_gravity="center">
+            <TextView
+                android:id="@+id/Address_Text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:paddingLeft="35dp"
+                android:textColor="#FFFFFF"
+                android:text="Address:" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center">
+
+                <EditText
+                    android:id="@+id/Address_Entry"
+                    android:layout_width="250dp"
+                    android:layout_height="40dp"
+                    android:hint="ADDRESS"
+                    android:background="@drawable/textbox_border"
+                    android:textColor="#FFFFFF"
+                    android:inputType="textPostalAddress"
+                    android:paddingLeft="10dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!--Postal Code: Text Field & User Entry-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:context=".FirstFragment"
+            android:orientation="horizontal"
+            android:paddingTop="10dp"
+            android:layout_gravity="center">
+            <TextView
+                android:id="@+id/Postal_Code_Text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:textColor="#FFFFFF"
+                android:text="Postal Code:" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center">
+                <EditText
+                    android:id="@+id/Postal_Code_Entry"
+                    android:layout_width="130dp"
+                    android:layout_height="40dp"
+                    android:hint="ZIPCODE"
+                    android:background="@drawable/textbox_border"
+                    android:textColor="#FFFFFF"
+                    android:inputType="number"
+                    android:paddingLeft="10dp"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!--Telephone: Text Field & User Entry-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:context=".FirstFragment"
+            android:orientation="horizontal"
+            android:paddingTop="10dp"
+            android:layout_gravity="center">
+            <TextView
+                android:id="@+id/Telephone_Text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:paddingLeft="10dp"
+                android:text="Telephone:" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center">
+                <EditText
+                    android:id="@+id/Telephone_Entry"
+                    android:hint="PHONE NUMBER"
+                    android:layout_width="200dp"
+                    android:layout_height="40dp"
+                    android:textColor="#FFFFFF"
+                    android:background="@drawable/textbox_border"
+                    android:inputType="number"
+                    android:paddingLeft="10dp"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

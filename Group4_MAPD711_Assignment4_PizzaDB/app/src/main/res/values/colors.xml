@@ -3,6 +3,9 @@
     <color name="colorPrimary">#F4646F</color>
     <color name="colorPrimaryDark">#3700B3</color>
     <color name="colorAccent">#03DAC5</color>
-
+    <color name="textBoxColorBlack">#000000</color>
+    <color name="textBoxColorWhite">#FFFFFF</color>
+    <color name="loginBorderColor">#E4A3FC</color>
+    <color name="customerOrderInfoColor">#8EE2FC</color>
 
 </resources>

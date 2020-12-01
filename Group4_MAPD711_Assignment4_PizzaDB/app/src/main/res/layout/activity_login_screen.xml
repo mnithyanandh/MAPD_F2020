@@ -1,9 +1,114 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:gravity="center"
     tools:context=".LoginScreen">
+    <LinearLayout
+        android:layout_width="520dp"
+        android:layout_height="860dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:background="@drawable/login_bg"
+        android:padding="30dp">
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="300dp"
+            android:layout_height="200dp"
+            android:layout_marginBottom="50dp"
+            android:src="@drawable/pizza_icon">
+        </ImageView>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center_horizontal">
+            <TextView
+                android:id="@+id/username"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:textAlignment="center"
+                android:text="Username:"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                tools:ignore="RtlCompat" />
 
-</LinearLayout>
+            <EditText
+                android:id="@+id/usernameEntry"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="#FFFFFF"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:background="@drawable/textbox_border"
+                android:text="Name" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="10dp">
+            <TextView
+                android:id="@+id/password"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:textAlignment="center"
+                android:text="Password:"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                tools:ignore="RtlCompat" />
+
+            <EditText
+                android:id="@+id/passwordEntry"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/textbox_border"
+                android:layout_weight="1"
+                android:textColor="#FFFFFF"
+                android:ems="10"
+                android:inputType="textPassword"
+                android:text="Name" />
+        </LinearLayout>
+        <Button
+            android:id="@+id/loginBtn"
+            android:layout_marginTop="30dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Login" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="5dp">
+            <TextView
+                android:id="@+id/sign_up"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:text="New user? Register here:"
+                android:textColor="#FFFFFF"
+                android:textSize="15sp"
+                android:textStyle="normal"
+                tools:ignore="RtlCompat" />
+            <TextView
+                android:id="@+id/sign_up_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:text="Sign-up"
+                android:textColor="#FC8E8E  "
+                android:textSize="15sp"
+                android:textStyle="bold"
+                tools:ignore="RtlCompat" />
+        </LinearLayout>
+
+    </LinearLayout>
+</RelativeLayout>

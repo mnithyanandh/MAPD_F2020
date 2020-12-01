@@ -1,9 +1,10 @@
-package com.example.assignment_4.data
+package com.example.assignment_4.DAO
 
 import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
+import com.example.assignment_4.Data.Customer
 
 @Dao
 interface CustomerDAO {
