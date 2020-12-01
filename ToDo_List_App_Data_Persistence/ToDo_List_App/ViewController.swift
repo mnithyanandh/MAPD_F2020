@@ -110,35 +110,33 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                                           Cddate: user_tasks[sender.tag].Cddate,
                                           Cdb_key: user_tasks[sender.tag].Cdb_key,
                                           index: sender.tag
-                             ),
-                     taction: Handler.CEdit))
+                     ),taction: Handler))
     }
     
     // MARK: - Function for Primary Segue Transition:
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)
     {
         if segue.identifier == "AddMoreSegue" {
-                   let destination = segue.destination as! TaskDetailsViewController
-                   
-                   //passing the data to "AddTaskViewController" once user enters it
-                   
-                   if let data = sender as? (task: Cell, taskAction: Handler)
-                   {    //using tuples to pass data from class and enum
-                       
-                       destination.tname = data.task.Cname
-                       destination.tdate = data.task.Cdate
-                       destination.tdescription = data.task.Cdescp
-                       destination.getiscomplete=data.task.Ccomplete
-                       destination.getduedate=data.task.Cddate
-                       destination.index=data.task.index
-                       destination.taction = data.taskAction
-                    destination.tdbkey=data.task.Cdb_key
-                   }
-                   else{
-                   print("Error")
-                   }
-                   
-                   destination.tdelegate=self
-               }
+           let destination = segue.destination as! TaskDetailsViewController
+           
+           //passing the data to "AddTaskViewController" once user enters it
+           
+           if let data = sender as? (UTask: Cell, tAction: Handler)
+           {    //using tuples to pass data from class and enum
+            destination.tname = data.UTask.Cname
+            destination.tdate = data.UTask.Cdate
+            destination.tdescription = data.UTask.Cdescp
+            destination.getiscomplete=data.UTask.Ccomplete
+            destination.getduedate=data.UTask.Cddate
+            destination.index=data.UTask.index
+            destination.taction = data.tAction
+            destination.tdbkey=data.UTask.Cdb_key
+           }
+           else{
+           print("Error")
+           }
+           
+           destination.tdelegate=self
+       }
     }
 }
