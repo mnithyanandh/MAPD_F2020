@@ -110,7 +110,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                                           Cddate: user_tasks[sender.tag].Cddate,
                                           Cdb_key: user_tasks[sender.tag].Cdb_key,
                                           index: sender.tag
-                     ),taction: Handler))
+                     ),taction: Handler.CEdit))
     }
     
     // MARK: - Function for Primary Segue Transition:
@@ -121,7 +121,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
            
            //passing the data to "AddTaskViewController" once user enters it
            
-           if let data = sender as? (UTask: Cell, tAction: Handler)
+           if let data = sender as? (UTask: Cell, taction: Handler)
            {    //using tuples to pass data from class and enum
             destination.tname = data.UTask.Cname
             destination.tdate = data.UTask.Cdate
@@ -129,7 +129,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             destination.getiscomplete=data.UTask.Ccomplete
             destination.getduedate=data.UTask.Cddate
             destination.index=data.UTask.index
-            destination.taction = data.tAction
+            destination.taction = data.taction
             destination.tdbkey=data.UTask.Cdb_key
            }
            else{
