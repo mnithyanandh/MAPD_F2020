@@ -7,7 +7,7 @@ import androidx.room.RoomDatabase
 import com.example.assignment_4.DAO.CustomerDAO
 import com.example.assignment_4.Data.Customer
 
-@Database(entities = arrayOf(Customer::class), version = 1)
+@Database(entities = arrayOf(Customer::class), version = 1, exportSchema = false)
 abstract class CustomerDatabase : RoomDatabase(){
     abstract fun getDAO(): CustomerDAO
 

@@ -2,6 +2,7 @@ package com.example.assignment_4.DAO
 
 import androidx.room.*
 import com.example.assignment_4.Data.Admin
+import com.example.assignment_4.Data.Customer
 
 @Dao
 interface AdminDAO {
@@ -17,6 +18,11 @@ interface AdminDAO {
     // Find Admins by name:
     @Query("SELECT * FROM Admin WHERE First_Name LIKE :FName AND Last_Name LIKE :LName LIMIT 1")
     fun findAdminByName(FName: String, LName: String): Admin
+
+    // Find Admin by Username:
+    // Find Customers by their Usernames:
+    @Query("SELECT * FROM Admin WHERE Username LIKE :username LIMIT 1")
+    fun findAdminByUsername(username: String): Admin
 
     // Find Admins by their ID:
     @Query("SELECT * FROM Admin WHERE adminId IN (:AId)")

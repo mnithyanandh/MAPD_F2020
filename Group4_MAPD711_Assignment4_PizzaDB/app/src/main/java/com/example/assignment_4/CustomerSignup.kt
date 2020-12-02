@@ -21,6 +21,7 @@ class CustomerSignup : AppCompatActivity() {
         var lname = findViewById<EditText>(R.id.CLName_Entry)
         var email = findViewById<EditText>(R.id.CEmail_Entry)
         var address = findViewById<EditText>(R.id.CAddress_Entry)
+        var password = findViewById<EditText>(R.id.CPassword_Entry)
         var postal_code = findViewById<EditText>(R.id.CPostal_Code_Entry)
         var city = findViewById<EditText>(R.id.CCity_Entry)
         var phone = findViewById<EditText>(R.id.CPhone_Entry)
@@ -30,21 +31,24 @@ class CustomerSignup : AppCompatActivity() {
 
         // Inserting in the values entered by the new Customer:
         // Create an object of the Customer Entity
-        var cust = Customer()
-        cust.userName = email.text.toString()
-        cust.firstName = fname.text.toString()
-        cust.lastName = lname.text.toString()
-        cust.email = email.text.toString()
-        cust.address = address.text.toString()
-        cust.postal_code = postal_code.text.toString()
-        cust.city = city.text.toString()
-        cust.phone = phone.text.toString()
+        Thread{
+            val signUpBtn = findViewById<Button>(R.id.SignUpBtn)
+            signUpBtn.setOnClickListener {
+                val signUp = Intent(this@CustomerSignup, LoginScreen::class.java)
+                var cust = Customer()
+                cust.userName = email.text.toString()
+                cust.firstName = fname.text.toString()
+                cust.lastName = lname.text.toString()
+                cust.email = email.text.toString()
+                cust.password = password.text.toString()
+                cust.address = address.text.toString()
+                cust.postal_code = postal_code.text.toString()
+                cust.city = city.text.toString()
+                cust.phone = phone.text.toString()
 
-        val signUpBtn = findViewById<Button>(R.id.SignUpBtn)
-        signUpBtn.setOnClickListener{
-            val signUp = Intent(this@CustomerSignup, LoginScreen::class.java)
-            CRoomDB.getDAO().addCustomer(cust)
-            startActivity(signUp)
-        }
+                CRoomDB.getDAO().addCustomer(cust)
+                startActivity(signUp)
+            }
+        }.start()
     }
 }

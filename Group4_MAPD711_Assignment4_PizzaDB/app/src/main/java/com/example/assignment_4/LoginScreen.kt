@@ -1,25 +1,21 @@
 package com.example.assignment_4
 
-import android.content.Context
-import android.content.Intent
-import android.content.SharedPreferences
-import androidx.appcompat.app.AppCompatActivity
-import android.os.Bundle
-import android.widget.Button
-import android.widget.EditText
-import android.widget.TextView
-import android.widget.Toast
-import androidx.appcompat.app.AlertDialog
-import androidx.room.Room
-import com.example.assignment_4.Data.Customer
-import com.example.assignment_4.Database.AdminDatabase
-import com.example.assignment_4.Database.CustomerDatabase
 //import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 //import com.google.android.gms.common.api.ApiException
 //import com.google.firebase.auth.FirebaseAuth
 //import com.google.firebase.auth.FirebaseUser
 //import com.google.firebase.auth.GoogleAuthProvider
-import org.w3c.dom.Text
+import android.content.Context
+import android.content.Intent
+import android.os.Bundle
+import android.widget.Button
+import android.widget.EditText
+import android.widget.TextView
+import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
+import androidx.room.Room
+import com.example.assignment_4.Database.AdminDatabase
+import com.example.assignment_4.Database.CustomerDatabase
 import java.util.*
 
 class LoginScreen : AppCompatActivity() {
@@ -42,43 +38,46 @@ class LoginScreen : AppCompatActivity() {
         var usrName = findViewById<EditText>(R.id.usernameEntry).text.toString()
         var passwrd = findViewById<EditText>(R.id.passwordEntry).text.toString()
 
-        // Handle Shared Preferences by registering in above information:
-        val addData = SharedPreferences.edit()
-        addData.putString("Username", usrName)
-        addData.putString("Password", passwrd)
-
         // Room DB Calls:
-        var CRoomDB = Room.databaseBuilder(applicationContext, CustomerDatabase::class.java,"CustomerDB").build()
-        // var ARoomDB = Room.databaseBuilder(applicationContext, AdminDatabase::class.java,"AdminDB").build()
-
-        // Apply changes to the Shared Preferences manager after adding the data
-        addData.apply()
+        var CRoomDB = Room.databaseBuilder(
+            applicationContext,
+            CustomerDatabase::class.java,
+            "CustomerDB"
+        ).build()
+        //var ARoomDB = Room.databaseBuilder(applicationContext, AdminDatabase::class.java, "AdminDB").build()
 
         // Initialize the Login Button:
         val loginButton = findViewById<Button>(R.id.loginBtn)
         loginButton.setOnClickListener {
+
+            // Handle Shared Preferences by registering in above information:
+            val addData = SharedPreferences.edit()
+            addData.putString("Username", usrName)
+            addData.putString("Password", passwrd)
+            // Apply changes to the Shared Preferences manager after adding the data
+            addData.apply()
+
+            //Pulling the values from Shared Preferences:
+            var SP_username = SharedPreferences.getString("Username", "")
+            var SP_password = SharedPreferences.getString("Password", "")
+
             Thread {
-                if (SharedPreferences.getString("Username", "") == "customer@gmail.com" ||
-                    SharedPreferences.getString("Username", "") == CRoomDB.getDAO()
-                        .findCustomerByUsername(usrName).toString().trim()
-                ) {
+                var CustomerusernameData =  CRoomDB.getDAO().findCustomerByUsername(SP_username.toString())
+                var CustomerpasswordData = CRoomDB.getDAO().findByCustomerPassword(SP_password.toString())
+                //var AdminusernameData = ARoomDB.getDAO().findAdminByUsername(SP_username.toString())
+
+                if (SP_username == "Username" && SP_password == "Password")
+                {
                     val performCLogin = Intent(this@LoginScreen, MainActivity::class.java)
                     startActivity(performCLogin)
-                } else if (SharedPreferences.getString("Username", "") == "admin" ||
-                    SharedPreferences.getString("Username", "") == "Admin"
-                ) {
+                }
+                else
+                {
                     val performALogin = Intent(this@LoginScreen, AdminMainActivity::class.java)
                     startActivity(performALogin)
-                } else {
-                    Toast.makeText(
-                        this,
-                        "User not found. Kindly verify your Username & Password and try again!",
-                        Toast.LENGTH_LONG
-                    ).show()
                 }
             }.start()
         }
-
 
         //Initialize the Signup TextView Click operation:
         var signUpView = findViewById<TextView>(R.id.sign_up_button)

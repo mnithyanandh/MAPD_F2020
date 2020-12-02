@@ -1,5 +1,6 @@
 package com.example.assignment_4.DAO
 
+import android.view.WindowId
 import androidx.room.*
 import com.example.assignment_4.Data.Customer
 
@@ -21,6 +22,10 @@ interface CustomerDAO {
     // Find Customers by their Usernames:
     @Query("SELECT * FROM Customer WHERE Username LIKE :username LIMIT 1")
     fun findCustomerByUsername(username: String): Customer
+
+    // Find Customer by their Password:
+    @Query("SELECT * FROM Customer WHERE Password LIKE :password LIMIT 1")
+    fun findByCustomerPassword(password: String): Customer
 
     // Find Customers by their ID:
     @Query("SELECT * FROM Customer WHERE customerId IN (:CId)")

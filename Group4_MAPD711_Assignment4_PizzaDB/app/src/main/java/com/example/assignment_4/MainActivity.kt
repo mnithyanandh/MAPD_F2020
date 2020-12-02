@@ -32,9 +32,9 @@ class MainActivity : AppCompatActivity() {
         val logout = findViewById<Button>(R.id.Logout)
         logout.setOnClickListener{
             val performLogout = Intent(this@MainActivity, LoginScreen::class.java)
-            startActivity(performLogout)
             findViewById<Button>(R.id.CustomerProfile).visibility = View.GONE
-            finish()
+            findViewById<Button>(R.id.CustomerOrders).visibility = View.GONE
+            startActivity(performLogout)
         }
 
         // Intent to view Customer Profile
