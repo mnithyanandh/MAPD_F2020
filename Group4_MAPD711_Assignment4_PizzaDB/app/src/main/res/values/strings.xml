@@ -28,5 +28,6 @@
     <string name="poi">poi</string>
 
     <string name="map_key">AIzaSyAPoIpon2ApJ2XEUhj4BwlSuPOsQI8v2GU</string>
+    <string name="default_web_client_id"></string>
 
 </resources>
