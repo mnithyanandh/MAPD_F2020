@@ -124,7 +124,7 @@ class TaskDetailsViewController: UIViewController, UITextFieldDelegate, UITextVi
     // MARK: - User Modified Date constraint for MM/DD/YYYY format
     @objc func UserDate(_ TaskDateOutlet:UIDatePicker){
         let date_format = DateFormatter()
-        date_format.dateFormat = "MM/DD/YYYY"
+        date_format.dateFormat = "MM/dd/yyyy"
         view.endEditing(true)
         tdate=date_format.string(from: TaskDateOutlet.date)
     }

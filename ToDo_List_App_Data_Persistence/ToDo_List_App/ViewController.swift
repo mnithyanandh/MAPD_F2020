@@ -22,7 +22,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func Edit_task(th_name: String, th_date: String, th_iscomplete: Bool, th_descp: String, th_ddate: Bool, th_db_key: String, index: Int) {
-        let dbobject :[String: Any] =  ["Name":th_name,"Date":th_date,"Description":th_descp,"isComplete":th_iscomplete,"hasDueDate":th_ddate,"id_key":th_db_key]
+        let dbobject :[String: Any] =  ["Name":th_name,"Date":th_date,"Description":th_descp,"isComplete":th_iscomplete,"hasDueDate":th_ddate,"id_key":th_db_key, "index": index]
         db.child(th_db_key).setValue(dbobject)
         UITableViewOutlet.reloadData()
     }
