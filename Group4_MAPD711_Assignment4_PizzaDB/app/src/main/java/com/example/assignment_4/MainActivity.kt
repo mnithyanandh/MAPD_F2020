@@ -26,7 +26,7 @@ class MainActivity : AppCompatActivity() {
         orderByCity.setOnClickListener{
             val viewCities = Intent(this@MainActivity, OurLocations::class.java)
             startActivity(viewCities)
-            }
+        }
 
         // Intent for User Logout
         val logout = findViewById<Button>(R.id.Logout)
@@ -34,6 +34,7 @@ class MainActivity : AppCompatActivity() {
             val performLogout = Intent(this@MainActivity, LoginScreen::class.java)
             startActivity(performLogout)
             findViewById<Button>(R.id.CustomerProfile).visibility = View.GONE
+            finish()
         }
 
         // Intent to view Customer Profile

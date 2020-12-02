@@ -7,7 +7,7 @@ import androidx.room.RoomDatabase
 import com.example.assignment_4.DAO.AdminDAO
 import com.example.assignment_4.Data.Admin
 
-@Database(entities = arrayOf(Admin::class), version = 1)
+@Database(entities = arrayOf(Admin::class), version = 1, exportSchema = false)
 abstract class AdminDatabase : RoomDatabase() {
     abstract fun getDAO(): AdminDAO
 

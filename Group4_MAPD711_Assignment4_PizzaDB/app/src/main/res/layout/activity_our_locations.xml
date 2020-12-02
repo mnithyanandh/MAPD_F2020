@@ -39,7 +39,7 @@
                 android:background="@drawable/textbox_border"
                 android:textAlignment="center"
                 android:gravity="center"
-                android:marginLeft="10dp"
+                android:layout_marginLeft="10dp"
                 />
         </LinearLayout>
         <LinearLayout

@@ -24,13 +24,13 @@
             android:text="Your's Truly, Pizza"
             android:textAllCaps="true"
             android:textColor="#FFFFFF"
-            android:textSize="40dp"
+            android:textSize="30dp"
             android:textColorHighlight="#28E1FF"/>
         <ImageView
             android:id="@+id/logo"
             android:layout_width="300dp"
             android:layout_height="200dp"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="20dp"
             android:layout_marginBottom="20dp"
             android:src="@drawable/pizza_icon">
         </ImageView>
@@ -41,26 +41,28 @@
             android:gravity="center_horizontal">
             <TextView
                 android:id="@+id/username"
-                android:layout_width="160dp"
+                android:layout_width="84dp"
                 android:layout_height="wrap_content"
                 android:padding="10dp"
                 android:textAlignment="center"
                 android:text="Username:"
                 android:textColor="#FFFFFF"
-                android:textSize="20sp"
+                android:textSize="13sp"
                 android:textStyle="bold"
                 tools:ignore="RtlCompat" />
 
             <EditText
                 android:id="@+id/usernameEntry"
-                android:layout_width="wrap_content"
+                android:layout_width="280dp"
                 android:layout_height="40dp"
                 android:layout_weight="1"
                 android:textColor="#FFFFFF"
                 android:ems="10"
+                android:textSize="13sp"
                 android:inputType="textPersonName"
+                android:paddingLeft="10dp"
                 android:background="@drawable/textbox_border"
-                android:text="Name" />
+                android:hint="Enter your username"/>
         </LinearLayout>
         <LinearLayout
             android:layout_width="wrap_content"
@@ -70,26 +72,28 @@
             android:layout_marginTop="10dp">
             <TextView
                 android:id="@+id/password"
-                android:layout_width="160dp"
+                android:layout_width="82dp"
                 android:layout_height="wrap_content"
                 android:padding="10dp"
                 android:textAlignment="center"
                 android:text="Password:"
                 android:textColor="#FFFFFF"
-                android:textSize="20sp"
+                android:textSize="13dp"
                 android:textStyle="bold"
                 tools:ignore="RtlCompat" />
 
             <EditText
                 android:id="@+id/passwordEntry"
-                android:layout_width="250dp"
+                android:layout_width="350dp"
                 android:layout_height="40dp"
-                android:background="@drawable/textbox_border"
                 android:layout_weight="1"
                 android:textColor="#FFFFFF"
+                android:paddingLeft="10dp"
+                android:textSize="13sp"
+                android:background="@drawable/textbox_border"
                 android:ems="10"
                 android:inputType="textPassword"
-                android:text="Name" />
+                android:hint="Enter your password here" />
         </LinearLayout>
         <LinearLayout
             android:layout_width="wrap_content"
@@ -104,13 +108,20 @@
                 android:background="@drawable/rounded_button"
                 android:text="Login" />
             <Button
+                android:id="@+id/GoogleBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/rounded_button"
+                android:text="+Google" />
+            <Button
                 android:id="@+id/testBtn"
                 android:layout_marginLeft="10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@drawable/rounded_button"
                 android:text="Test"
-                android:visibility="visible"/>
+                android:visibility="gone"/>
         </LinearLayout>
         <TextView
             android:id="@+id/testData"
@@ -119,7 +130,7 @@
             android:gravity="center"
             android:textColor="#FF8F8F"
             android:text="Test data here..."
-            android:visibility="visible"/>
+            android:visibility="gone"/>
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -132,7 +143,7 @@
                 android:textAlignment="center"
                 android:text="New user? Register here:"
                 android:textColor="#FFFFFF"
-                android:textSize="15sp"
+                android:textSize="13sp"
                 android:textStyle="normal"
                 tools:ignore="RtlCompat" />
             <TextView
@@ -141,9 +152,11 @@
                 android:layout_height="wrap_content"
                 android:textAlignment="center"
                 android:text="Sign-up"
-                android:textColor="#FC8E8E  "
-                android:textSize="15sp"
+                android:layout_marginLeft="5dp"
+                android:textColor="#FC8E8E"
+                android:textSize="13sp"
                 android:textStyle="bold"
+                android:clickable="true"
                 tools:ignore="RtlCompat" />
         </LinearLayout>
 

@@ -1,18 +1,29 @@
 package com.example.assignment_4.Data
 
-import android.location.Address
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 
 @Entity(tableName = "Customer")
-data class Customer (
-    @PrimaryKey(autoGenerate = true) val customerId: Int,
-    @ColumnInfo(name = "Username") val userName: String,
-    @ColumnInfo(name = "Password") var password: String,
-    @ColumnInfo(name = "First_Name") val firstName: String,
-    @ColumnInfo(name = "Last_Name") val lastName: String,
-    @ColumnInfo(name = "Address") val address: Address,
-    @ColumnInfo(name = "City") val city: String,
-    @ColumnInfo(name = "Postal_Code") val postal_code: Int
-)
+class Customer {
+    @PrimaryKey
+    var customerId: Int = 0
+    @ColumnInfo(name = "Username")
+    var userName: String = ""
+    @ColumnInfo(name = "Password")
+    var password: String = ""
+    @ColumnInfo(name = "First_Name")
+    var firstName: String = ""
+    @ColumnInfo(name = "Last_Name")
+    var lastName: String = ""
+    @ColumnInfo(name = "Email")
+    var email: String = ""
+    @ColumnInfo(name = "Address")
+    var address: String = ""
+    @ColumnInfo(name = "Postal_Code")
+    var postal_code: String = ""
+    @ColumnInfo(name = "City")
+    var city: String = ""
+    @ColumnInfo(name = "Phone Number")
+    var phone: String = ""
+}
