@@ -1,8 +1,8 @@
 //  File name: TaskDetailsViewController.swift
 //
-//  Author's name: Created by Nithyanandh Mahalingam on 11/29/20.
+//  Author's name: Created by Nithyanandh Mahalingam on 12/06/20.
 //  StudentID: 301162314
-//  Date: 11/29/20
+//  Date: 12/06/20
 //  App description: ToDo_List_App
 //
 
@@ -24,6 +24,9 @@ class TaskDetailsViewController: UIViewController, UITextFieldDelegate, UITextVi
     var tdelegate: TaskHandler?
     var taction: Handler = .CAdd
     
+    //MARK: - Add a variable counter to track if the Primary Prototype cell needs deletion or not
+    var counter = 0
+    
     // MARK: - IB_Outlets:
     @IBOutlet weak var TaskNameOutlet: UITextField!
     @IBOutlet weak var TaskDescriptionOutlet: UITextView!
@@ -39,7 +42,13 @@ class TaskDetailsViewController: UIViewController, UITextFieldDelegate, UITextVi
         case .CAdd:
             if TaskNameOutlet.text != ""
             {
-                tdelegate?.Add_task(th_name: TaskNameOutlet.text!, th_date: tdate, th_iscomplete: tiscomplete, th_descp: TaskDescriptionOutlet.text!, th_ddate: tduedate, th_db_key: "", index: index)
+                tdelegate?.Add_task(th_name: TaskNameOutlet.text!,
+                                    th_date: tdate,
+                                    th_iscomplete: tiscomplete,
+                                    th_descp: TaskDescriptionOutlet.text!,
+                                    th_ddate: tduedate,
+                                    th_db_key: "",
+                                    index: index)
             }
                 
         case .CEdit:
@@ -47,7 +56,13 @@ class TaskDetailsViewController: UIViewController, UITextFieldDelegate, UITextVi
             Alert.addAction(UIAlertAction(title: "Update", style: .default, handler: { action in
                 if self.TaskNameOutlet.text != ""
                 {
-                    self.tdelegate?.Edit_task(th_name: self.TaskNameOutlet.text!, th_date: self.tdate, th_iscomplete: self.tiscomplete, th_descp: self.TaskDescriptionOutlet.text!, th_ddate: self.tduedate, th_db_key: self.tdbkey, index: self.index)
+                    self.tdelegate?.Edit_task(th_name: self.TaskNameOutlet.text!,
+                                              th_date: self.tdate,
+                                              th_iscomplete: self.tiscomplete,
+                                              th_descp: self.TaskDescriptionOutlet.text!,
+                                              th_ddate: self.tduedate,
+                                              th_db_key: self.tdbkey,
+                                              index: self.index)
                     self.navigationController?.popViewController(animated: true)
                 }
                 
@@ -68,22 +83,22 @@ class TaskDetailsViewController: UIViewController, UITextFieldDelegate, UITextVi
             self.TaskIsCompletedOutlet.isOn=false
             let date = Date()
             self.TaskDateOutlet.date = date
+            self.navigationController?.popViewController(animated: true)
         }))
         Alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: {action in ()}))
-                present(Alert,animated: true)
         self.navigationController?.popViewController(animated: true)
+        present(Alert,animated: true)
     }
     
     // Delete Button:
     @IBAction func TaskDeleteButton(_ sender: UIButton) {
-        let Alert = UIAlertController .init(title: "Delete", message: "Confirm Delete the selected Task?", preferredStyle:.alert)
+        let Alert = UIAlertController .init(title: "Confirm Delete the selected Task?", message: "Any pending changes will apply after app restart", preferredStyle:.alert)
         Alert.addAction(UIAlertAction(title: "Yes", style: .destructive, handler: {action in
             self.tdelegate?.Del_task(th_db_key: self.tdbkey)
             self.navigationController?.popViewController(animated: true)
         } ))
         Alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: {action in ()}))
-                present(Alert,animated: true)
-        self.navigationController?.popViewController(animated: true)
+        present(Alert,animated: true)
     }
     
     // MARK: - Firebase DB Reference
@@ -114,11 +129,6 @@ class TaskDetailsViewController: UIViewController, UITextFieldDelegate, UITextVi
                 TaskSaveOutlet.setImage(UIImage(systemName: "rectangle.and.pencil.and.ellipsis"), for:.normal )
                 TaskSaveOutlet.setTitle("Save", for: .normal)
         }
-        
-        // Finally, make sure that an instance of current Task Fields are initiated
-//        TaskNameOutlet.delegate=self
-//        tduedate = TaskDueDateOutlet.isOn
-//        tiscomplete = TaskIsCompletedOutlet.isOn
     }
     
     // MARK: - User Modified Date constraint for MM/DD/YYYY format
@@ -155,18 +165,9 @@ class TaskDetailsViewController: UIViewController, UITextFieldDelegate, UITextVi
         }
     }
     
-    // MARK: - Text View Editing Functions:
-    func textViewDidBeginEditing(_ textView: UITextView){
-        if textView.textColor == UIColor.darkGray
-        {
-            textView.text = nil
-            textView.textColor = UIColor.white
-        }
-    }
-    
     // MARK: - Text Field Editing Functions:
     func textFieldDidEndEditing(_ textField: UITextField){
-        if  textField.text != ""
+        if textField.text != ""
         {
             TaskDueDateOutlet.isHidden=false
             TaskIsCompletedOutlet.isHidden=false
@@ -177,7 +178,20 @@ class TaskDetailsViewController: UIViewController, UITextFieldDelegate, UITextVi
 
 // MARK: - Declare Protocol for Data transfer
 protocol TaskHandler {
-    func Add_task (th_name: String, th_date: String, th_iscomplete: Bool, th_descp: String, th_ddate: Bool, th_db_key: String, index: Int)
-    func Edit_task(th_name: String, th_date: String, th_iscomplete: Bool, th_descp: String, th_ddate: Bool, th_db_key: String, index: Int)
+    func Add_task (th_name: String,
+                   th_date: String,
+                   th_iscomplete: Bool,
+                   th_descp: String,
+                   th_ddate: Bool,
+                   th_db_key: String,
+                   index: Int)
+    func Edit_task(th_name: String,
+                   th_date: String,
+                   th_iscomplete: Bool,
+                   th_descp: String,
+                   th_ddate: Bool,
+                   th_db_key: String,
+                   index: Int)
     func Del_task(th_db_key: String)
+    // func TaskStats(th_db_key: String)
 }

@@ -1,8 +1,8 @@
 //  File name: ViewController.swift
 //
-//  Author's name: Created by Nithyanandh Mahalingam on 11/29/20.
+//  Author's name: Created by Nithyanandh Mahalingam on 12/06/20.
 //  StudentID: 301162314
-//  Date: 11/29/20
+//  Date: 12/06/20
 //  App description: ToDo_List_App
 //
 
@@ -17,19 +17,37 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     // MARK: - TaskHandler functions to reference TaskDetailsViewController
     func Add_task(th_name: String, th_date: String, th_iscomplete: Bool, th_descp: String, th_ddate: Bool, th_db_key: String, index: Int) {
         let th_db_key = db.childByAutoId().key
-        let dbobject :[String: Any] =  ["Name":th_name,"Date":th_date,"Description":th_descp,"isComplete":th_iscomplete,"hasDueDate":th_ddate,"id_key":th_db_key!, "index": index]
+        let dbobject :[String: Any] =  ["Name":th_name,
+                                        "Date":th_date,
+                                        "Description":th_descp,
+                                        "isComplete":th_iscomplete,
+                                        "hasDueDate":th_ddate,
+                                        "id_key":th_db_key!,
+                                        "index": index]
         db.child(th_db_key!).setValue(dbobject)
     }
     
     func Edit_task(th_name: String, th_date: String, th_iscomplete: Bool, th_descp: String, th_ddate: Bool, th_db_key: String, index: Int) {
-        let dbobject :[String: Any] =  ["Name":th_name,"Date":th_date,"Description":th_descp,"isComplete":th_iscomplete,"hasDueDate":th_ddate,"id_key":th_db_key, "index": index]
+        let dbobject :[String: Any] =  ["Name":th_name,
+                                        "Date":th_date,
+                                        "Description":th_descp,
+                                        "isComplete":th_iscomplete,
+                                        "hasDueDate":th_ddate,
+                                        "id_key":th_db_key,
+                                        "index": index]
         db.child(th_db_key).setValue(dbobject)
         UITableViewOutlet.reloadData()
     }
     
     func Del_task(th_db_key: String) {
         db.child(th_db_key).setValue(nil)
+        UITableViewOutlet.reloadData()
     }
+    
+//    func TaskStats(th_db_key: String){
+//        db.child(th_iscomplete).setValue(false)
+//        UITableViewOutlet.reloadData()
+//    }
     
     //MARK: - TableView Delegate Function:
     // TableView Delegate function
@@ -47,11 +65,19 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     // TableView DataSource Function #2
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CustomCell", for: indexPath) as! CustomCell
+        cell.contentView.backgroundColor = nil
         cell.TaskNameLbl.text = user_tasks[indexPath.row].Cname
         cell.DueDateLbl.text = user_tasks[indexPath.row].Cdate
         cell.TaskActiveSwitch.isOn = user_tasks[indexPath.row].Ccomplete
         cell.TaskEditBtn.tag=indexPath.row
         cell.TaskEditBtn.addTarget(self, action: #selector(EditTask(_:)), for: .touchUpInside)
+        
+        if(cell.TaskActiveSwitch.isOn == true){
+            cell.contentView.backgroundColor = UIColor.green
+        }
+        else{
+            cell.contentView.backgroundColor = UIColor(red: 255/255, green: 20/255, blue: 147/255, alpha: 1.0)
+        }
         return cell
     }
     
@@ -113,24 +139,67 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                      ),taction: Handler.CEdit))
     }
     
+    // MARK: - LEFT TO RIGHT SWIPE: Edit Task
+    // TableView 'LeadingSwipeActionsConfigurationsForRowAt' function for Left-To-Right Swipe:
+    func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let swipeForEdit = UIContextualAction(style: .normal, title: "Edit"){(action,view,nil) in
+            self.performSegue(withIdentifier: "AddMoreSegue", sender:
+                            (UTask:Cell(Cname: self.user_tasks[indexPath.row].Cname,
+                              Cdate: self.user_tasks[indexPath.row].Cdate,
+                              Ccomplete: self.user_tasks[indexPath.row].Ccomplete,
+                              Cdescp: self.user_tasks[indexPath.row].Cdescp,
+                              Cddate: self.user_tasks[indexPath.row].Cddate,
+                              Cdb_key: self.user_tasks[indexPath.row].Cdb_key,
+                              index: indexPath.row
+                            ), taction: Handler.CEdit))}
+        
+        // UI visibility for swipe action:
+        swipeForEdit.backgroundColor = UIColor(red: 0, green: 145/255, blue: 1, alpha: 1.0)
+        swipeForEdit.title = "Edit"
+        
+        // UI functions for the swipe action:
+        let swipeAction=UISwipeActionsConfiguration(actions: [swipeForEdit])
+        swipeAction.performsFirstActionWithFullSwipe = false
+        UITableViewOutlet.reloadData()
+        
+        return swipeAction
+    }
+    
+    // MARK: - RIGHT TO LEFT SWIPE: DELETE & COMPLETE Task
+    // TableView 'TrailingSwipeActionsConfigurationsForRowAt' function for Right-To-Left Swipe:
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        
+        let swipeForComplete = UIContextualAction(style: .normal, title: (user_tasks[indexPath.row].Ccomplete ? "Completed" : "Pending" ) ){(action,view,nil) in ()
+            //self.TaskStats(th_iscomplete: self.user_tasks[indexPath.row].Ccomplete)
+        }
+        swipeForComplete.backgroundColor = UIColor(red: 255/255, green: 200/255, blue: 0/255, alpha: 1.0)
+        
+        let swipeForDelete = UIContextualAction(style: .destructive, title: "Delete"){
+            (action,view,nil) in
+            self.Del_task(th_db_key: self.user_tasks[indexPath.row].Cdb_key)
+        }
+        swipeForDelete.backgroundColor = UIColor(red: 1, green: 0, blue: 0, alpha: 1.0)
+        
+        return UISwipeActionsConfiguration(actions: [swipeForDelete, swipeForComplete])
+    }
+    
     // MARK: - Function for Primary Segue Transition:
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)
     {
         if segue.identifier == "AddMoreSegue" {
            let destination = segue.destination as! TaskDetailsViewController
-           
-           //passing the data to "AddTaskViewController" once user enters it
-           
-           if let data = sender as? (UTask: Cell, taction: Handler)
-           {    //using tuples to pass data from class and enum
-            destination.tname = data.UTask.Cname
-            destination.tdate = data.UTask.Cdate
-            destination.tdescription = data.UTask.Cdescp
-            destination.getiscomplete=data.UTask.Ccomplete
-            destination.getduedate=data.UTask.Cddate
-            destination.index=data.UTask.index
-            destination.taction = data.taction
-            destination.tdbkey=data.UTask.Cdb_key
+            
+            // Create a segue to link Add task operations in the "Add More" segue
+            if let data = sender as? (UTask: Cell, taction: Handler)
+           {
+                destination.tname = data.UTask.Cname
+                destination.tdate = data.UTask.Cdate
+                destination.tdescription = data.UTask.Cdescp
+                destination.getiscomplete=data.UTask.Ccomplete
+                destination.getduedate=data.UTask.Cddate
+                destination.index=data.UTask.index
+                destination.taction = data.taction
+                destination.tdbkey=data.UTask.Cdb_key
            }
            else{
            print("Error")

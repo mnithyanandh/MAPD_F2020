@@ -1,8 +1,8 @@
 //  File name: AppDelegate.swift
 //
-//  Author's name: Created by Nithyanandh Mahalingam on 11/29/20.
+//  Author's name: Created by Nithyanandh Mahalingam on 12/06/20.
 //  StudentID: 301162314
-//  Date: 11/29/20
+//  Date: 12/06/20
 //  App description: ToDo_List_App
 //
 

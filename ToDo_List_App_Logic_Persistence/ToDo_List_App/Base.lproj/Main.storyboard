@@ -22,48 +22,56 @@
                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CustomCell" id="XfG-XI-ZXY" customClass="CustomCell" customModule="ToDo_List_App" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="45"/>
+                                        <rect key="frame" x="0.0" y="28" width="414" height="47"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="XfG-XI-ZXY" id="M4v-Ks-QCY">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="45"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="47"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Task 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8fS-If-bsE">
-                                                    <rect key="frame" x="45" y="0.0" width="57.5" height="29.5"/>
+                                                    <rect key="frame" x="20" y="0.0" width="254" height="33.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="254" id="cyF-6a-1Ri"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="20"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Due date for Task 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZuU-e9-G6j">
-                                                    <rect key="frame" x="45" y="25" width="165.5" height="22.5"/>
-                                                    <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="15"/>
+                                                    <rect key="frame" x="20" y="22" width="254" height="21.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="254" id="wXe-g1-ZLi"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="15"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" title="CustomCellSwitch" translatesAutoresizingMaskIntoConstraints="NO" id="C1D-TI-oNO">
-                                                    <rect key="frame" x="282.5" y="6" width="51" height="31.5"/>
-                                                </switch>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NbB-CB-II7">
-                                                    <rect key="frame" x="348" y="0.0" width="66" height="45"/>
+                                                <button hidden="YES" opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NbB-CB-II7">
+                                                    <rect key="frame" x="367" y="1" width="20.5" height="43"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="20.5" id="FNu-A4-MyN"/>
+                                                    </constraints>
                                                     <state key="normal" image="square.and.pencil" catalog="system"/>
                                                 </button>
+                                                <switch hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" title="CustomCellSwitch" translatesAutoresizingMaskIntoConstraints="NO" id="C1D-TI-oNO">
+                                                    <rect key="frame" x="282" y="8" width="51" height="31.5"/>
+                                                </switch>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
-                                                <constraint firstItem="NbB-CB-II7" firstAttribute="top" secondItem="M4v-Ks-QCY" secondAttribute="top" id="0nN-9D-nmb"/>
-                                                <constraint firstAttribute="bottom" secondItem="NbB-CB-II7" secondAttribute="bottom" id="468-O1-QVe"/>
-                                                <constraint firstItem="ZuU-e9-G6j" firstAttribute="leading" secondItem="M4v-Ks-QCY" secondAttribute="leadingMargin" constant="25" id="77p-zy-95V"/>
-                                                <constraint firstAttribute="trailing" secondItem="NbB-CB-II7" secondAttribute="trailing" id="9sX-NG-DBr"/>
-                                                <constraint firstItem="ZuU-e9-G6j" firstAttribute="top" secondItem="M4v-Ks-QCY" secondAttribute="topMargin" constant="14" id="CC5-31-DXk"/>
-                                                <constraint firstItem="C1D-TI-oNO" firstAttribute="leading" secondItem="ZuU-e9-G6j" secondAttribute="trailing" constant="72" id="E1M-Xq-t6E"/>
-                                                <constraint firstItem="NbB-CB-II7" firstAttribute="leading" secondItem="C1D-TI-oNO" secondAttribute="trailing" constant="16.5" id="EcL-Ay-sXL"/>
-                                                <constraint firstAttribute="bottom" secondItem="C1D-TI-oNO" secondAttribute="bottom" constant="7.5" id="HTT-tb-3AY"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="ZuU-e9-G6j" secondAttribute="bottom" constant="-13.5" id="Ley-uf-gCk"/>
-                                                <constraint firstItem="C1D-TI-oNO" firstAttribute="leading" secondItem="8fS-If-bsE" secondAttribute="trailing" constant="180" id="Zm6-bk-1SI"/>
-                                                <constraint firstItem="8fS-If-bsE" firstAttribute="leading" secondItem="M4v-Ks-QCY" secondAttribute="leadingMargin" constant="25" id="h29-Dl-A1m"/>
-                                                <constraint firstItem="8fS-If-bsE" firstAttribute="top" secondItem="M4v-Ks-QCY" secondAttribute="topMargin" constant="-11" id="p34-9z-hRu"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="8fS-If-bsE" secondAttribute="bottom" constant="4.5" id="pGk-LN-Z8W"/>
-                                                <constraint firstItem="C1D-TI-oNO" firstAttribute="top" secondItem="M4v-Ks-QCY" secondAttribute="top" constant="6" id="qYd-2j-ojf"/>
+                                                <constraint firstItem="NbB-CB-II7" firstAttribute="leading" secondItem="C1D-TI-oNO" secondAttribute="trailing" constant="36" id="12R-aZ-ejY"/>
+                                                <constraint firstItem="ZuU-e9-G6j" firstAttribute="leading" secondItem="M4v-Ks-QCY" secondAttribute="leading" constant="20" id="ALa-8a-Wia"/>
+                                                <constraint firstItem="NbB-CB-II7" firstAttribute="top" secondItem="M4v-Ks-QCY" secondAttribute="top" constant="1" id="AmS-Lc-vUS"/>
+                                                <constraint firstItem="8fS-If-bsE" firstAttribute="top" secondItem="M4v-Ks-QCY" secondAttribute="top" id="G2H-Su-Z8B"/>
+                                                <constraint firstAttribute="trailing" secondItem="NbB-CB-II7" secondAttribute="trailing" constant="26.5" id="GtR-jQ-Vyr"/>
+                                                <constraint firstItem="C1D-TI-oNO" firstAttribute="top" secondItem="M4v-Ks-QCY" secondAttribute="top" constant="8" id="IXf-bj-Jv9"/>
+                                                <constraint firstAttribute="bottom" secondItem="C1D-TI-oNO" secondAttribute="bottom" constant="7.5" id="Iu0-Tw-Voi"/>
+                                                <constraint firstItem="ZuU-e9-G6j" firstAttribute="top" secondItem="M4v-Ks-QCY" secondAttribute="top" constant="22" id="TjB-wH-VeW"/>
+                                                <constraint firstItem="8fS-If-bsE" firstAttribute="leading" secondItem="M4v-Ks-QCY" secondAttribute="leading" constant="20" id="dav-Xy-IvG"/>
+                                                <constraint firstAttribute="bottom" secondItem="8fS-If-bsE" secondAttribute="bottom" constant="13.5" id="kxr-mt-l7A"/>
+                                                <constraint firstAttribute="bottom" secondItem="ZuU-e9-G6j" secondAttribute="bottom" constant="3.5" id="otF-9x-4go"/>
+                                                <constraint firstItem="C1D-TI-oNO" firstAttribute="leading" secondItem="8fS-If-bsE" secondAttribute="trailing" constant="8" symbolic="YES" id="tCQ-7E-tKj"/>
+                                                <constraint firstAttribute="bottom" secondItem="NbB-CB-II7" secondAttribute="bottom" constant="3" id="ypo-xD-15S"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -184,7 +192,7 @@
                                     <action selector="TextFieldOutlet:" destination="js1-wl-4Qx" eventType="editingDidEnd" id="mbp-UJ-d3G"/>
                                 </connections>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tsx-XX-InT">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tsx-XX-InT">
                                 <rect key="frame" x="289" y="728" width="94" height="22"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="94" id="gBR-Wa-PMA"/>
