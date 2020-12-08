@@ -53,7 +53,7 @@
 
             <EditText
                 android:id="@+id/usernameEntry"
-                android:layout_width="280dp"
+                android:layout_width="240dp"
                 android:layout_height="40dp"
                 android:layout_weight="1"
                 android:textColor="#FFFFFF"
@@ -84,7 +84,7 @@
 
             <EditText
                 android:id="@+id/passwordEntry"
-                android:layout_width="350dp"
+                android:layout_width="240dp"
                 android:layout_height="40dp"
                 android:layout_weight="1"
                 android:textColor="#FFFFFF"
@@ -106,7 +106,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@drawable/rounded_button"
-                android:text="Login" />
+                android:text="Login"
+                android:visibility="gone"/>
             <Button
                 android:id="@+id/GoogleBtn"
                 android:layout_width="wrap_content"

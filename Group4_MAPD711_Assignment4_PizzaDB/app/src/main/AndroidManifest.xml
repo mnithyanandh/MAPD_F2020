@@ -34,15 +34,16 @@
 
         <activity
             android:name=".OurLocations"
-            android:label="@string/title_activity_our_locations" />
-        <activity android:name=".Order_Screen" />
-        <activity android:name=".CheckoutScreen" />
-        <activity android:name=".LoginScreen">
+            android:label="@string/title_activity_our_locations">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity android:name=".Order_Screen" />
+        <activity android:name=".CheckoutScreen" />
+        <activity android:name=".LoginScreen">
         </activity>
 
         <meta-data
