@@ -23,6 +23,8 @@ import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.SupportMapFragment
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
+import com.google.android.libraries.places.api.Places
+
 
 class OurLocations : AppCompatActivity(), OnMapReadyCallback, AdapterView.OnItemSelectedListener {
 
@@ -106,10 +108,10 @@ class OurLocations : AppCompatActivity(), OnMapReadyCallback, AdapterView.OnItem
             mMap.mapType = GoogleMap.MAP_TYPE_SATELLITE
             true
         }
-//        R.id.terrain_map -> {
-//            mMap.mapType = GoogleMap.MAP_TYPE_TERRAIN
-//            true
-//        }
+        R.id.terrain_map -> {
+            mMap.mapType = GoogleMap.MAP_TYPE_TERRAIN
+            true
+        }
         else -> super.onOptionsItemSelected(item)
     }
 
@@ -194,7 +196,7 @@ class OurLocations : AppCompatActivity(), OnMapReadyCallback, AdapterView.OnItem
                     Toast.makeText(
                         parent.context,
                         "Navigating to Mississauga, Ontario...",
-                        Toast.LENGTH_SHORT
+                        Toast.LENGTH_LONG
                     ).show()
                     val mississauga = LatLng(43.58, -79.64)
                     // mMap.addMarker(MarkerOptions().position(mississauga).title("Mississauga"))
@@ -211,7 +213,7 @@ class OurLocations : AppCompatActivity(), OnMapReadyCallback, AdapterView.OnItem
                     Toast.makeText(
                         parent.context,
                         "Navigating to Oakville, Ontario...",
-                        Toast.LENGTH_SHORT
+                        Toast.LENGTH_LONG
                     ).show()
                     val oakville = LatLng(43.46, -79.68)
                     // mMap.addMarker(MarkerOptions().position(oakville).title("Oakville"))
@@ -228,7 +230,7 @@ class OurLocations : AppCompatActivity(), OnMapReadyCallback, AdapterView.OnItem
                     Toast.makeText(
                         parent.context,
                         "Navigating to North York, Ontario...",
-                        Toast.LENGTH_SHORT
+                        Toast.LENGTH_LONG
                     ).show()
                     val north_york = LatLng(43.76, -79.41)
                     // mMap.addMarker(MarkerOptions().position(north_york).title("North York"))
@@ -245,7 +247,7 @@ class OurLocations : AppCompatActivity(), OnMapReadyCallback, AdapterView.OnItem
                     Toast.makeText(
                         parent.context,
                         "Navigating to Vaughan, Ontario...",
-                        Toast.LENGTH_SHORT
+                        Toast.LENGTH_LONG
                     ).show()
                     val vaughan = LatLng(43.85, -79.50)
                     // mMap.addMarker(MarkerOptions().position(vaughan).title("Vaughan"))
@@ -262,7 +264,7 @@ class OurLocations : AppCompatActivity(), OnMapReadyCallback, AdapterView.OnItem
                     Toast.makeText(
                         parent.context,
                         "Navigating to Kitchener, Ontario...",
-                        Toast.LENGTH_SHORT
+                        Toast.LENGTH_LONG
                     ).show()
                     val kitchener = LatLng(43.45, -80.49)
                     // mMap.addMarker(MarkerOptions().position(kitchener).title("Kitchener"))
