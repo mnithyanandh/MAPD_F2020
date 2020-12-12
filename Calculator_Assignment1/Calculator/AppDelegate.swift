@@ -1,8 +1,8 @@
 //
-//  AppDelegate.swift
-//  Calculator_Assignment1
-//
-//  Created by Nithyanandh Mahalingam on 12/12/20.
+//  File Name: AppDelegate.swift
+//  Created by Nithyanandh Mahalingam on 10/08/20
+//  Student ID: 301162314
+//  App: Calculator - Assignment 2
 //
 
 import UIKit
