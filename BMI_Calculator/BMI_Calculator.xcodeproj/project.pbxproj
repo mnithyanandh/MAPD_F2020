@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		511CDDB725844E580003A708 /* BMIDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 511CDDB625844E570003A708 /* BMIDataViewController.swift */; };
+		511CDDBA25844F6E0003A708 /* BMIUpdateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 511CDDB925844F6E0003A708 /* BMIUpdateViewController.swift */; };
 		512046E62584295C00BAD040 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 512046E52584295C00BAD040 /* GoogleService-Info.plist */; };
 		512D764F258270B600038C6E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512D764E258270B600038C6E /* AppDelegate.swift */; };
 		512D7651258270B600038C6E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512D7650258270B600038C6E /* SceneDelegate.swift */; };
@@ -22,6 +24,8 @@
 
 /* Begin PBXFileReference section */
 		13F20A757FD01B385015AC95 /* Pods-BMI_Calculator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BMI_Calculator.release.xcconfig"; path = "Target Support Files/Pods-BMI_Calculator/Pods-BMI_Calculator.release.xcconfig"; sourceTree = "<group>"; };
+		511CDDB625844E570003A708 /* BMIDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BMIDataViewController.swift; sourceTree = "<group>"; };
+		511CDDB925844F6E0003A708 /* BMIUpdateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BMIUpdateViewController.swift; sourceTree = "<group>"; };
 		512046E52584295C00BAD040 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		512D764B258270B600038C6E /* BMI_Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BMI_Calculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		512D764E258270B600038C6E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -82,6 +86,8 @@
 				512D7657258270B600038C6E /* Assets.xcassets */,
 				512D7659258270B600038C6E /* LaunchScreen.storyboard */,
 				512D765C258270B600038C6E /* Info.plist */,
+				511CDDB625844E570003A708 /* BMIDataViewController.swift */,
+				511CDDB925844F6E0003A708 /* BMIUpdateViewController.swift */,
 			);
 			path = BMI_Calculator;
 			sourceTree = "<group>";
@@ -224,6 +230,8 @@
 				512D7653258270B600038C6E /* ViewController.swift in Sources */,
 				512D764F258270B600038C6E /* AppDelegate.swift in Sources */,
 				512D7651258270B600038C6E /* SceneDelegate.swift in Sources */,
+				511CDDBA25844F6E0003A708 /* BMIUpdateViewController.swift in Sources */,
+				511CDDB725844E580003A708 /* BMIDataViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
