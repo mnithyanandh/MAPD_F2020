@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="EHf-IW-A2E">
+            <objects>
+                <viewController id="01J-lp-oVM" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background.png" translatesAutoresizingMaskIntoConstraints="NO" id="jcg-yO-ZhR">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BMI Calculator" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cvU-Ve-ipF">
+                                <rect key="frame" x="64.5" y="276" width="285" height="55"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BMI.png" translatesAutoresizingMaskIntoConstraints="NO" id="ttF-iQ-cN2">
+                                <rect key="frame" x="107" y="348" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="KbB-hs-esM"/>
+                                    <constraint firstAttribute="width" constant="200" id="z4I-9J-IvN"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="by Nithyanandh Mahalingam" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q2R-ov-oO1">
+                                <rect key="frame" x="60.5" y="706" width="293" height="31"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-MediumItalic" family="Avenir Next" pointSize="22"/>
+                                <color key="textColor" systemColor="systemRedColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ttF-iQ-cN2" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="1Ng-Pc-ACg"/>
+                            <constraint firstItem="jcg-yO-ZhR" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="1VP-XY-9KD"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Q2R-ov-oO1" secondAttribute="trailing" constant="60.5" id="2Hd-44-ZOf"/>
+                            <constraint firstItem="Q2R-ov-oO1" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="40.5" id="2OU-Kd-XbT"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jcg-yO-ZhR" secondAttribute="trailing" id="IqZ-Gl-Ojf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="jcg-yO-ZhR" secondAttribute="bottom" id="Qla-yZ-cPL"/>
+                            <constraint firstItem="cvU-Ve-ipF" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="topMargin" constant="232" id="TQE-Nh-5I1"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cvU-Ve-ipF" secondAttribute="trailing" constant="64.5" id="Tz2-WF-sIL"/>
+                            <constraint firstItem="cvU-Ve-ipF" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="44.5" id="UKo-3u-RYo"/>
+                            <constraint firstItem="Q2R-ov-oO1" firstAttribute="top" secondItem="ttF-iQ-cN2" secondAttribute="bottom" constant="158" id="VSk-cd-krd"/>
+                            <constraint firstItem="ttF-iQ-cN2" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="a9C-wy-yE7"/>
+                            <constraint firstItem="ttF-iQ-cN2" firstAttribute="top" secondItem="cvU-Ve-ipF" secondAttribute="bottom" constant="17" id="ga1-Sb-0Py"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="Q2R-ov-oO1" secondAttribute="bottom" constant="125" id="lsd-GA-u9y"/>
+                            <constraint firstItem="cvU-Ve-ipF" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="tTU-rC-OvX"/>
+                            <constraint firstItem="jcg-yO-ZhR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="v8c-GQ-yJM"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="53" y="375"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="BMI.png" width="1190" height="1190"/>
+        <image name="background.png" width="1125" height="2436"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
