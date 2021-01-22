@@ -8,6 +8,7 @@ This is the master repo for the MAPD F2020 program.
 - MAPD 713
 - MAPD 714
 - MAPD 715
+- MAPD 724
 - MAPD 726
 
 # Latest operational branches:
@@ -16,4 +17,5 @@ This is the master repo for the MAPD F2020 program.
 - MAPD 712 Web Technologies: https://github.com/mnithyanandh/MAPD_F2020/tree/MAPD_712_Web_Technologies
 - MAPD 713 Enterprise Technologies: https://github.com/mnithyanandh/MAPD_F2020/tree/MAPD_713_Enterprise_Technologies
 - MAPD 715 Mobile UI/UX Development: https://github.com/mnithyanandh/MAPD_F2020/tree/MAPD_715_Mobile_UiUx_Design
+- MAPD 724 Advanced iOS Development: https://github.com/mnithyanandh/MAPD_F2020/tree/MAPD_724_Advanced_iOS_Development
 - MAPD 726 Mobile Applications Development Project: https://github.com/mnithyanandh/MAPD_F2020/tree/MAPD_726_Mobile_Applications_Development_Project
