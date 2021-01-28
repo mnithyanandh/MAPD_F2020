@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "DC6E7046-406D-4A1A-B14A-6577EFBBCE24"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "76978100-9128-4E50-B37A-2D6C5A149D3B"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "InClassAssignment-1/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "60"
+            endingLineNumber = "60"
+            landmarkName = "_spinReels()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D11221A4-6C2A-4789-BC9B-8E71A6F108B1"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "InClassAssignment-1/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "61"
+            endingLineNumber = "61"
+            landmarkName = "_spinReels()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "D11221A4-6C2A-4789-BC9B-8E71A6F108B1 - 50188554bab1f391"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "InClassAssignment_1.ViewController._spinReels() -&gt; Swift.Array&lt;Swift.String&gt;"
+                  moduleName = "InClassAssignment-1"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nithyanandhmahalingam/Documents/MAPD724%20-%20Advanced%20iOS%20Development/InClassAssignment-1/InClassAssignment-1/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "61"
+                  endingLineNumber = "61"
+                  offsetFromSymbolStart = "1518">
+               </Location>
+               <Location
+                  uuid = "D11221A4-6C2A-4789-BC9B-8E71A6F108B1 - 50188554bab1f391"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "InClassAssignment_1.ViewController._spinReels() -&gt; Swift.Array&lt;Swift.String&gt;"
+                  moduleName = "InClassAssignment-1"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nithyanandhmahalingam/Documents/MAPD724%20-%20Advanced%20iOS%20Development/InClassAssignment-1/InClassAssignment-1/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "61"
+                  endingLineNumber = "61"
+                  offsetFromSymbolStart = "1555">
+               </Location>
+               <Location
+                  uuid = "D11221A4-6C2A-4789-BC9B-8E71A6F108B1 - 50188554bab1f391"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "InClassAssignment_1.ViewController._spinReels() -&gt; Swift.Array&lt;Swift.String&gt;"
+                  moduleName = "InClassAssignment-1"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nithyanandhmahalingam/Documents/MAPD724%20-%20Advanced%20iOS%20Development/InClassAssignment-1/InClassAssignment-1/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "61"
+                  endingLineNumber = "61"
+                  offsetFromSymbolStart = "1947">
+               </Location>
+               <Location
+                  uuid = "D11221A4-6C2A-4789-BC9B-8E71A6F108B1 - 50188554bab1f391"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "InClassAssignment_1.ViewController._spinReels() -&gt; Swift.Array&lt;Swift.String&gt;"
+                  moduleName = "InClassAssignment-1"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nithyanandhmahalingam/Documents/MAPD724%20-%20Advanced%20iOS%20Development/InClassAssignment-1/InClassAssignment-1/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "61"
+                  endingLineNumber = "61"
+                  offsetFromSymbolStart = "2329">
+               </Location>
+               <Location
+                  uuid = "D11221A4-6C2A-4789-BC9B-8E71A6F108B1 - 50188554bab1f391"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "InClassAssignment_1.ViewController._spinReels() -&gt; Swift.Array&lt;Swift.String&gt;"
+                  moduleName = "InClassAssignment-1"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nithyanandhmahalingam/Documents/MAPD724%20-%20Advanced%20iOS%20Development/InClassAssignment-1/InClassAssignment-1/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "61"
+                  endingLineNumber = "61"
+                  offsetFromSymbolStart = "2711">
+               </Location>
+               <Location
+                  uuid = "D11221A4-6C2A-4789-BC9B-8E71A6F108B1 - 50188554bab1f391"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "InClassAssignment_1.ViewController._spinReels() -&gt; Swift.Array&lt;Swift.String&gt;"
+                  moduleName = "InClassAssignment-1"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nithyanandhmahalingam/Documents/MAPD724%20-%20Advanced%20iOS%20Development/InClassAssignment-1/InClassAssignment-1/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "61"
+                  endingLineNumber = "61"
+                  offsetFromSymbolStart = "3093">
+               </Location>
+               <Location
+                  uuid = "D11221A4-6C2A-4789-BC9B-8E71A6F108B1 - 50188554bab1f391"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "InClassAssignment_1.ViewController._spinReels() -&gt; Swift.Array&lt;Swift.String&gt;"
+                  moduleName = "InClassAssignment-1"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nithyanandhmahalingam/Documents/MAPD724%20-%20Advanced%20iOS%20Development/InClassAssignment-1/InClassAssignment-1/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "61"
+                  endingLineNumber = "61"
+                  offsetFromSymbolStart = "3475">
+               </Location>
+               <Location
+                  uuid = "D11221A4-6C2A-4789-BC9B-8E71A6F108B1 - 50188554bab1f391"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "InClassAssignment_1.ViewController._spinReels() -&gt; Swift.Array&lt;Swift.String&gt;"
+                  moduleName = "InClassAssignment-1"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nithyanandhmahalingam/Documents/MAPD724%20-%20Advanced%20iOS%20Development/InClassAssignment-1/InClassAssignment-1/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "61"
+                  endingLineNumber = "61"
+                  offsetFromSymbolStart = "3857">
+               </Location>
+               <Location
+                  uuid = "D11221A4-6C2A-4789-BC9B-8E71A6F108B1 - 50188554bab1f391"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "InClassAssignment_1.ViewController._spinReels() -&gt; Swift.Array&lt;Swift.String&gt;"
+                  moduleName = "InClassAssignment-1"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nithyanandhmahalingam/Documents/MAPD724%20-%20Advanced%20iOS%20Development/InClassAssignment-1/InClassAssignment-1/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "61"
+                  endingLineNumber = "61"
+                  offsetFromSymbolStart = "4239">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
