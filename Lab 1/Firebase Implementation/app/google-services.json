@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "255320498458",
+    "project_id": "mapd725-lab1",
+    "storage_bucket": "mapd725-lab1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:255320498458:android:1a5c49d8c91cda68d74ca3",
+        "android_client_info": {
+          "package_name": "com.example.module2_firebase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "255320498458-0v00vnm266b84h42omj4mpeljirmm9sp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBdvPQDDZmvnTKQbFArV_KrhLyfvY2-aFw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "255320498458-0v00vnm266b84h42omj4mpeljirmm9sp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
