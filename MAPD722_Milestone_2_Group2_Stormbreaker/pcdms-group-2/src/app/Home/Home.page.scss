@@ -1,0 +1,70 @@
+#welcome_view {
+  flex: 0.9;
+  justify-content: 'space-around';
+  align-items: 'center';
+}
+#welcome_tag {
+  margin-top: 30;
+  font-size: 50;
+  color: 'red';
+  font-weight: 'bold';
+  justify-content: 'center';
+  text-align: 'center';
+}
+#welcome_title {
+  font-size: 25;
+  color: 'black';
+  font-weight: 'bold';
+  justify-content: 'center';
+  align-items: 'center';
+  text-align: 'center';
+}
+#welcome_action {
+  font-size: 22;
+  font-weight: '600';
+  color: '#000B4C';
+  align-items: 'center';
+  justify-content: 'center';
+  text-align: 'center';
+}
+#welcome_options_a {
+  font-size: 20;
+  font-weight: '600';
+  color: '#0022E1';
+  padding-top: 10;
+  padding-left: 5;
+  flex-direction: 'row';
+  justify-content: 'space-between';
+  align-items: 'center';
+  align-content: 'center';
+}
+#welcome_options_b {
+  font-size: 20;
+  font-weight: '600';
+  color: '#0022E1';
+  padding-left: 40;
+  flex-direction: 'row';
+  justify-content: 'space-between';
+  align-items: 'center';
+  align-content: 'center';
+}
+#welcome_options_c {
+  margin-top: 5;
+  font-size: 20;
+  font-weight: '600';
+  color: '#0022E1';
+  flex-direction: 'row';
+  justify-content: 'center';
+  align-items: 'center';
+  align-content: 'center';
+}
+#help {
+  font-weight: 'bold';
+  justify-content: 'center';
+  align-items: 'center';
+}
+#logout {
+  font-weight: 'bold';
+  justify-content: 'center';
+  align-items: 'center';
+}

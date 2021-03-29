@@ -6,8 +6,8 @@
   align-items: 'center';
   text-align: 'center';
 }
-#search_render_text {
-  font-size: 30;
+.search_render_text {
+  font-size: 8;
   font-weight: 'bold';
   align-self: 'center';
   justify-content: 'center'
@@ -17,7 +17,7 @@
   justify-content: 'center';
   align-items: 'center'
 }
-#profile_pic {
+.ion-header {
   margin-top: 20;
   justify-content: 'center';
   align-content: 'center';

@@ -1,0 +1,592 @@
+#container {
+  background-color: '#ecf0f1';
+}
+#add_render {
+  margin-top: 10;
+  font-size: 30;
+  font-weight: 'bold';
+  justify-content: 'center';
+  align-items: 'center';
+  text-align: 'center';
+}
+#search_button {
+  position: 'absolute';
+  margin-top: 20;
+  margin-left: 40;
+}
+#add_render_text {
+  font-size: 30;
+  font-weight: 'bold';
+}
+#add_patient_name_area {
+  height: 50;
+  width: 400;
+  margin-top: 10;
+  font-size: 20;
+  font-weight: '600';
+  color: '#0022E1';
+  flex-direction: 'row';
+  justify-content:'space-around';
+  align-items: 'center';
+}
+#add_patient_name {
+  font-size: 20;
+  margin-left: 20;
+  margin-right: 10;
+  font-weight: 'bold';
+  align-self: 'center';
+  justify-content: 'center';
+}
+#add_patient_first_name {
+  margin: 20;
+  height: 40;
+  width: 150;
+  border-width: 1;
+  padding: 10;
+}
+#add_patient_last_name {
+  margin: 15;
+  height: 40;
+  width: 150;
+  border-width: 1;
+  padding: 10;
+}
+#add_patient_DOB_A_area {
+  height: 50;
+  width: 400;
+  margin-top: 10;
+  font-size: 20;
+  font-weight: '600';
+  color: '#0022E1';
+  flex-direction: 'row';
+  justify-content:'space-around';
+  align-items: 'center';
+}
+#add_patient_DOB {
+  font-size: 20;
+  margin-left: 20;
+  margin-right: 10;
+  font-weight: 'bold';
+  align-self: 'center';
+  justify-content: 'center';
+}
+#add_patient_DOB_MM {
+  margin: 15;
+  height: 40;
+  width: 50;
+  border-width: 1;
+  padding: 10;
+}
+#add_patient_DOB_DD {
+  margin: 15;
+  height: 40;
+  width: 50;
+  border-width: 1;
+  padding: 10;
+}
+#add_patient_DOB_YYYY {
+  margin: 15;
+  height: 40;
+  width: 60;
+  border-width: 1;
+  padding: 10;
+}
+#add_patient_DOA {
+  font-size: 20;
+  margin-left: 20;
+  margin-right: 10;
+  font-weight: 'bold';
+  align-self: 'center';
+  justify-content: 'center';
+}
+#add_patient_DOA_Date {
+  margin: 15;
+  height: 40;
+  width: 100;
+  border-width: 1;
+  padding: 10;
+}
+#add_patient_Gender_area {
+  height: 50;
+  width: 400;
+  margin-top: 5;
+  font-size: 20;
+  font-weight: '600';
+  color: '#0022E1';
+  flex-direction: 'row';
+  justify-content:'space-around';
+  align-items: 'center';
+}
+#add_patient_Gender {
+  font-size: 20;
+  margin-left: 40;
+  font-weight: 'bold';
+  align-self: 'center';
+  justify-content: 'center';
+}
+// #add_patient_Gender_sex {
+//     margin: 15;
+//     height: 40;
+//     width: 250;
+//     border-width: 1;
+//     padding: 10;
+// }
+#add_patient_Gender_sex {
+  margin-top: 15;
+  font-size: 20;
+  font-weight: '600';
+  color: '#0022E1';
+  justify-content:'center';
+  align-items: 'center';
+}
+#add_patient_Address_area {
+  height: 50;
+  width: 400;
+  margin-top: 10;
+  font-size: 20;
+  font-weight: '600';
+  color: '#0022E1';
+  flex-direction: 'row';
+  justify-content:'space-around';
+  align-items: 'center';
+}
+#add_patient_Address_Lbl {
+  font-size: 20;
+  margin-left: 40;
+  font-weight: 'bold';
+  align-self: 'center';
+  justify-content: 'center';
+}
+#add_patient_Address_Line_area {
+  height: 120;
+  width: 400;
+  margin-top: 70;
+  font-size: 20;
+  font-weight: '600';
+  color: '#0022E1';
+  flex-direction: 'column';
+  justify-content:'space-around';
+  align-items: 'center';
+}
+#add_patient_Address_Line_entry_1 {
+  margin: 15;
+  height: 40;
+  margin-bottom: 30;
+  width: 250;
+  border-width: 1;
+  padding: 10;
+}
+#add_patient_Address_Line_entry_2 {
+  margin: 15;
+  height: 40;
+  width: 250;
+  border-width: 1;
+  padding: 10;
+}
+#add_patient_Address_City_entry {
+  margin-top: 50;
+  height: 40;
+  width: 150;
+  border-width: 1;
+  padding: 10;
+}
+#add_patient_Address_Province_area {
+  height: 50;
+  width: 210;
+  font-size: 20;
+  font-weight: '600';
+  color: '#0022E1';
+  flex-direction: 'row';
+  justify-content:'space-around';
+  align-items: 'center';
+}
+#add_patient_Address_Province_entry {
+  margin-top: 50;
+  height: 40;
+  width: 50;
+  border-width: 1;
+  padding: 10;
+}
+#add_patient_Phone_Number_area {
+  height: 50;
+  width: 400;
+  margin-top: 115;
+  font-size: 20;
+  font-weight: '600';
+  color: '#0022E1';
+  flex-direction: 'row';
+  justify-content:'space-around';
+  align-items: 'center';
+}
+#add_patient_Phone_Number {
+  font-size: 20;
+  margin-left: 10;
+  font-weight: 'bold';
+  align-self: 'center';
+  justify-content: 'center';
+}
+#add_patient_Phone {
+  margin: 15;
+  height: 40;
+  width: 220;
+  border-width: 1;
+  padding: 10;
+}
+#add_patient_measurements_area {
+  height: 50;
+  width: 400;
+  margin-top: 5;
+  font-size: 20;
+  font-weight: '600';
+  color: '#0022E1';
+  flex-direction: 'row';
+  justify-content:'space-around';
+  align-items: 'center'
+}
+#add_patient_height_lbl {
+  font-size: 20;
+  margin-left: 20;
+  margin-right: 10;
+  font-weight: 'bold';
+  align-self: 'center';
+  justify-content: 'center';
+}
+#add_patient_weight_lbl {
+  font-size: 20;
+  margin-left: 10;
+  margin-right: 10;
+  font-weight: 'bold';
+  align-self: 'center';
+  justify-content: 'center';
+}
+#add_patient_height {
+  margin: 20;
+  height: 40;
+  width: 70;
+  border-width: 1;
+  padding: 10;
+}
+#add_patient_weight {
+  margin: 20;
+  height: 40;
+  width: 70;
+  border-width: 1;
+  padding: 10;
+}
+#add_patient_Medications_area {
+  height: 50;
+  width: 400;
+  margin-top: 10;
+  font-size: 20;
+  font-weight: '600';
+  color: '#0022E1';
+  flex-direction: 'row';
+  justify-content:'space-around';
+  align-items: 'center'
+}
+#add_patient_medications_choice {
+  margin-top: 10;
+  font-size: 20;
+  font-weight: '600';
+  color: '#0022E1';
+  flex-direction: 'row';
+  justify-content:'space-between';
+  align-items: 'center'
+}
+#add_patient_meds_specification_area {
+  height: 180;
+  width: 400;
+  font-size: 20;
+  font-weight: '600';
+  color: '#0022E1';
+  flex-direction: 'row';
+  justify-content:'space-around';
+  align-items: 'center'
+}
+#add_patient_meds_lbl {
+  font-size: 20;
+  margin-left: 10;
+  font-weight: 'bold';
+  align-self: 'center';
+  justify-content: 'center';
+}
+#add_patient_meds_YES_lbl {
+  font-size: 15;
+  margin-left: 10;
+  font-weight: 'bold';
+  align-self: 'center';
+  justify-content: 'center';
+}
+#add_patient_meds_specs {
+  margin: 15;
+  height: 150;
+  width: 220;
+  border-width: 1;
+  padding: 10;
+}
+#row_wise_radio_YES_NO {
+  font-size: 20;
+  font-weight: '600';
+  color: '#0022E1';
+  justify-content:'center';
+  align-items: 'center'
+}
+#add_patient_EPhone_Number_area {
+  height: 50;
+  width: 400;
+  margin-top: 10;
+  font-size: 20;
+  font-weight: '600';
+  color: '#0022E1';
+  flex-direction: 'row';
+  justify-content:'space-around';
+  align-items: 'center'
+}
+#add_patient_EPhone_Number {
+  font-size: 20;
+  margin-left: 10;
+  font-weight: 'bold';
+  align-self: 'center';
+  justify-content: 'center';
+}
+#add_patient_EPhone {
+  margin: 15;
+  height: 40;
+  width: 160;
+  border-width: 1;
+  padding: 10;
+}
+#add_patient_E_name_area {
+  height: 50;
+  width: 410;
+  margin-top: 5;
+  font-size: 20;
+  font-weight: '600';
+  color: '#0022E1';
+  flex-direction: 'row';
+  justify-content:'space-around';
+  align-items: 'center'
+}
+#add_patient_Efirst_name {
+  margin: 20;
+  height: 40;
+  width: 180;
+  border-width: 1;
+  padding: 10;
+}
+#add_patient_Elast_name {
+  margin: 20;
+  height: 40;
+  width: 180;
+  border-width: 1;
+  padding: 10;
+}
+#add_patient_ERelationship_area {
+  height: 50;
+  width: 400;
+  margin-top: 10;
+  font-size: 20;
+  font-weight: '600';
+  color: '#0022E1';
+  flex-direction: 'row';
+  justify-content:'space-around';
+  align-items: 'center'
+}
+#add_patient_ERelationship_Lbl {
+  font-size: 20;
+  margin-left: 10;
+  font-weight: 'bold';
+  align-self: 'center';
+  justify-content: 'center';
+}
+#add_patient_ERelationship {
+  margin: 15;
+  height: 40;
+  width: 220;
+  border-width: 1;
+  padding: 10;
+}
+#add_patient_Existing_Condtns_area {
+  height: 50;
+  width: 390;
+  margin-top: 20;
+  font-size: 20;
+  font-weight: '600';
+  color: '#0022E1';
+  justify-content:'center';
+  align-items: 'center'
+}
+#add_patient_Existing_Condtns_lbl {
+  font-size: 20;
+  margin-left: 10;
+  font-weight: 'bold';
+  align-self: 'center';
+  justify-content: 'center';
+}
+#add_patient_Existing_Condtns_list_area {
+  height: 50;
+  width: 400;
+  margin-top: 20;
+  font-size: 20;
+  color: '#0022E1';
+  flex-direction: 'row';
+  justify-content:'center';
+  align-items: 'center'
+}
+#add_patient_Existing_Condtns_other {
+  margin: 15;
+  height: 40;
+  width: 380;
+  border-width: 1;
+  padding: 10;
+}
+#add_patient_Current_Symptoms_area {
+  height: 50;
+  width: 390;
+  margin-top: 10;
+  font-size: 20;
+  font-weight: '600';
+  color: '#0022E1';
+  justify-content:'center';
+  align-items: 'center'
+}
+#add_patient_Current_Symptoms_lbl {
+  font-size: 20;
+  margin-left: 10;
+  font-weight: 'bold';
+  align-self: 'center';
+  justify-content: 'center';
+}
+#add_patient_Current_Symptoms_other {
+  margin: 15;
+  height: 80;
+  width: 380;
+  border-width: 1;
+  padding: 10;
+}
+#add_patient_Medical_Allergies_area {
+  height: 100;
+  width: 400;
+  margin-top: 5;
+  font-size: 20;
+  font-weight: '600';
+  color: '#0022E1';
+  justify-content:'center';
+  align-items: 'center'
+}
+#add_patient_Medical_Allergies {
+  font-size: 20;
+  margin-left: 10;
+  font-weight: 'bold';
+  align-self: 'center';
+  justify-content: 'center';
+}
+#add_patient_Medical_Allergies_choice {
+  margin-top: 10;
+  font-size: 20;
+  font-weight: '600';
+  color: '#0022E1';
+  flex-direction: 'row';
+  justify-content:'space-between';
+  align-items: 'center'
+}
+#add_patient_Medical_Allergies_YES_area {
+  height: 180;
+  width: 400;
+  font-size: 20;
+  font-weight: '600';
+  color: '#0022E1';
+  flex-direction: 'row';
+  justify-content:'space-around';
+  align-items: 'center'
+}
+#add_patient_Medical_Allergies_YES_lbl {
+  font-size: 15;
+  margin-left: 10;
+  font-weight: 'bold';
+  align-self: 'center';
+  justify-content: 'center';
+}
+#add_patient_Medical_Allergies_YES_specs {
+  margin: 15;
+  height: 150;
+  width: 220;
+  border-width: 1;
+  padding: 10;
+}
+#add_patient_Alcohol_area {
+  height: 100;
+  width: 400;
+  margin-top: 15;
+  font-size: 20;
+  font-weight: '600';
+  color: '#0022E1';
+  justify-content:'center';
+  align-items: 'center'
+}
+#add_patient_Alcohol_lbl {
+  font-size: 20;
+  margin-left: 20;
+  font-weight: 'bold';
+  align-self: 'center';
+  justify-content: 'center';
+}
+#add_patient_Alcohol_data {
+  margin-top: 20;
+  font-size: 20;
+  margin-left: 20;
+  font-weight: '600';
+  color: '#0022E1';
+  justify-content:'center';
+  align-items: 'center'
+}
+#add_patient_Tobacco_area {
+  height: 100;
+  width: 400;
+  margin-top: 5;
+  font-size: 20;
+  font-weight: '600';
+  color: '#0022E1';
+  justify-content:'center';
+  align-items: 'center'
+}
+#add_patient_Tobacco {
+  font-size: 20;
+  margin-left: 10;
+  font-weight: 'bold';
+  align-self: 'center';
+  justify-content: 'center';
+}
+#add_patient_Tobacco_choice {
+  margin-top: 10;
+  font-size: 20;
+  font-weight: '600';
+  color: '#0022E1';
+  flex-direction: 'row';
+  justify-content:'space-between';
+  align-items: 'center'
+}
+#add_patient_Tobacco_YES_area {
+  height: 180;
+  width: 400;
+  font-size: 20;
+  font-weight: '600';
+  color: '#0022E1';
+  flex-direction: 'row';
+  justify-content:'space-around';
+  align-items: 'center'
+}
+#add_patient_Tobacco_YES_lbl {
+  font-size: 15;
+  margin-left: 10;
+  font-weight: 'bold';
+  align-self: 'center';
+  justify-content: 'center';
+}
+#add_patient_Tobacco_YES_specs {
+  margin: 15;
+  height: 150;
+  width: 220;
+  border-width: 1;
+  padding: 10;
+}
