@@ -1,0 +1,77 @@
+ion-content {
+  --background: url(../../../assets/background/background.png) no-repeat center center / cover;
+  align-items: center;
+  align-self: center;
+  justify-content: center;
+
+  &.auth_tag{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    display: flex;
+  }
+}
+
+ion-input {
+  &.auth_input{
+    width: 100%;
+    height: 30pt;
+    border: solid 1px black;
+    justify-content: center;
+    align-self: center;
+  }
+}
+
+ion-label{
+  &.button_view{
+    margin-top: 20;
+    justify-content: center;
+    align-items: center
+  }
+
+  &.auth_render_text{
+    margin-top: 50pt;
+    font-size: 25px;
+    font-weight: bold;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+  }
+  &.auth_enter_txtfield{
+    font-size: 20px;
+    justify-content: center;
+    color: #0022E1;
+    align-items: center;
+    text-align: center;
+    font-weight: bold;
+    display: flex;
+  }
+
+  &.auth_logo{
+    flex: 0&.8;
+    justify-content: center;
+    align-items: center
+  }
+
+  &.button_container{
+    background-color: #ecf0f1;
+  }
+}
+
+ion-button{
+  &.auth_button{
+    font-size: 30;
+    font-weight: bold;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &.logout {
+    font-size: 30;
+    font-weight: bold;
+    justify-content: center;
+    align-items: center;
+  }
+}
+

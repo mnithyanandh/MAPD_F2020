@@ -1,0 +1,174 @@
+#container {
+    background-color: '#ecf0f1';
+}
+#view_tag {
+    margin-top: 20;
+    font-size: 50;
+    font-weight: 'bold';
+    justify-content: 'center';
+    align-items: 'center';
+    text-align: 'center';
+}
+#view_render_text {
+    font-size: 25;
+    font-weight: 'bold';
+}
+#view_patient_info {
+    margin-top: 20;
+    font-size: 20;
+    font-weight: '600';
+    color: '#0022E1';
+    justify-content: 'center';
+    align-items: 'center';
+    align-content: 'center'
+}
+#view_name {
+    font-size: 45;
+    font-weight: 'bold';
+    color: '#3948fc';
+    justify-content: 'space-around';
+    align-items: 'center';
+    text-align: 'center';
+    text-decoration-line: 'underline'
+}
+#view_patient_base_info {
+    font-size: 17;
+    font-weight: 'bold';
+    color: '#3948fc';
+    justify-content: 'space-around';
+    align-items: 'center';
+    text-align: 'center';
+}
+#view_patient_subinfo {
+    height: 50;
+    width: 400;
+    font-size: 20;
+    font-weight: '600';
+    color: '#0022E1';
+    flex-direction: 'row';
+    justify-content:'space-around';
+    align-items: 'center'
+}
+#view_title_heading_health_issues {
+    font-size: 22;
+    margin-left: 20;
+    font-weight: 'bold';
+    align-self: 'center';
+    justify-content: 'center';
+    text-decoration-line: 'underline'
+
+}
+#view_title_heading_diagnosis_week {
+    font-size: 22;
+    margin-left: 90;
+    font-weight: 'bold';
+    align-self: 'center';
+    justify-content: 'center';
+    text-decoration-line: 'underline'
+
+}
+#view_patient_diagnosis_week_number_1 {
+    width: 400;
+    font-size: 20;
+    font-weight: '600';
+    color: '#0022E1';
+    flex-direction: 'row';
+    align-content: 'center';
+    justify-content: 'space-around';
+    z-index: 10
+}
+#view_patient_diagnosis_week_number_2 {
+    width: 400;
+    margin-top: 10;
+    font-size: 20;
+    font-weight: '600';
+    color: '#0022E1';
+    flex-direction: 'row';
+    align-content: 'center';
+    justify-content: 'space-around';
+    z-index: 9
+}
+#view_patient_diagnosis_week_number_3 {
+    width: 400;
+    margin-top: 10;
+    font-size: 20;
+    font-weight: '600';
+    color: '#0022E1';
+    align-items: 'center'
+}
+#view_patient_diagnosis_diagnosis_issue_item_1 {
+    color: '#0022E1';
+    flex-direction: 'row';
+    align-content: 'center';
+    justify-content: 'space-between'
+}
+#view_patient_diagnosis_health_issue_items {
+    margin-top: 10;
+    font-size: 20;
+    font-weight: '600';
+    color: '#0022E1';
+    flex-direction: 'column';
+    align-content: 'center';
+    justify-content: 'space-evenly';
+    z-index: 11
+}
+#view_patient_clinical_records {
+    height: 50;
+    width: 400;
+    font-size: 20;
+    font-weight: '600';
+    color: '#0022E1';
+    flex-direction: 'row';
+    justify-content:'space-between';
+    align-items: 'center'
+}
+#view_patient_clinical_record_edit {
+    font-size: 22;
+    margin-left: 20;
+    font-weight: 'bold';
+    align-self: 'center';
+    justify-content: 'center';
+    text-decoration-line: 'underline'
+}
+#view_patient_medical_history {
+    height: 50;
+    width: 400;
+    font-size: 20;
+    font-weight: '600';
+    color: '#0022E1';
+    flex-direction: 'row';
+    justify-content:'space-between';
+    align-items: 'center'
+}
+#view_patient_medical_history_edit {
+    font-size: 22;
+    margin-left: 20;
+    font-weight: 'bold';
+    align-self: 'center';
+    justify-content: 'center';
+    text-decoration-line: 'underline'
+}
+#view_patient_periodic_checkup {
+    height: 50;
+    width: 400;
+    font-size: 20;
+    font-weight: '600';
+    color: '#0022E1';
+    flex-direction: 'row';
+    justify-content:'space-between';
+    align-items: 'center'
+}
+#view_patient_periodic_checkup_edit {
+    font-size: 22;
+    margin-left: 20;
+    font-weight: 'bold';
+    align-self: 'center';
+    justify-content: 'center';
+    text-decoration-line: 'underline'
+}
+#save_button {
+    font-size: 30;
+    font-weight: 'bold';
+    justify-content: 'center';
+    align-items: 'center';
+}

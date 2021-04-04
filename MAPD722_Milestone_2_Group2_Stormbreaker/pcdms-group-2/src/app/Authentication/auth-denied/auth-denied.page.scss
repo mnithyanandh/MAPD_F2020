@@ -1,5 +1,5 @@
-ion-content {
-  --background: url('../../assets/background/background.png') no-repeat center center / cover;
+ion-content{
+  --background: url('../../../assets/background/background.png') no-repeat center center / cover;
   align-items: center;
   align-self: center;
   justify-content: center;
@@ -11,10 +11,9 @@ ion-content {
 .container{
   -webkit-animation:swing-in-top-fwd 2s cubic-bezier(.175,.885,.32,1.275) both;animation:swing-in-top-fwd 2s cubic-bezier(.175,.885,.32,1.275) both;
   img{
-    height: 60%;
-    margin-top: 150pt;
-    width: 70%;
+    height: 40%;
+    margin-top: 250pt;
+    width: 40%;
     align-items: center;
   }
-
 }

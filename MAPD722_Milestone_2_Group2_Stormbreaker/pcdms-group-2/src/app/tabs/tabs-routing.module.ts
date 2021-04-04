@@ -4,7 +4,7 @@ import { TabsPage } from './tabs.page';
 
 const routes: Routes = [
   {
-    path: 'tabs',
+    path: '',
     component: TabsPage,
     children: [
       {
@@ -13,7 +13,7 @@ const routes: Routes = [
       },
       {
         path: 'SearchAPatient',
-        loadChildren: () => import('../SearchAPatient/SearchAPatient.module').then(m => m.SearchAPatientModule)
+        loadChildren: () => import('../SearchAPatient/search-apatient/search-apatient.module').then(m => m.SearchAPatientPageModule)
       },
       {
         path: 'AddAPatient',
@@ -25,14 +25,14 @@ const routes: Routes = [
       },
       {
         path: '',
-        redirectTo: '/tabs/Home',
+        redirectTo: '/Tabs/Home',
         pathMatch: 'full'
       }
     ]
   },
   {
     path: '',
-    redirectTo: '/tabs/Home',
+    redirectTo: '/Tabs/Home',
     pathMatch: 'full'
   }
 ];

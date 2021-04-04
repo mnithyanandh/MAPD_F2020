@@ -6,6 +6,10 @@ const routes: Routes = [
   {
     path: '',
     component: SplashScreen,
+  },
+  {
+    path: 'AuthScreen',
+    loadChildren: () => import('../Authentication/auth-screen/auth-screen.module').then( m => m.AuthScreenPageModule)
   }
 ];
 
