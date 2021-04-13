@@ -1,0 +1,97 @@
+ion-content {
+  --background: url('../../assets/background/background.png') no-repeat center center / cover;
+  align-items: center;
+  align-self: center;
+  justify-content: center;
+  padding: 50px;
+}
+
+ion-label{
+  &.welcome_view {
+    flex: 0.9px;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  &.welcome_tag {
+    font-size: 50px;
+    color: red;
+    width: 100%;
+    font-weight: bold;
+    margin-top: 30px;
+    justify-content: center;
+    display: flex;
+  }
+
+  &.welcome_title {
+    font-size: 23px;
+    color: black;
+    font-weight: bold;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    text-align: center;
+    padding: 4px;
+  }
+
+  &.welcome_action {
+    font-size: 22;
+    font-weight: 600;
+    color: #000B4C;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+  }
+
+  &.welcome_options_a {
+    font-size: 20;
+    color: #0022E1;
+    justify-content:center;
+    align-items: center;
+    align-content: center;
+    width: 100%;
+    display: flex;
+    padding: 5px;
+  }
+  &.welcome_options_b {
+    font-size: 20;
+    color: #0022E1;
+    justify-content:center;
+    align-items: center;
+    align-content: center;
+    width: 100%;
+    display: flex;
+  }
+};
+
+ion-button {
+  &.help {
+    font-weight: bold;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    width: 50%;
+    display: block;
+    margin: 0 auto;
+  }
+  &.logout {
+    font-weight: bold;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    width: 30%;
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+ion-image{
+  &.image-props{
+    height: 100%;
+    width: 100%;
+    z-index: -1
+  }
+}
