@@ -1,42 +1,119 @@
-#search_tag {
-  margin-top: 10;
-  font-size: 50;
-  font-weight: 'bold';
-  justify-content: 'center';
-  align-items: 'center';
-  text-align: 'center';
+ion-content {
+  --background: url('../../../assets/background/background.png') no-repeat center center / cover;
+  align-items: center;
+  align-self: center;
+  justify-content: center;
+  padding: 50px;
 }
-#search_render_text {
-  font-size: 30;
-  font-weight: 'bold';
-  align-self: 'center';
-  justify-content: 'center'
+/* Rounded border */
+.rounded {
+  border-radius: 5px;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border: 0;
+  border-top: 2px solid rgba(0, 0, 0, 0.8);
 }
-#container {
-  background-color: '#ecf0f1';
-  justify-content: 'center';
-  align-items: 'center'
+
+ion-content {
+  &.image {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-self: center;
+  }
 }
-#profile_pic {
-  margin-top: 20;
-  justify-content: 'center';
-  align-content: 'center';
-  align-items: 'center'
+
+ion-img{
+  &.size {
+    height: 150pt;
+    width: 150;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-self: center;
+  }
 }
-#search_button {
-  font-size: 30;
-  font-weight: 'bold';
-  justify-content: 'center';
-  align-items: 'center';
+
+ion-searchbar{
+  &.search_patient{
+    color: gray;
+  }
 }
-#search_render {
-  height: 50;
-  width: 400;
-  margin-top: 10;
-  font-size: 30;
-  font-weight: '600';
-  color: '#0022E1';
-  flex-direction: 'row';
-  justify-content:'center';
-  align-items: 'center'
+
+ion-label {
+  &.search_render {
+    height: 50pt;
+    width: 400pt;
+    font-size: 30;
+    font-weight: 600;
+    color: &.0022E1;
+    flex-direction: row;
+    justify-content:center;
+    align-items: center
+  }
+
+  &.search_render_searchbox{
+    margin-top: 50pt;
+    font-size: 20px;
+    font-weight: bold;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+  }
+
+  &.search_render_text {
+    // font-size: 30;
+    // font-weight: bold;
+    // align-self: center;
+    // justify-content: center
+    font-size: 30px;
+    color: black;
+    font-weight: bold;
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  &.search_tag {
+    margin-top: 10;
+    font-size: 50;
+    font-weight: bold;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  &.container {
+    background-color: #ecf0f1;
+    justify-content: center;
+    align-items: center
+  }
+  &.profile_pic {
+    margin-top: 20;
+    justify-content: center;
+    align-content: center;
+    align-items: center
+  }
+}
+ion-button{
+  &.search_button {
+    font-weight: bold;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    width: 30%;
+    display: flex;
+    margin: 0 auto;
+  }
+
+  &.logout {
+    font-weight: bold;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    width: 30%;
+    display: flex;
+    margin: 0 auto;
+  }
 }

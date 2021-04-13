@@ -1,23 +1,579 @@
 <ion-header [translucent]="true">
-  <ion-toolbar style="align-items: center;">
-    <ion-title>
-      Add Patient
+  <ion-toolbar>
+    <ion-title >
+      PCDMS
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Add Patient</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <ion-label class="add_render_text"> Add A New Patient</ion-label>
+  <hr class="rounded"/>
+  <br/>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <div class="ion-text-center">
+          <ion-label>Name:</ion-label>
+        </div>
+      </ion-col>
+      <ion-col>
+        <div class="ion-text-center">
+          <ion-input class="add_text_input" placeholder="First Name" clearOnEdit="true" [(ngModel)]="firstName"></ion-input>
+        </div>
+      </ion-col>
+      <ion-col>
+        <div class="ion-text-center">
+          <ion-input class="add_text_input" placeholder="Last Name" clearOnEdit="true" [(ngModel)]="lastName"></ion-input>
+        </div>
+      </ion-col>
+    </ion-row>
 
-  <ion-infinite-scroll threshold="100px" (ionInfinite)="loadData($event)">
-    <ion-infinite-scroll-content
-      loadingSpinner="bubbles"
-      loadingText="Loading more data...">
-      <app-explore-container name="Add A New Patient"></app-explore-container>
-    </ion-infinite-scroll-content>
-  </ion-infinite-scroll>
+    <br/>
+
+    <ion-row>
+      <ion-col>
+        <div>
+          <ion-label>DOB:</ion-label>
+        </div>
+      </ion-col>
+      <ion-col>
+        <div class="ion-text-center">
+          <ion-input class="add_text_input" placeholder="MM" clearOnEdit="true" [(ngModel)]="month"></ion-input>
+        </div>
+      </ion-col>
+      <ion-col>
+        <div class="ion-text-center">
+          <ion-input class="add_text_input" placeholder="DD" clearOnEdit="true" [(ngModel)]="lastName"></ion-input>
+        </div>
+      </ion-col>
+      <ion-col>
+        <div class="ion-text-center">
+          <ion-input class="add_text_input" placeholder="YYYY" clearOnEdit="true" [(ngModel)]="year"></ion-input>
+        </div>
+      </ion-col>
+      <ion-col>
+        <div class="ion-text-center">
+          <ion-label>DOA:</ion-label>
+        </div>
+      </ion-col>
+      <ion-col>
+        <div class="ion-text-center">
+          <ion-input class="add_text_input" placeholder="TODAY" clearOnEdit="true" [(ngModel)]="doa"></ion-input>
+        </div>
+      </ion-col>
+    </ion-row>
+
+    <br/>
+
+    <ion-radio-group>
+      <ion-row>
+        <ion-col>
+          <div></div>
+        </ion-col>
+        <ion-col>
+          <div></div>
+        </ion-col>
+          <ion-col>
+            <ion-item lines="none" color="none">
+              <ion-label>Gender: </ion-label>
+            </ion-item>
+          </ion-col>
+
+          <ion-col>
+            <ion-item lines="none" color="none">
+              <ion-label>Male: </ion-label>
+              <ion-radio value="male"></ion-radio>
+            </ion-item>
+          </ion-col>
+
+          <ion-col>
+            <ion-item lines="none" color="none">
+              <ion-label>Female: </ion-label>
+              <ion-radio value="female"></ion-radio>
+            </ion-item>
+          </ion-col>
+          <ion-col>
+            <div></div>
+          </ion-col>
+          <ion-col>
+            <div></div>
+          </ion-col>
+      </ion-row>
+    </ion-radio-group>
+
+    <br/>
+
+    <ion-row>
+      <ion-col>
+        <div class="ion-text-center">
+          <ion-label>Address:</ion-label>
+        </div>
+      </ion-col>
+      <ion-col>
+        <div class="ion-text-center">
+          <ion-input class="add_text_input" placeholder="Line 1" clearOnEdit="true" [(ngModel)]="addressL1"></ion-input>
+        </div>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <div></div>
+      </ion-col>
+      <ion-col>
+        <div class="ion-text-center">
+          <ion-input class="add_text_input" placeholder="Line 2" clearOnEdit="true" [(ngModel)]="addressL2"></ion-input>
+        </div>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <div></div>
+      </ion-col>
+      <ion-col>
+        <div></div>
+      </ion-col>
+      <ion-col>
+        <div class="ion-text-center">
+          <ion-input class="add_text_input" placeholder="City" clearOnEdit="true" [(ngModel)]="city"></ion-input>
+        </div>
+      </ion-col>
+      <ion-col>
+        <div class="ion-text-center">
+          <ion-input class="add_text_input" placeholder="PR" clearOnEdit="true" [(ngModel)]="province"></ion-input>
+        </div>
+      </ion-col>
+    </ion-row>
+
+    <br/>
+
+    <ion-row>
+      <ion-col>
+        <div class="ion-text-center">
+          <ion-label>Phone Number:</ion-label>
+        </div>
+      </ion-col>
+      <ion-col>
+        <div class="ion-text-center">
+          <ion-input class="add_text_input" placeholder="Phone Number" clearOnEdit="true" [(ngModel)]="phoneno"></ion-input>
+        </div>
+      </ion-col>
+    </ion-row>
+
+    <br/>
+
+    <ion-row>
+      <ion-col>
+        <div class="ion-text-center">
+          <ion-label>Height:</ion-label>
+        </div>
+      </ion-col>
+      <ion-col>
+        <div class="ion-text-center">
+          <ion-input class="add_text_input" placeholder="in cm" clearOnEdit="true" [(ngModel)]="height"></ion-input>
+        </div>
+      </ion-col>
+      <ion-col>
+        <div></div>
+      </ion-col>
+      <ion-col>
+        <div class="ion-text-center">
+          <ion-label>Weight:</ion-label>
+        </div>
+      </ion-col>
+      <ion-col>
+        <div class="ion-text-center">
+          <ion-input class="add_text_input" placeholder="in kgs" clearOnEdit="true" [(ngModel)]="weight"></ion-input>
+        </div>
+      </ion-col>
+    </ion-row>
+
+    <br/>
+
+    <ion-row>
+      <ion-col>
+        <div class="ion-text-center">
+          <ion-label>Blood Pressure Stats:</ion-label>
+        </div>
+      </ion-col>
+      <ion-col>
+        <div class="ion-text-center">
+          <ion-input class="add_text_input" placeholder="curr/max" clearOnEdit="true" [(ngModel)]="bloodp"></ion-input>
+        </div>
+      </ion-col>
+    </ion-row>
+
+    <br/>
+
+    <ion-row>
+      <ion-col>
+        <div class="ion-text-center">
+          <ion-label>Respiratory Rate Stats:</ion-label>
+        </div>
+      </ion-col>
+      <ion-col>
+        <div class="ion-text-center">
+          <ion-input class="add_text_input" placeholder="cycles/min" clearOnEdit="true" [(ngModel)]="respiratoryr"></ion-input>
+        </div>
+      </ion-col>
+    </ion-row>
+
+    <br/>
+
+    <ion-row>
+      <ion-col>
+        <div class="ion-text-center">
+          <ion-label>Blood Oxygen Level Stats:</ion-label>
+        </div>
+      </ion-col>
+      <ion-col>
+        <div class="ion-text-center">
+          <ion-input class="add_text_input" placeholder="O2%" clearOnEdit="true" [(ngModel)]="bloodoxy"></ion-input>
+        </div>
+      </ion-col>
+    </ion-row>
+
+    <br/>
+
+    <ion-row>
+      <ion-col>
+        <div class="ion-text-center">
+          <ion-label>Heart Rate Stats:</ion-label>
+        </div>
+      </ion-col>
+      <ion-col>
+        <div class="ion-text-center">
+          <ion-input class="add_text_input" placeholder="beats/min" clearOnEdit="true" [(ngModel)]="heartr"></ion-input>
+        </div>
+      </ion-col>
+    </ion-row>
+
+    <br/>
+
+    <ion-radio-group>
+      <ion-row>
+        <ion-col>
+          <div></div>
+        </ion-col>
+        <ion-col>
+          <ion-item lines="none" color="none">
+            <ion-label>On Medications?</ion-label>
+          </ion-item>
+        </ion-col>
+        <ion-col>
+          <div class="ion-text-center">
+            <ion-item lines="none" color="none">
+              <ion-label>Yes  </ion-label>
+              <ion-radio value="yes"></ion-radio>
+            </ion-item>
+          </div>
+        </ion-col>
+        <ion-col>
+          <div class="ion-text-center">
+            <ion-item lines="none" color="none">
+              <ion-label>No  </ion-label>
+              <ion-radio value="no"></ion-radio>
+            </ion-item>
+          </div>
+        </ion-col>
+        <ion-col>
+          <div></div>
+        </ion-col>
+      </ion-row>
+    </ion-radio-group>
+
+    <ion-row>
+      <ion-col>
+        <div class="ion-text-center">
+          <ion-label>If Yes, please specify:</ion-label>
+        </div>
+      </ion-col>
+      <ion-col>
+        <div class="ion-text-center">
+          <ion-textarea class="add_patient_meds_specs" placeholder="specify medications here" clearOnEdit="true" [(ngModel)]="xmedications"></ion-textarea>
+        </div>
+      </ion-col>
+    </ion-row>
+
+    <br/>
+
+    <ion-row>
+      <ion-col>
+        <div class="ion-text-center">
+          <ion-label>Emergency Phone No.:</ion-label>
+        </div>
+      </ion-col>
+      <ion-col>
+        <div class="ion-text-center">
+          <ion-input class="add_text_input" placeholder="Phone Number" clearOnEdit="true" [(ngModel)]="ephoneno"></ion-input>
+        </div>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <div class="ion-text-center">
+          <ion-input class="add_text_input" placeholder="First Name" clearOnEdit="true" [(ngModel)]="efirstName"></ion-input>
+        </div>
+      </ion-col>
+      <ion-col>
+        <div class="ion-text-center">
+          <ion-input class="add_text_input" placeholder="Last Name" clearOnEdit="true" [(ngModel)]="elastName"></ion-input>
+        </div>
+      </ion-col>
+    </ion-row>
+
+    <br/>
+
+    <ion-row>
+      <ion-col>
+        <div class="ion-text-center">
+          <ion-label>Relationship:</ion-label>
+        </div>
+      </ion-col>
+      <ion-col>
+        <div class="ion-text-center">
+          <ion-input class="add_text_input" placeholder="Father/Mother/???" clearOnEdit="true" [(ngModel)]="econtactType"></ion-input>
+        </div>
+      </ion-col>
+    </ion-row>
+
+    <br/>
+
+    <div class="ion-text-center">
+      <ion-label class="add_patient_Existing_Condtns_lbl">Check the following exisiting health conditions that apply to the patient:</ion-label>
+    </div>
+
+    <br/>
+
+    <ion-row>
+      <ion-col>
+        <div class="ion-text-center">
+          <ion-label>Epilepsy</ion-label>
+        </div>
+      </ion-col>
+      <ion-col>
+        <div class="ion-text-center">
+          <ion-checkbox checked="false"></ion-checkbox>
+        </div>
+      </ion-col>
+      <ion-col>
+        <div class="ion-text-center">
+          <ion-label>Cardiac Issues</ion-label>
+        </div>
+      </ion-col>
+      <ion-col>
+        <div class="ion-text-center">
+          <ion-checkbox checked="false"></ion-checkbox>
+        </div>
+      </ion-col>
+      <ion-col>
+        <div class="ion-text-center">
+          <ion-label>Hypertension</ion-label>
+        </div>
+      </ion-col>
+      <ion-col>
+        <div class="ion-text-center">
+          <ion-checkbox checked="false"></ion-checkbox>
+        </div>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <div class="ion-text-center">
+          <ion-label>Cancer</ion-label>
+        </div>
+      </ion-col>
+      <ion-col>
+        <div class="ion-text-center">
+          <ion-checkbox checked="false"></ion-checkbox>
+        </div>
+      </ion-col>
+      <ion-col>
+        <div class="ion-text-center">
+          <ion-label>Asthma</ion-label>
+        </div>
+      </ion-col>
+      <ion-col>
+        <div class="ion-text-center">
+          <ion-checkbox checked="false"></ion-checkbox>
+        </div>
+      </ion-col>
+      <ion-col>
+        <div class="ion-text-center">
+          <ion-label>Diabetes</ion-label>
+        </div>
+      </ion-col>
+      <ion-col>
+        <div class="ion-text-center">
+          <ion-checkbox checked="false"></ion-checkbox>
+        </div>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <div class="ion-text-center">
+          <ion-input class="add_text_input" placeholder="others please specify here" clearOnEdit="true" [(ngModel)]="preconditions"></ion-input>
+        </div>
+      </ion-col>
+    </ion-row>
+
+    <br/>
+
+    <div class="ion-text-center">
+      <ion-label class="add_patient_Existing_Condtns_lbl">Current symptoms that apply to the patient:</ion-label>
+    </div>
+
+    <ion-row>
+      <ion-col>
+        <div class="ion-text-center">
+          <ion-input class="add_text_input" placeholder="specify symptoms here" clearOnEdit="true" [(ngModel)]="symptoms"></ion-input>
+        </div>
+      </ion-col>
+    </ion-row>
+
+    <br/>
+
+    <ion-radio-group>
+      <ion-row>
+        <ion-col>
+          <div></div>
+        </ion-col>
+        <ion-col>
+          <ion-item lines="none" color="none" class="ion-text-center">
+            <ion-label class="add_patient_Existing_Condtns_lbl">Medical Allergies?</ion-label>
+          </ion-item>
+        </ion-col>
+        <ion-col>
+          <div class="ion-text-center">
+            <ion-item lines="none" color="none">
+              <ion-label>Yes  </ion-label>
+              <ion-radio value="yes"></ion-radio>
+            </ion-item>
+          </div>
+        </ion-col>
+        <ion-col>
+          <div class="ion-text-center">
+            <ion-item lines="none" color="none">
+              <ion-label>No  </ion-label>
+              <ion-radio value="no"></ion-radio>
+            </ion-item>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-radio-group>
+
+    <ion-row>
+      <ion-col>
+        <div class="ion-text-center">
+          <ion-label>If Yes, please specify:</ion-label>
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <div class="ion-text-center">
+          <ion-input class="add_text_input" placeholder="others please specify here" clearOnEdit="true" [(ngModel)]="xallergies"></ion-input>
+        </div>
+      </ion-col>
+    </ion-row>
+
+    <br/>
+
+    <ion-row>
+      <ion-col>
+        <ion-item lines="none" color="none" class="ion-text-center">
+          <ion-label class="add_patient_Existing_Condtns_lbl">Does the patient consume alcohol?</ion-label>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+
+    <ion-radio-group>
+      <ion-row>
+        <ion-col>
+          <div class="ion-text-center">
+            <ion-item lines="none" color="none">
+              <ion-label>Daily </ion-label>
+              <ion-radio value="daily"></ion-radio>
+            </ion-item>
+          </div>
+        </ion-col>
+        <ion-col>
+          <div class="ion-text-center">
+            <ion-item lines="none" color="none">
+              <ion-label>Monthly </ion-label>
+              <ion-radio value="monthly"></ion-radio>
+            </ion-item>
+          </div>
+        </ion-col>
+        <ion-col>
+          <div class="ion-text-center">
+            <ion-item lines="none" color="none">
+              <ion-label>Occassionally </ion-label>
+              <ion-radio value="occassionally"></ion-radio>
+            </ion-item>
+          </div>
+        </ion-col>
+        <ion-col>
+          <div class="ion-text-center">
+            <ion-item lines="none" color="none">
+              <ion-label>Never </ion-label>
+              <ion-radio value="never"></ion-radio>
+            </ion-item>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-radio-group>
+
+    <br/>
+
+    <ion-row>
+      <ion-col>
+        <ion-item lines="none" color="none" class="ion-text-center">
+          <ion-label class="add_patient_Existing_Condtns_lbl">Does the patient consume tobacco?</ion-label>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+
+    <ion-radio-group>
+      <ion-row>
+        <ion-col>
+          <div></div>
+        </ion-col>
+        <ion-col>
+          <div class="ion-text-center">
+            <ion-item lines="none" color="none">
+              <ion-label>Yes </ion-label>
+              <ion-radio value="yes"></ion-radio>
+            </ion-item>
+          </div>
+        </ion-col>
+        <ion-col>
+          <div class="ion-text-center">
+            <ion-item lines="none" color="none">
+              <ion-label>No </ion-label>
+              <ion-radio value="no"></ion-radio>
+            </ion-item>
+          </div>
+        </ion-col>
+        <ion-col>
+          <div></div>
+        </ion-col>
+      </ion-row>
+    </ion-radio-group>
+
+    <br/>
+
+    <ion-button class="search_button" (click)="logout()">Logout</ion-button>
+
+  </ion-grid>
+
+  <br/>
+  <br/>
+  <br/>
+  <br/>
 </ion-content>

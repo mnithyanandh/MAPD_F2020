@@ -1,5 +1,6 @@
 import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
+import { Location } from '@angular/common'
 
 @Component({
   selector: 'app-auth-denied',
@@ -8,9 +9,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AuthDeniedPage implements OnInit {
 
-  constructor(private route: Router) {
+  constructor(private route: Router, private location: Location) {
     setTimeout(() => {
-      this.route.navigateByUrl('AuthScreen');
+      this.location.back();
     }, 3000);
   }
   ngOnInit() {

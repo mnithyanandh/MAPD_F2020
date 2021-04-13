@@ -17,6 +17,7 @@ export class AppComponent {
   start()
   {
     this.platform.ready().then(() => {
+      // change back to "Splash" once finalized
       this.router.navigateByUrl('Splash');
     });
   }

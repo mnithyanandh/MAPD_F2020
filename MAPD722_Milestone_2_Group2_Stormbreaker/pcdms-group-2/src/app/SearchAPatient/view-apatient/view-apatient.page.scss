@@ -172,3 +172,67 @@
     justify-content: 'center';
     align-items: 'center';
 }
+
+.rounded {
+  border-radius: 5px;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border: 0;
+  border-top: 2px solid rgba(0, 0, 0, 0.8);
+}
+
+ion-label {
+  &.search_render {
+    height: 50pt;
+    width: 400pt;
+    font-size: 30;
+    font-weight: 600;
+    color: &.0022E1;
+    flex-direction: row;
+    justify-content:center;
+    align-items: center
+  }
+
+  &.search_render_searchbox{
+    margin-top: 50pt;
+    font-size: 20px;
+    font-weight: bold;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+  }
+
+  &.view_render_text {
+    // font-size: 30;
+    // font-weight: bold;
+    // align-self: center;
+    // justify-content: center
+    font-size: 30px;
+    color: black;
+    font-weight: bold;
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+}
+ion-button {
+  &.help {
+    font-weight: bold;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    width: 50%;
+    display: block;
+    margin: 0 auto;
+  }
+  &.back {
+    font-weight: bold;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    width: 60%;
+    display: block;
+    margin: 0 auto;
+  }
+}

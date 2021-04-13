@@ -19,6 +19,10 @@ const routes: Routes = [
     loadChildren: () => import('./Authentication/auth-denied/auth-denied.module').then( m => m.AuthDeniedPageModule)
   },
   {
+    path: 'ViewAPatient',
+    loadChildren: () => import('./SearchAPatient/view-apatient/view-apatient.module').then(m => m.ViewAPatientPageModule)
+  },
+  {
     path: 'Tabs',
     loadChildren: () => import('./Tabs/tabs.module').then(m => m.TabsPageModule)
   },

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Location } from '@angular/common';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-view-apatient',
@@ -7,7 +9,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ViewAPatientPage implements OnInit {
 
-  constructor() { }
+  constructor(private route: Router, private location: Location) { }
+
+  logout(){
+    this.location.back();
+  }
 
   ngOnInit() {
   }
