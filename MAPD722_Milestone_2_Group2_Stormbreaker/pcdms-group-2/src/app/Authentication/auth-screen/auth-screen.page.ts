@@ -42,7 +42,6 @@ export class AuthScreenPage implements OnInit, OnDestroy{
         .then(response => response.json())
         .then((data) => {
             this.pass_code = data;
-            console.log(this.pass_code);
         })
         .catch((error) => {
         console.log(error);

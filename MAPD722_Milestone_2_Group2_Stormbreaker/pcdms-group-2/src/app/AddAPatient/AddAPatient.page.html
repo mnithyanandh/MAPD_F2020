@@ -19,12 +19,12 @@
       </ion-col>
       <ion-col>
         <div class="ion-text-center">
-          <ion-input class="add_text_input" placeholder="First Name" clearOnEdit="true" [(ngModel)]="firstName"></ion-input>
+          <ion-input class="add_text_input" placeholder="First Name" clearOnEdit="true" [(ngModel)]="firstname"></ion-input>
         </div>
       </ion-col>
       <ion-col>
         <div class="ion-text-center">
-          <ion-input class="add_text_input" placeholder="Last Name" clearOnEdit="true" [(ngModel)]="lastName"></ion-input>
+          <ion-input class="add_text_input" placeholder="Last Name" clearOnEdit="true" [(ngModel)]="lastname"></ion-input>
         </div>
       </ion-col>
     </ion-row>
@@ -44,7 +44,7 @@
       </ion-col>
       <ion-col>
         <div class="ion-text-center">
-          <ion-input class="add_text_input" placeholder="DD" clearOnEdit="true" [(ngModel)]="lastName"></ion-input>
+          <ion-input class="add_text_input" placeholder="DD" clearOnEdit="true" [(ngModel)]="date"></ion-input>
         </div>
       </ion-col>
       <ion-col>
@@ -66,7 +66,7 @@
 
     <br/>
 
-    <ion-radio-group>
+    <ion-radio-group [(ngModel)]="gender">
       <ion-row>
         <ion-col>
           <div></div>
@@ -83,14 +83,14 @@
           <ion-col>
             <ion-item lines="none" color="none">
               <ion-label>Male: </ion-label>
-              <ion-radio value="male"></ion-radio>
+              <ion-radio value="Male"></ion-radio>
             </ion-item>
           </ion-col>
 
           <ion-col>
             <ion-item lines="none" color="none">
               <ion-label>Female: </ion-label>
-              <ion-radio value="female"></ion-radio>
+              <ion-radio value="Female"></ion-radio>
             </ion-item>
           </ion-col>
           <ion-col>
@@ -144,6 +144,23 @@
         <div class="ion-text-center">
           <ion-input class="add_text_input" placeholder="PR" clearOnEdit="true" [(ngModel)]="province"></ion-input>
         </div>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <div></div>
+      </ion-col>
+      <ion-col>
+        <div></div>
+      </ion-col>
+      <ion-col>
+        <div class="ion-text-center">
+          <ion-input class="add_text_input" placeholder="Zipcode" clearOnEdit="true" [(ngModel)]="zipcode"></ion-input>
+        </div>
+      </ion-col>
+      <ion-col>
+        <div></div>
       </ion-col>
     </ion-row>
 
@@ -252,7 +269,7 @@
 
     <br/>
 
-    <ion-radio-group>
+    <ion-radio-group [(ngModel)]="medications">
       <ion-row>
         <ion-col>
           <div></div>
@@ -266,7 +283,7 @@
           <div class="ion-text-center">
             <ion-item lines="none" color="none">
               <ion-label>Yes  </ion-label>
-              <ion-radio value="yes"></ion-radio>
+              <ion-radio value="Yes"></ion-radio>
             </ion-item>
           </div>
         </ion-col>
@@ -274,7 +291,7 @@
           <div class="ion-text-center">
             <ion-item lines="none" color="none">
               <ion-label>No  </ion-label>
-              <ion-radio value="no"></ion-radio>
+              <ion-radio value="No"></ion-radio>
             </ion-item>
           </div>
         </ion-col>
@@ -315,12 +332,12 @@
     <ion-row>
       <ion-col>
         <div class="ion-text-center">
-          <ion-input class="add_text_input" placeholder="First Name" clearOnEdit="true" [(ngModel)]="efirstName"></ion-input>
+          <ion-input class="add_text_input" placeholder="First Name" clearOnEdit="true" [(ngModel)]="efirstname"></ion-input>
         </div>
       </ion-col>
       <ion-col>
         <div class="ion-text-center">
-          <ion-input class="add_text_input" placeholder="Last Name" clearOnEdit="true" [(ngModel)]="elastName"></ion-input>
+          <ion-input class="add_text_input" placeholder="Last Name" clearOnEdit="true" [(ngModel)]="elastname"></ion-input>
         </div>
       </ion-col>
     </ion-row>
@@ -348,71 +365,59 @@
 
     <br/>
 
-    <ion-row>
-      <ion-col>
-        <div class="ion-text-center">
-          <ion-label>Epilepsy</ion-label>
-        </div>
-      </ion-col>
-      <ion-col>
-        <div class="ion-text-center">
-          <ion-checkbox checked="false"></ion-checkbox>
-        </div>
-      </ion-col>
-      <ion-col>
-        <div class="ion-text-center">
-          <ion-label>Cardiac Issues</ion-label>
-        </div>
-      </ion-col>
-      <ion-col>
-        <div class="ion-text-center">
-          <ion-checkbox checked="false"></ion-checkbox>
-        </div>
-      </ion-col>
-      <ion-col>
-        <div class="ion-text-center">
-          <ion-label>Hypertension</ion-label>
-        </div>
-      </ion-col>
-      <ion-col>
-        <div class="ion-text-center">
-          <ion-checkbox checked="false"></ion-checkbox>
-        </div>
-      </ion-col>
-    </ion-row>
-
-    <ion-row>
-      <ion-col>
-        <div class="ion-text-center">
-          <ion-label>Cancer</ion-label>
-        </div>
-      </ion-col>
-      <ion-col>
-        <div class="ion-text-center">
-          <ion-checkbox checked="false"></ion-checkbox>
-        </div>
-      </ion-col>
-      <ion-col>
-        <div class="ion-text-center">
-          <ion-label>Asthma</ion-label>
-        </div>
-      </ion-col>
-      <ion-col>
-        <div class="ion-text-center">
-          <ion-checkbox checked="false"></ion-checkbox>
-        </div>
-      </ion-col>
-      <ion-col>
-        <div class="ion-text-center">
-          <ion-label>Diabetes</ion-label>
-        </div>
-      </ion-col>
-      <ion-col>
-        <div class="ion-text-center">
-          <ion-checkbox checked="false"></ion-checkbox>
-        </div>
-      </ion-col>
-    </ion-row>
+      <form [formGroup]="form" lines="none" color="none">
+        <ion-row>
+          <ion-col>
+            <ion-item (click)="onAllChange()" lines="none" color="none" class="item-transparent">
+              <ion-checkbox slot="start" [checked]="allOptionStateChecked" [indeterminate]="allOptionStateIndeterminate">
+              </ion-checkbox>
+              <ion-label>All</ion-label>
+            </ion-item>
+          </ion-col>
+          <ion-col>
+            <ion-item lines="none" color="none">
+              <ion-checkbox slot="start" formControlName="Epilepsy" (ionChange)="onPreConditionsChange()">
+              </ion-checkbox>
+              <ion-label>Epilepsy</ion-label>
+            </ion-item>
+          </ion-col>
+          <ion-col>
+            <ion-item lines="none" color="none">
+              <ion-checkbox slot="start" formControlName="Cardiac" (ionChange)="onPreConditionsChange()">
+              </ion-checkbox>
+              <ion-label>Caridac Arrest</ion-label>
+            </ion-item>
+          </ion-col>
+          <ion-col>
+            <ion-item lines="none" color="none">
+              <ion-checkbox slot="start" formControlName="Hypertension" (ionChange)="onPreConditionsChange()">
+              </ion-checkbox>
+              <ion-label>Hypertension</ion-label>
+            </ion-item>
+          </ion-col>
+          <ion-col>
+            <ion-item lines="none" color="none">
+              <ion-checkbox slot="start" formControlName="Cancer" (ionChange)="onPreConditionsChange()">
+              </ion-checkbox>
+              <ion-label>Cancer</ion-label>
+            </ion-item>
+          </ion-col>
+          <ion-col>
+            <ion-item lines="none" color="none">
+              <ion-checkbox slot="start" formControlName="Asthma" (ionChange)="onPreConditionsChange()">
+              </ion-checkbox>
+              <ion-label>Asthma</ion-label>
+            </ion-item>
+          </ion-col>
+          <ion-col>
+            <ion-item lines="none" color="none">
+              <ion-checkbox slot="start" formControlName="Diabetes" (ionChange)="onPreConditionsChange()">
+              </ion-checkbox>
+              <ion-label>Diabetes</ion-label>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+      </form>
 
     <ion-row>
       <ion-col>
@@ -438,7 +443,7 @@
 
     <br/>
 
-    <ion-radio-group>
+    <ion-radio-group [(ngModel)]="allergies">
       <ion-row>
         <ion-col>
           <div></div>
@@ -452,7 +457,7 @@
           <div class="ion-text-center">
             <ion-item lines="none" color="none">
               <ion-label>Yes  </ion-label>
-              <ion-radio value="yes"></ion-radio>
+              <ion-radio value="Yes"></ion-radio>
             </ion-item>
           </div>
         </ion-col>
@@ -460,7 +465,7 @@
           <div class="ion-text-center">
             <ion-item lines="none" color="none">
               <ion-label>No  </ion-label>
-              <ion-radio value="no"></ion-radio>
+              <ion-radio value="No"></ion-radio>
             </ion-item>
           </div>
         </ion-col>
@@ -492,13 +497,13 @@
       </ion-col>
     </ion-row>
 
-    <ion-radio-group>
+    <ion-radio-group [(ngModel)]="alcohol">
       <ion-row>
         <ion-col>
           <div class="ion-text-center">
             <ion-item lines="none" color="none">
               <ion-label>Daily </ion-label>
-              <ion-radio value="daily"></ion-radio>
+              <ion-radio value="Daily"></ion-radio>
             </ion-item>
           </div>
         </ion-col>
@@ -506,7 +511,7 @@
           <div class="ion-text-center">
             <ion-item lines="none" color="none">
               <ion-label>Monthly </ion-label>
-              <ion-radio value="monthly"></ion-radio>
+              <ion-radio value="Monthly"></ion-radio>
             </ion-item>
           </div>
         </ion-col>
@@ -514,7 +519,7 @@
           <div class="ion-text-center">
             <ion-item lines="none" color="none">
               <ion-label>Occassionally </ion-label>
-              <ion-radio value="occassionally"></ion-radio>
+              <ion-radio value="Occassionally"></ion-radio>
             </ion-item>
           </div>
         </ion-col>
@@ -522,7 +527,7 @@
           <div class="ion-text-center">
             <ion-item lines="none" color="none">
               <ion-label>Never </ion-label>
-              <ion-radio value="never"></ion-radio>
+              <ion-radio value="Never"></ion-radio>
             </ion-item>
           </div>
         </ion-col>
@@ -539,7 +544,7 @@
       </ion-col>
     </ion-row>
 
-    <ion-radio-group>
+    <ion-radio-group [(ngModel)]="tobacco">
       <ion-row>
         <ion-col>
           <div></div>
@@ -548,7 +553,7 @@
           <div class="ion-text-center">
             <ion-item lines="none" color="none">
               <ion-label>Yes </ion-label>
-              <ion-radio value="yes"></ion-radio>
+              <ion-radio value="Yes"></ion-radio>
             </ion-item>
           </div>
         </ion-col>
@@ -556,7 +561,7 @@
           <div class="ion-text-center">
             <ion-item lines="none" color="none">
               <ion-label>No </ion-label>
-              <ion-radio value="no"></ion-radio>
+              <ion-radio value="No"></ion-radio>
             </ion-item>
           </div>
         </ion-col>
@@ -568,9 +573,83 @@
 
     <br/>
 
-    <ion-button class="search_button" (click)="submit()">Submit</ion-button>
+    <ion-row>
+      <ion-col>
+        <ion-item lines="none" color="none" class="ion-text-center">
+          <ion-label class="add_patient_Existing_Condtns_lbl">Patient current health status:</ion-label>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+
+    <ion-radio-group [(ngModel)]="currentCondition">
+      <ion-row>
+        <ion-col>
+          <div></div>
+        </ion-col>
+        <ion-col>
+          <div class="ion-text-center">
+            <ion-item lines="none" color="none">
+              <ion-label>Deteriorating </ion-label>
+              <ion-radio value="Deteriorating"></ion-radio>
+            </ion-item>
+          </div>
+        </ion-col>
+        <ion-col>
+          <div class="ion-text-center">
+            <ion-item lines="none" color="none">
+              <ion-label>Under Diagnosis </ion-label>
+              <ion-radio value="Under Diagnosis"></ion-radio>
+            </ion-item>
+          </div>
+        </ion-col>
+        <ion-col>
+          <div class="ion-text-center">
+            <ion-item lines="none" color="none">
+              <ion-label>Stable </ion-label>
+              <ion-radio value="Stable"></ion-radio>
+            </ion-item>
+          </div>
+        </ion-col>
+        <ion-col>
+          <div></div>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <div></div>
+        </ion-col>
+        <ion-col>
+          <div></div>
+        </ion-col>
+        <ion-col>
+          <div class="ion-text-center">
+            <ion-item lines="none" color="none">
+              <ion-label>Recovered </ion-label>
+              <ion-radio value="Recovered"></ion-radio>
+            </ion-item>
+          </div>
+        </ion-col>
+        <ion-col>
+          <div></div>
+        </ion-col>
+        <ion-col>
+          <div></div>
+        </ion-col>
+      </ion-row>
+    </ion-radio-group>
 
     <br/>
+
+    <ion-row>
+      <ion-col>
+        <ion-button class="search_button" (click)="submit()">Submit</ion-button>
+    <br/>
+      </ion-col>
+      <ion-col>
+        <ion-button class="search_button" (click)="reset()">Reset Form</ion-button>
+    <br/>
+      </ion-col>
+    </ion-row>
 
     <ion-button class="search_button" (click)="logout()">Logout</ion-button>
 
