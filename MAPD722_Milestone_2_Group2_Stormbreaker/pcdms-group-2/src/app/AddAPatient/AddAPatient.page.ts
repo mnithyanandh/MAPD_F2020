@@ -25,7 +25,7 @@ export class AddAPatient implements OnDestroy, OnInit {
   public date: string;
   public year: string;
   public dob: string;
-  public doa: Date;
+  public doa: string;
   public addressL1: string;
   public addressL2: string;
   public city: string;
@@ -180,12 +180,12 @@ export class AddAPatient implements OnDestroy, OnInit {
     const Address = this.addressL1+', '+this.addressL2+', '+this.city+', '+this.province+' '+this.zipcode;
     this.dob = this.month+'/'+this.date+'/'+this.year;
     const patientConditions = this.hasEpilepsy+this.hasCaridacArrest+this.hasHypertension+this.hasCancer+this.hasAsthma+this.hasDiabetes+this.preconditions;
-    const doa = new Date();
+    //const doa = new Date();
     const data = {
       firstName: this.firstname,
       lastName: this.lastname,
       dateOfBirth: this.dob,
-      dateOfAdmission: doa,
+      dateOfAdmission: this.doa,
       gender: this.gender,
       address: Address,
       patientContact: "+1-"+this.phoneno,

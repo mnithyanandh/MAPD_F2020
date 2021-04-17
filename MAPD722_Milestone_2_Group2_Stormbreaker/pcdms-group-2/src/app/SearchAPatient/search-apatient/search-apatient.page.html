@@ -13,7 +13,13 @@
   <ion-img class="size" src= "../../assets/avatar.png"></ion-img>
   <ion-label class="search_render_searchbox"> Enter in the Patient details: </ion-label>
   <br/>
-  <ion-searchbar color="#000" placeholder="Search for Patient" inputmode="text"></ion-searchbar>
+  <ion-searchbar color="#000" placeholder="Enter Patient's First Name" inputmode="text" [(ngModel)]="fname"></ion-searchbar>
+  <br/>
+  <ion-searchbar color="#000" placeholder="Enter Patient's Last Name" inputmode="text" [(ngModel)]="lname"></ion-searchbar>
+  <br/>
+  <ion-searchbar color="#000" placeholder="Enter Patient's Gender" inputmode="text" [(ngModel)]="gender"></ion-searchbar>
+  <br/>
+  <ion-searchbar color="#000" placeholder="Enter Patient's Date of Admission in MM/DD/YYYY" inputmode="text" [(ngModel)]="DOA"></ion-searchbar>
   <br/>
   <br/>
   <ion-button class="logout" (click)="start()">Search</ion-button>

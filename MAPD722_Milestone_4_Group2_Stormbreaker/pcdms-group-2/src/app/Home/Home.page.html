@@ -1,0 +1,40 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title >
+      PCDMS
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-label class="welcome_tag"> Welcome</ion-label>
+  <br/>
+  <br/>
+  <ion-label class="welcome_title"> Patient Clinical Data Management System [PCDMS]</ion-label>
+  <br/>
+  <br/>
+  <br/>
+  <ion-label class="welcome_action"> From the below tabs, choose your preferred activity:</ion-label>
+  <br/>
+  <br/>
+  <ion-label class="welcome_options_a"> Access Home using the &nbsp;
+    <ion-icon name="home"></ion-icon> &nbsp; tab
+  </ion-label>
+  <br/>
+  <ion-label class="welcome_options_b"> Search for a Patient using the &nbsp;
+    <ion-icon name="search"></ion-icon> &nbsp; tab
+  </ion-label>
+  <br/>
+  <ion-label class="welcome_options_b"> Add a new Patient using the &nbsp;
+    <ion-icon name="happy"></ion-icon> &nbsp; tab
+  </ion-label>
+  <br/>
+  <ion-label class="welcome_options_b"> View Active Cases using the &nbsp;
+    <ion-icon name="eye"></ion-icon> &nbsp; tab
+  </ion-label>
+  <br/>
+  <br/>
+  <ion-button class="help">Help/Contact Us</ion-button>
+  <br/>
+  <ion-button class="logout" (click)="logout()">Logout</ion-button>
+</ion-content>

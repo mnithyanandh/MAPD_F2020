@@ -1,0 +1,23 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title >
+      PCDMS
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-label class="search_render_text"> Search A Patient</ion-label>
+  <hr class="rounded"/>
+  <br/>
+  <ion-img class="size" src= "../../assets/avatar.png"></ion-img>
+  <ion-label class="search_render_searchbox"> Enter in the Patient details: </ion-label>
+  <br/>
+  <ion-searchbar color="#000" placeholder="Search for Patient" inputmode="text"></ion-searchbar>
+  <br/>
+  <br/>
+  <ion-button class="logout" (click)="start()">Search</ion-button>
+  <br/>
+  <ion-button class="logout" (click)="logout()">Logout</ion-button>
+  <br/>
+</ion-content>

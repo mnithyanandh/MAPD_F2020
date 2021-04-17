@@ -1,0 +1,29 @@
+#welcome {
+  text-align: center;
+  left: 0;
+  right: 0;
+  top: 100%;
+  transform: translateY(-50%);
+}
+
+#welcome strong {
+  font-size: 25;
+  color: black;
+  font-weight: bold;
+  justify-content: center;
+  align-items: 'center';
+  text-align: 'center';
+}
+
+// #welcome p {
+//   font-size: 16px;
+//   line-height: 22px;
+
+//   color: #8c8c8c;
+
+//   margin: 0;
+// }
+
+#container a {
+  text-decoration: none;
+}
